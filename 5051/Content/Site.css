@@ -118,4 +118,26 @@ a.navbar-brand {
     height: 50px;
     text-indent: -9999px; /* hides the link text */
 }
-/*--------------End Fab5--------------*/
+
+.intro {
+    width: 100%;
+    background-color: white;
+    margin: auto;
+}
+
+.banner {
+    background: url(../Content/img/adminBackground.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: auto;
+    padding-top: 80px;
+    height:300px;
+}
+
+.intro hr {
+    border-color: #F05F40;
+    border-width: 3px;
+    max-width: 200px;
+}

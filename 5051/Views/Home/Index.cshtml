@@ -10,37 +10,62 @@
         <h3>Earn Points, to update your avatar and stores to show off your collection!</h3>
 
     </header>
-    <div class="container">
+
+
+    <section class="intro">
+        <div class="container">
+            <hr>
+
         <div class="row">
-            <div class="col-md-4">
-                <h2>Getting started</h2>
-                <p>
-                    Each student earns points while attending class, and can use the points to update their personal Avatar, create stores, buy and sell items
-                    to complete their collection.
-                </p>
-                <p>
-                    @Html.ActionLink("Avatar Houses", "HouseExample", "Home", null, new { @class = "btn btn-primary" })
-                </p>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-gift text-primary sr-icons"></i>
+                    <h3>Earn Points</h3>
+                    <p class="text-muted">Each student earns points while attending class, and can use the points to update their personal Avatar, create stores, buy and sell items to complete their collection. </p>
+                    <p>
+                        @Html.ActionLink("Avatar Houses", "HouseExample", "Home", null, new { @class = "btn btn-primary" })
+                    </p>
+                </div>
             </div>
-
-            <div class="col-md-4">
-                <h2>Level up</h2>
-                <p>
-                    Earn Bonus points by showing up to class early or staying after school.
-                    The more points you have, the more you can do! You can expand all your stores by buying new items for the store.
-                </p>
-                <p>
-                    @Html.ActionLink("Store", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
-                </p>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+                    <h3>Level up</h3>
+                    <p class="text-muted">Earn Bonus points by showing up to class early or staying after school.</p>
+                    <p>
+                        @Html.ActionLink("Store", "ShopExample", "Home", null, new { @class = "btn btn-primary" })
+                    </p>
+                </div>
             </div>
-
-            <div class="col-md-4">
-                <h2>Track your Progress</h2>
-                <p>View your attendance history, and track your progress over the school year.</p>
-                <p>
-                    @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
-                </p>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-chart-bar text-primary sr-icons"></i>
+                    <h3>Track your Progress</h3>
+                    <p class="text-muted">View your attendance history, and track your progress over the school year.</p>
+                    <p>
+                        @Html.ActionLink("Show Me", "StudentExample", "Home", null, new { @class = "btn btn-primary" })
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box">
+                    <i class="fa fa-4x fa-shopping-basket text-primary sr-icons" data-sr-id="5" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
+                    <h3>Customize your store</h3>
+                    <p class="text-muted">Buy items from Marketplace and stock up your store to earn extra rewards and expand all your stores.</p>
+                </div>
+            </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="banner">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">We make school fun!</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
