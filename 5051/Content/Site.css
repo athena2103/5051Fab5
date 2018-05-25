@@ -120,9 +120,11 @@ a.navbar-brand {
 }
 
 .intro {
+    padding-top: 70px;
     width: 100%;
     background-color: white;
     margin: auto;
+    height: 400px;
 }
 
 .banner {
@@ -132,11 +134,11 @@ a.navbar-brand {
     background-repeat: no-repeat;
     width: 100%;
     margin: auto;
-    padding-top: 80px;
+    padding-top: 70px;
     height:300px;
 }
 
-.intro hr {
+.banner hr {
     border-color: #F05F40;
     border-width: 3px;
     max-width: 200px;
