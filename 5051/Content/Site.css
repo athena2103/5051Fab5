@@ -42,8 +42,8 @@ textarea {
 #clock {
     display: flex;
     display: -webkit-flex;
-    height: 100px;
-    width: 360px;
+    margin=top: 20px;
+    width: 400px;
     font-family: Lato;
     font-size: 5em;
     color: navajowhite;
@@ -53,6 +53,7 @@ textarea {
     height: 100%;
     text-align: center;
     width: 35%;
+    color: navajowhite;
 }
 
 .masthead {
@@ -169,4 +170,18 @@ a.navbar-brand {
 
 .footer a {
     color: #fff;
+}
+
+#avatar {
+    border: 5px solid white;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+
+#avatar-logged {
+    border: 5px solid green;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
 }
