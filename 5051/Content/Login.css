@@ -6,15 +6,12 @@
 }
 
 #container {
-    background-image: url("~/Content/img/sunset.png");
-    background-color: #fefbd8;
-    margin: 50px 0 auto;
-    padding: 30px;
+    background-image: url("../Content/img/sunset.png");
+    background-size: cover;
+    margin: 0 auto;
+    padding: 50px;
 }
 
-.sunset-background {
-    background-image: url("~/Content/img/sunset.png");
-}
 
 html {
     overflow-y: scroll;
@@ -103,7 +100,7 @@ input, textarea {
     background: none;
     background-image: none;
     border: 1px solid #a0b3b0;
-    color: #4d4d4d;
+    color: #fff;
     border-radius: 0;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
