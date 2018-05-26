@@ -2,8 +2,8 @@
 
 body {
     background: #fefbd8;
-    padding-top: 60px;
     padding-bottom: 20px;
+    padding-top: 50px;
     font-family: Lato, sans-serif;
 }
 
@@ -142,4 +142,14 @@ a.navbar-brand {
     border-color: #F05F40;
     border-width: 3px;
     max-width: 200px;
+}
+
+.form p {
+    color: white;
+}
+
+.navbar-default {
+    background: rgba(77, 77, 77, 0.6);
+    font-size: 20px;
+    color: white;
 }

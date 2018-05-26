@@ -266,6 +266,7 @@
     <Content Include="Content\img\ReportStudentMay.png" />
     <Content Include="Content\img\sitelogo.png" />
     <Content Include="Content\img\Store.png" />
+    <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
