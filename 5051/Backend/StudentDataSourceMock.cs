@@ -134,6 +134,8 @@ namespace _5051.Backend
             Create(new StudentModel("Nina", Avatar[5].Id));
             Create(new StudentModel("Winona", Avatar[6].Id));
             Create(new StudentModel("Jonathan", Avatar[2].Id));
+            Create(new StudentModel("Sam", Avatar[1].Id));
+            Create(new StudentModel("Mike", Avatar[0].Id));
         }
     }
 }
