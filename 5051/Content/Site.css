@@ -73,12 +73,12 @@ textarea {
 #studentnavicons {
     position: relative;
     top: -700px;
-    left: 900px;
+    left: 950px
 }
 
     #studentnavicons a {
         font-size: 2.5em;
-        margin-left: 7px;
+        margin-left: 10px;
        
     }
 
