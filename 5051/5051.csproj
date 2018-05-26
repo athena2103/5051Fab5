@@ -279,6 +279,7 @@
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
     <Content Include="Content\img\StudentReport.PNG" />
+    <Content Include="Content\img\studentReportWireframe.png" />
     <Content Include="Content\img\student_community.PNG" />
     <Content Include="Content\img\student_logout.PNG" />
     <Content Include="Content\img\sunset.png" />
