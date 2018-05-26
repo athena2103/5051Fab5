@@ -6,10 +6,12 @@
 }
 
 #container {
-    background-color: #fefbd8;
-    margin: 50px 0 auto;
-    padding: 30px;
+    background-image: url("../Content/img/sunset.png");
+    background-size: cover;
+    margin: 0 auto;
+    padding: 50px;
 }
+
 
 html {
     overflow-y: scroll;
@@ -18,7 +20,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #29abe2;
     transition: 0.5s ease;
 }
 
@@ -143,15 +145,15 @@ textarea {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: #1ab188;
-    color: #fff;
+    background: #fcfcfc;
+    color: #3e4444;
     transition: all 0.5s ease;
     -webkit-appearance: none;
     display: block;
 }
 
     .button:hover, .button:focus {
-        background: #138566;
+        background: #64dfed;
     }
 
 .button-block {
