@@ -179,7 +179,14 @@ a.navbar-brand {
     -moz-border-radius: 150px;
 }
 
-#avatar-logged {
+#avata-red {
+    border: 1px solid red;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+}
+
+#avatar-green {
     border: 5px solid green;
     border-radius: 150px;
     -webkit-border-radius: 150px;
