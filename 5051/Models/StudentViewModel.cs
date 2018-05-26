@@ -16,6 +16,12 @@ namespace _5051.Models
         public List<StudentDisplayViewModel> StudentList = new List<StudentDisplayViewModel>();
 
         /// <summary>
+        /// Single student to return to the View
+        /// </summary>
+        public StudentDisplayViewModel Student;
+
+
+        /// <summary>
         /// Default constructor, needed becase of the constructor that takes a List of Student Models
         /// </summary>
         public StudentViewModel() { }
@@ -30,6 +36,15 @@ namespace _5051.Models
             {
                 StudentList.Add(new StudentDisplayViewModel(item));
             }
+        }
+
+        /// <summary>
+        /// Take the data passed in, and convert to a new StudentDisplayViewModel item
+        /// </summary>
+        /// <param name="data"></param>
+        public StudentViewModel(StudentModel data)
+        {
+            Student = new StudentDisplayViewModel(data);
         }
     }
 }

@@ -8,14 +8,13 @@
     <div class="container">
         <!--script to switch between report and edit attendance table-->
         <script>
-    function changeImage() {
-        var img = document.getElementById("image");
-        img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
-        img.style.height = "200px";
-        img.style.width = "800px";
-        return false;
-    }
-
+            function changeImage() {
+                 var img = document.getElementById("image");
+                 img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
+                 img.style.height = "200px";
+                 img.style.width = "800px";
+                 return false;
+            }
         </script>
 
         <div class="col-md-8">
@@ -24,10 +23,10 @@
 
         <div class="col-md-4">
             @{
-                if (Model.StudentList.Count == 1)
+                if (Model.Student!= null)
                 {
                     @Html.ActionLink("Manage student info", "Read", "Student",
-                    new { id = Model.StudentList.ElementAt(0).Id }, new { @class = "btn btn-primary" })
+                    new { id = Model.Student.Id }, new { @class = "btn btn-primary" })
                     <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
                 }
             }
@@ -40,7 +39,7 @@
             <div class="row text-center">
                 <div class="col-sm-12">
                     @{
-                        if (Model.StudentList == null || !Model.StudentList.Any())
+                        if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
                         {
                             <br />
                             <p>No Students in the System</p>
@@ -51,9 +50,9 @@
                             <div class="col-md-4">
                                 <br /><br />
                                 @{
-                                    if (Model.StudentList.Count == 1)
+                                    if (Model.Student != null)
                                     {
-                                        var item = Model.StudentList.ElementAt(0);
+                                        var item = Model.Student;
                                         <div class="row">
                                             <div class="col-sm-5">
                                                 <img src="~/Content/img/@item.AvatarUri" width="150" height="150" />
@@ -68,7 +67,7 @@
                                             <div class="col-sm-5 text-left">
                                                 @Html.DisplayNameFor(i => item.Name)
                                             </div>
-                                            <div class="col-sm-2 text-left">
+                                            <div class="col-sm-7 text-left">
                                                 @Html.DisplayFor(i => item.Name)
                                             </div>
                                         </div>
@@ -77,7 +76,7 @@
                                             <div class="col-sm-5 text-left">
                                                 @Html.DisplayNameFor(i => item.AvatarName)
                                             </div>
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-7 text-left">
                                                 @Html.DisplayFor(i => item.AvatarName)
                                             </div>
                                         </div>
@@ -86,7 +85,7 @@
                                             <div class="col-sm-5 text-left">
                                                 @Html.DisplayNameFor(i => item.AvatarDescription)
                                             </div>
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-7 text-left">
                                                 @Html.DisplayFor(i => item.AvatarDescription)
                                             </div>
                                         </div>
@@ -95,7 +94,7 @@
                                             <div class="col-sm-5 text-left">
                                                 @Html.DisplayNameFor(i => item.AvatarLevel)
                                             </div>
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-7 text-left">
                                                 @Html.DisplayFor(i => item.AvatarLevel)
                                             </div>
                                         </div>
@@ -104,7 +103,7 @@
                                             <div class="col-sm-5 text-left">
                                                 @Html.DisplayNameFor(i => item.Status)
                                             </div>
-                                            <div class="col-sm-2">
+                                            <div class="col-sm-7 text-left">
                                                 @Html.DisplayFor(i => item.Status)
                                             </div>
                                         </div>
@@ -113,8 +112,7 @@
                                         <br />
                                         <div class="row">
                                             <div class="col-sm-8">
-                                                @Html.ActionLink("Cancel", "Index", new { id = item.Id }, new { @class = "btn btn-success" })
-                                                @Html.ActionLink("Update", "Update", new { id = item.Id }, new { @class = "btn btn-primary" })
+                                                @Html.ActionLink("Update", "Manage", "Admin", new { id = item.Id, cmd = "Update"}, new { @class = "btn btn-primary" })
                                                 @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
                                             </div>
                                         </div>
@@ -125,7 +123,7 @@
                                         foreach (var item in Model.StudentList)
                                         {
                                             <div class="col-md-6 text-center">
-                                                <a id="@item.Id" href="~/Admin/Report/@item.Id">
+                                                <a id="@item.Id" href="~/Admin/Manage/@item.Id">
                                                     <img src="~/Content/img/@item.AvatarUri" width="50" height="50" />
                                                     <br />
                                                     <span>
@@ -147,7 +145,7 @@
                                 </span>
                                 <br\>
                                     <span class="pull-left">
-                                        @if (Model.StudentList.Count > 1)
+                                        @if (Model.Student == null)
                                         {
                                             <img id="image" src="~/Content/img/totalGraph.png" width="600" height="300" />
                                         }
@@ -160,7 +158,7 @@
                                     </span>
                             </div>
 
-                                    }
+                        }
                     }
                 </div>
             </div>

@@ -367,7 +367,7 @@
     <Content Include="Views\Shop\Discounts.cshtml" />
     <Content Include="Views\Shop\Specials.cshtml" />
     <Content Include="Views\Shop\Buy.cshtml" />
-    <Content Include="Views\Admin\Report.cshtml" />
+    <Content Include="Views\Admin\Manage.cshtml" />
     <Content Include="Views\Admin\Calendar.cshtml" />
     <Content Include="Views\Admin\Attendance.cshtml" />
     <Content Include="Views\Admin\StudentReport.cshtml" />
