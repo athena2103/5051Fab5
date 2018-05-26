@@ -27,7 +27,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <returns>All the Students that can have a report</returns>
         // GET: Report
-        public ActionResult Report(string id = null)
+        public ActionResult Manage(string id = null, string cmd = null)
         {
 
             // Load the list of data into the StudentList. If has ID, return one student's info
@@ -38,17 +38,14 @@ namespace _5051.Controllers
                 var StudentViewModel = new StudentViewModel(myDataList);
                 return View(StudentViewModel);
             }
-               
             else
             {
                 var singleData = StudentBackend.Read(id);
-                List<StudentModel> singleList = new List<StudentModel>();
-                singleList.Add(singleData);
-                var StudentViewModel = new StudentViewModel(singleList);
+                var StudentViewModel = new StudentViewModel(singleData);
                 return View(StudentViewModel);
             }
             
-           
+
         }
 
         // GET: Report

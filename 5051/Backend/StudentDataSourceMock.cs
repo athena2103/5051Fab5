@@ -130,10 +130,10 @@ namespace _5051.Backend
         {
             //Set up default avatars:
             var Avatar = AvatarBackend.Instance.Index();
-            Create(new StudentModel("Minh", Avatar[0].Id));
-            Create(new StudentModel("Nina", Avatar[1].Id));
-            Create(new StudentModel("Winona", Avatar[0].Id));
-            Create(new StudentModel("Jonathan", Avatar[1].Id));
+            Create(new StudentModel("Minh", Avatar[4].Id));
+            Create(new StudentModel("Nina", Avatar[5].Id));
+            Create(new StudentModel("Winona", Avatar[6].Id));
+            Create(new StudentModel("Jonathan", Avatar[2].Id));
         }
     }
 }

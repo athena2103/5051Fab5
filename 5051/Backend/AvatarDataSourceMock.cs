@@ -132,6 +132,11 @@ namespace _5051.Backend
             var count = 0;
             Create(new AvatarModel("defaultF1Avatar.png", "fDefault", "fDefault", 1));
             Create(new AvatarModel("defaultM1Avatar.png", "mDefault", "mDefault", 1));
+            Create(new AvatarModel("djhAvatar.png", "fartard", "fartard", 1));
+            Create(new AvatarModel("dMNAvatar.png", "royal", "royal", 1));
+            Create(new AvatarModel("dMN1Avatar.png", "losangeles", "losangels", 1));
+            Create(new AvatarModel("dnnAvatar.png", "I tried", "I tried", 1));
+            Create(new AvatarModel("dwaAvatar.png", "xoxo", "xoxo", 1));
             /**
             Create(new AvatarModel("avatar" + count++.ToString() +".png", "Police", "Happy Officer",1));
             Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Kunoichi", "Ninja Lady",2));
