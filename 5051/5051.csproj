@@ -249,6 +249,11 @@
     <Content Include="Content\img\defaultMAvatar.JPG" />
     <Content Include="Content\img\defaultReportIcon.png" />
     <Content Include="Content\img\defaultRoomPic.PNG" />
+    <Content Include="Content\img\djhAvatar.png" />
+    <Content Include="Content\img\dmn1Avatar.png" />
+    <Content Include="Content\img\dmnAvatar.png" />
+    <Content Include="Content\img\dnnAvatar.png" />
+    <Content Include="Content\img\dwaAvatar.png" />
     <Content Include="Content\img\GameIcon.png" />
     <Content Include="Content\img\headerbg.jpg" />
     <Content Include="Content\img\headerbg.png" />
@@ -262,6 +267,7 @@
     <Content Include="Content\img\PortalLogin.png" />
     <Content Include="Content\img\PortalReports.png" />
     <Content Include="Content\img\PortalStore.png" />
+    <Content Include="Content\img\ReportPicture.png" />
     <Content Include="Content\img\ReportPic.png" />
     <Content Include="Content\img\ReportStudentMay.png" />
     <Content Include="Content\img\sitelogo.png" />
@@ -362,7 +368,7 @@
     <Content Include="Views\Shop\Discounts.cshtml" />
     <Content Include="Views\Shop\Specials.cshtml" />
     <Content Include="Views\Shop\Buy.cshtml" />
-    <Content Include="Views\Admin\Report.cshtml" />
+    <Content Include="Views\Admin\Manage.cshtml" />
     <Content Include="Views\Admin\Calendar.cshtml" />
     <Content Include="Views\Admin\Attendance.cshtml" />
     <Content Include="Views\Admin\StudentReport.cshtml" />
@@ -374,6 +380,7 @@
     <Content Include="Views\Student\Default.cshtml" />
     <Content Include="Views\Portal\Logout.cshtml" />
     <Content Include="Views\Student\Community.cshtml" />
+    <Content Include="Views\Portal\AdminLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

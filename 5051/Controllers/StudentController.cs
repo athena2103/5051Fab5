@@ -26,6 +26,46 @@ namespace _5051.Controllers
         }
 
         /// <summary>
+        ///Market Page
+        /// </summary>
+        /// <returns></returns>
+        // GET: Portal
+        public ActionResult Market()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Student's Avatar page
+        /// </summary>
+        /// <returns></returns>
+        // GET: Portal
+        public ActionResult Avatar_Fab5()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// My Attendance Reports
+        /// </summary>
+        /// <returns></returns>
+        // GET: Portal
+        public ActionResult Report()
+        {
+            return View();
+        }
+
+        /// <summary>
+        ///Market Page
+        /// </summary>
+        /// <returns></returns>
+        // GET: Portal
+        public ActionResult Accomplishments()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Read information on a single Student
         /// </summary>
         /// <param name="id"></param>
