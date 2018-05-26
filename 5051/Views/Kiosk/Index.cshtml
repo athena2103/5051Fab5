@@ -43,7 +43,7 @@
     <div class="row">
         <div class="col-md-6">
 
-            <h4>Select your profile to login</h4>
+            <p class="text-white">Select your profile to login</p>
             <div id="navigation" class="list">
 
                 @{
@@ -51,7 +51,7 @@
                     foreach (var item in Model.StudentList)
                     {
                         if (item.Status == _5051.Models.StudentStatusEnum.Out)
-                        {   
+                        {
                             <a class="list-group-item" id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri"><i class="glyphicon glyphicon-user"></i> @item.Name</a>
                         }
                     }
@@ -61,99 +61,127 @@
         </div>
         <div class="col-md-6">
             <div class="box">
-            <center><img src="~/Content/img/defaultavatarX.png" width="200" height="200" />
-                <p></p>
+                <center>
+                    <img id="avatar" src="~/Content/img/defaultavatarX.png" width="200" height="200" />
+                    <p></p>
                 </center>
-            
+
             </div>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-6 text-left">
             @Html.ActionLink("New profile", "NewProfile", "Kiosk", null, new { @class = "button button-block" })
-            </div>
+        </div>
         <div class="col-md-6">
-            <div class="submitLink text-center"><a href="#" data-toggle="modal" data-target="#loginModal" class="button button-block">Login</a>
+            <div class="submitLink text-center">
+                <a href="#" data-toggle="modal" data-target="#loginModal" class="button">Clock in</a>
+                <a href="#" data-toggle="modal" data-target="#logoutModal" class="button">Clock Out</a>
             </div>
         </div>
-        </div>
+    </div>
 
 
-                <!--data-toggle="modal" data-target="#loginModal"-->
-                <!-- Modal -->
-                <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
 
-                                <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Clock in</h5>
 
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body text-center">
-                                Login Successfully! <br>
-                                You have earned 100 points from signing in today!
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
+                <div class="modal-body text-center">
+                    Clock In Successfully! <br>
+                    You have earned 100 points from clocking in today!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="row"></div>
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
 
+                    <h5 class="modal-title" id="exampleModalLabel">Clock out</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    Clock Out Successfully! <br>
+                    You have earned 100 points from clocking out today!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <hr />
+    <div class="row"></div>
+
+
+    @{
+        if (Model.StudentList == null || !Model.StudentList.Any())
+        {
+            <br />
+            <p>No Students in the System</p>
+            <br />
+        }
+        else
+        {
+            // List out the Logged IN Students, then the Logged Out students
+
+            <div class="row">
+                <p class="text-white">List of students Logged In</p>
 
                 @{
-                    if (Model.StudentList == null || !Model.StudentList.Any())
+                    // Logged IN first
+                    foreach (var item in Model.StudentList)
                     {
-                        <br />
-                        <p>No Students in the System</p>
-                        <br />
-                    }
-                    else
-                    {
-                        // List out the Logged IN Students, then the Logged Out students
-
-                        <div class="row">
-                            <h4>List of students Logged In</h4>
-
-                            @{
-                                // Logged IN first
-                                foreach (var item in Model.StudentList)
-                                {
-                                    if (item.Status == _5051.Models.StudentStatusEnum.In)
-                                    {
-                                        <div class="col-sm-2">
-                                            <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
-                                                <div class="col-sm-1">
-                                                    <img src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                                    <br />
-                                                    <span>
-                                                        @item.Name
-                                                    </span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    }
-                                }
-                            }
-                        </div>
-
-                        <br />
-                        <br />
-                        <br />
-                        <div class="row">
-
-
-                        </div>
+                        if (item.Status == _5051.Models.StudentStatusEnum.In)
+                        {
+                            <div class="col-sm-2">
+                                <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
+                                    <div class="col-sm-1">
+                                        <img id="avatar-logged" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                                        <br />
+                                        <span class="text-center">
+                                            @item.Name
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        }
                     }
                 }
+            </div>
+
+            <br />
+            <br />
+            <br />
+            <div class="row">
+
 
             </div>
+        }
+    }
+
+</div>
 
 
 

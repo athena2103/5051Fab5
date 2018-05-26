@@ -2,43 +2,44 @@
     ViewBag.Title = "Student Login";
 }
 
-<head>
     <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
-</head>
+    <div id="container">
+        <div id="background">
+            <div class="row text-center">
+                <div class="form">
 
-<div id="container">
-    <div class="form">
+                    <div id="login">
+                        <h1 style="font:Lato, sans-serif;"> Welcome Back to Nova Town! </h1>
 
-        <div id="login">
-            <h1 style="font:Lato, sans-serif;"> Welcome Back to Nova Town! </h1>
+                        <form action="/" method="post">
 
-            <form action="/" method="post">
+                            <div class="field-wrap">
+                                <label>
+                                    Email Address<span class="req">*</span>
+                                </label>
+                                <input type="email" required autocomplete="off" />
+                            </div>
 
-                <div class="field-wrap">
-                    <label>
-                        Email Address<span class="req">*</span>
-                    </label>
-                    <input type="email" required autocomplete="off" />
+                            <div class="field-wrap">
+                                <label>
+                                    Password<span class="req">*</span>
+                                </label>
+                                <input type="password" required autocomplete="off" />
+                            </div>
+
+                            <p class="forgot"><a href="#">Forgot Password?</a></p>
+
+                            <a href="~/Portal/Index" class="button button-block" role="button">Log In</a>
+
+                        </form>
+
+                    </div>
+
                 </div>
-
-                <div class="field-wrap">
-                    <label>
-                        Password<span class="req">*</span>
-                    </label>
-                    <input type="password" required autocomplete="off" />
-                </div>
-
-                <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-                <a href="~/Portal/Index" class="button button-block" role="button">Log In</a>
-
-            </form>
-
+                <!-- /form -->
+            </div>
+            </div>
         </div>
-
-    </div>
-    <!-- /form -->
-</div>
 
 
