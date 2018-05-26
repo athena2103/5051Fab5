@@ -3,7 +3,7 @@
 body {
     background: #fefbd8;
     padding-bottom: 20px;
-    padding-top: 50px;
+    padding-top: 80px;
     font-family: Lato, sans-serif;
 }
 
@@ -153,4 +153,20 @@ a.navbar-brand {
     background: rgba(77, 77, 77, 0.6);
     font-size: 20px;
     color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+        color: #fff; /*Sets the text hover color on navbar*/
+}
+
+.footer {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #21d192;
+}
+
+.footer a {
+    color: #fff;
 }

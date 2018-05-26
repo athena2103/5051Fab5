@@ -42,22 +42,35 @@
         @RenderBody()
     </div>
 
-    <div class="container body-content">
-        <hr />
-        <footer>
-            <div class="footer navbar-fixed-bottom">
-                <div style="background-color:lightgray">
-                    &nbsp;&nbsp;&copy; @DateTime.Now.Year - SUperNova, all rights reserved
-                    &nbsp;&nbsp;
-                    @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                    @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                    @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
-                </div>
-                
-            </div>
-        </footer>
-    </div>
 
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer">
+
+            <div style="background-color: #21d192;">
+
+                    <!-- Grid row-->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-lg-12 text-center">
+                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
+                            @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
+                            @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p class="copyright text-muted small">&nbsp;&nbsp;&copy; @DateTime.Now.Year - SUperNova, all rights reserved</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
 
 </body>
 </html>
