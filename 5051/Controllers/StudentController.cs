@@ -40,7 +40,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <returns></returns>
         // GET: Portal
-        public ActionResult Avatar()
+        public ActionResult Avatar_Fab5()
         {
             return View();
         }
