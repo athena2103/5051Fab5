@@ -19,6 +19,16 @@ namespace _5051.Controllers
         }
 
         /// <summary>
+        /// The Login in page for the Admin Portal
+        /// </summary>
+        /// <returns></returns>
+        // GET: Portal
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
+        /// <summary>
         /// Display logout page
         /// </summary>
         /// <returns></returns>

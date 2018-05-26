@@ -51,6 +51,7 @@
                                 <br /><br />
                                 @{
                                     if (Model.Student != null)
+                                        //For invidiual student
                                     {
                                         var item = Model.Student;
                                         <div class="row">
@@ -62,64 +63,141 @@
 
                                             </div>
                                         </div>
+                                        if (Model.Student.isUpdate == true)
+                                        {
+                                            //Update student info
+                                            using (Html.BeginForm("Update","Admin",FormMethod.Post))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                @Html.HiddenFor(i => Model.Student.Id)
+                                                @Html.HiddenFor(i => Model.Student.AvatarId)
+                                                @Html.HiddenFor(i => Model.Student.AvatarLevel)
+                                                @Html.HiddenFor(i => Model.Student.Tokens)
+                                                @Html.HiddenFor(i => Model.Student.isUpdate)
+                                                @Html.HiddenFor(i => Model.Student.AvatarUri)
+                                                <div class="row">
+                                                    <div class="col-sm-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.Name)
+                                                    </div>
+                                                    <div class="col-sm-7 text-left">
+                                                        @Html.EditorFor(i => Model.Student.Name)
+                                                        @Html.ValidationMessageFor(i => Model.Student.Name)
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-5 text-left">
-                                                @Html.DisplayNameFor(i => item.Name)
-                                            </div>
-                                            <div class="col-sm-7 text-left">
-                                                @Html.DisplayFor(i => item.Name)
-                                            </div>
-                                        </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarName)
+                                                    </div>
+                                                    <div class="col-sm-7 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarName)
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-5 text-left">
-                                                @Html.DisplayNameFor(i => item.AvatarName)
-                                            </div>
-                                            <div class="col-sm-7 text-left">
-                                                @Html.DisplayFor(i => item.AvatarName)
-                                            </div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-5 text-left">
-                                                @Html.DisplayNameFor(i => item.AvatarDescription)
-                                            </div>
-                                            <div class="col-sm-7 text-left">
-                                                @Html.DisplayFor(i => item.AvatarDescription)
-                                            </div>
-                                        </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarDescription)
+                                                    </div>
+                                                    <div class="col-sm-7 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarDescription)
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-5 text-left">
-                                                @Html.DisplayNameFor(i => item.AvatarLevel)
-                                            </div>
-                                            <div class="col-sm-7 text-left">
-                                                @Html.DisplayFor(i => item.AvatarLevel)
-                                            </div>
-                                        </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarLevel)
+                                                    </div>
+                                                    <div class="col-sm-7 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarLevel)
+                                                    </div>
+                                                </div>
 
-                                        <div class="row">
-                                            <div class="col-sm-5 text-left">
-                                                @Html.DisplayNameFor(i => item.Status)
-                                            </div>
-                                            <div class="col-sm-7 text-left">
-                                                @Html.DisplayFor(i => item.Status)
-                                            </div>
-                                        </div>
+                                                <div class="row">
+                                                    <div class="col-sm-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.Status)
+                                                    </div>
+                                                    <div class="col-sm-7 text-left">
+                                                        @Html.EnumDropDownListFor(i => Model.Student.Status, "Select Status")
+                                                        @Html.ValidationMessageFor(i => Model.Student.Status)
+                                                    </div>
+                                                </div>
 
-                                        <br />
-                                        <br />
-                                        <div class="row">
-                                            <div class="col-sm-8">
-                                                @Html.ActionLink("Update", "Manage", "Admin", new { id = item.Id, cmd = "Update"}, new { @class = "btn btn-primary" })
-                                                @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
-                                            </div>
-                                        </div>
+                                                <br />
+                                                <br />
+                                                <div class="row">
+                                                    <div class="col-sm-8">
+                                                            @Html.ActionLink("Cancel", "Manage", "Admin", new { @class = "btn btn-success" })
+                                                            <input type="submit" value="Update" class="btn btn-primary">
+                                                            
+                                                    </div>
+                                                </div>
+
+
+                                            }
+                                        }
+                                        else
+                                        {
+                                            //Read student info
+                                                    <div class="row">
+                                                        <div class="col-sm-5 text-left">
+                                                            @Html.DisplayNameFor(i => item.Name)
+                                                        </div>
+                                                        <div class="col-sm-7 text-left">
+                                                            @Html.DisplayFor(i => item.Name)
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-5 text-left">
+                                                            @Html.DisplayNameFor(i => item.AvatarName)
+                                                        </div>
+                                                        <div class="col-sm-7 text-left">
+                                                            @Html.DisplayFor(i => item.AvatarName)
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-5 text-left">
+                                                            @Html.DisplayNameFor(i => item.AvatarDescription)
+                                                        </div>
+                                                        <div class="col-sm-7 text-left">
+                                                            @Html.DisplayFor(i => item.AvatarDescription)
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-5 text-left">
+                                                            @Html.DisplayNameFor(i => item.AvatarLevel)
+                                                        </div>
+                                                        <div class="col-sm-7 text-left">
+                                                            @Html.DisplayFor(i => item.AvatarLevel)
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-sm-5 text-left">
+                                                            @Html.DisplayNameFor(i => item.Status)
+                                                        </div>
+                                                        <div class="col-sm-7 text-left">
+                                                            @Html.DisplayFor(i => item.Status)
+                                                        </div>
+                                                    </div>
+
+                                                    <br />
+                                                        <br />
+                                                        <div class="row">
+                                                            <div class="col-sm-8">
+                                                                    @Html.ActionLink("Edit", "Manage", "Admin", new { id = item.Id, cmd = "Update" }, new { @class = "btn btn-primary" })
+                                                            </div>
+                                                        </div>
+
+                                        }
 
                                     }
                                     else
                                     {
+                                        //For list of students
                                         foreach (var item in Model.StudentList)
                                         {
                                             <div class="col-md-6 text-center">

@@ -18,7 +18,7 @@ namespace _5051.Models
         /// <summary>
         /// Single student to return to the View
         /// </summary>
-        public StudentDisplayViewModel Student;
+        public StudentDisplayViewModel Student { get; set; }
 
 
         /// <summary>
