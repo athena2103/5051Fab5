@@ -2,8 +2,8 @@
 
 body {
     background: #fefbd8;
-    padding-top: 60px;
     padding-bottom: 20px;
+    padding-top: 80px;
     font-family: Lato, sans-serif;
 }
 
@@ -119,4 +119,54 @@ a.navbar-brand {
     height: 50px;
     text-indent: -9999px; /* hides the link text */
 }
-/*--------------End Fab5--------------*/
+
+.intro {
+    padding-top: 70px;
+    width: 100%;
+    background-color: white;
+    margin: auto;
+    height: 400px;
+}
+
+.banner {
+    background: url(../Content/img/adminBackground.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: auto;
+    padding-top: 70px;
+    height:300px;
+}
+
+.banner hr {
+    border-color: #F05F40;
+    border-width: 3px;
+    max-width: 200px;
+}
+
+.form p {
+    color: white;
+}
+
+.navbar-default {
+    background: rgba(77, 77, 77, 0.6);
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+        color: #fff; /*Sets the text hover color on navbar*/
+}
+
+.footer {
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #21d192;
+}
+
+.footer a {
+    color: #fff;
+}
