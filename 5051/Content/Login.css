@@ -6,9 +6,14 @@
 }
 
 #container {
+    background-image: url("~/Content/img/sunset.png");
     background-color: #fefbd8;
     margin: 50px 0 auto;
     padding: 30px;
+}
+
+.sunset-background {
+    background-image: url("~/Content/img/sunset.png");
 }
 
 html {
@@ -18,7 +23,7 @@ html {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #29abe2;
     transition: 0.5s ease;
 }
 
@@ -98,7 +103,7 @@ input, textarea {
     background: none;
     background-image: none;
     border: 1px solid #a0b3b0;
-    color: #fff;
+    color: #4d4d4d;
     border-radius: 0;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -143,15 +148,15 @@ textarea {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    background: #1ab188;
-    color: #fff;
+    background: #fcfcfc;
+    color: #3e4444;
     transition: all 0.5s ease;
     -webkit-appearance: none;
     display: block;
 }
 
     .button:hover, .button:focus {
-        background: #138566;
+        background: #64dfed;
     }
 
 .button-block {
