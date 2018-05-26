@@ -42,27 +42,60 @@ namespace _5051.Controllers
             {
                 var singleData = StudentBackend.Read(id);
                 var StudentViewModel = new StudentViewModel(singleData);
+                //Respond to update student's info request
+                if(cmd == "Update")
+                {
+                    StudentViewModel.Student.isUpdate = true;
+                }
                 return View(StudentViewModel);
             }
             
 
         }
 
-        // GET: Report
         /// <summary>
-        /// Returns an individual report for a student
+        /// This updates the Student based on the information posted from the udpate page
         /// </summary>
-        /// <param name="id">Student ID to generate Report for</param>
-        /// <returns>Report data</returns>
-        /**
-        public ActionResult Report(string id)
+        /// <param name="data"></param>
+        /// <returns></returns>
+        // POST: Student/Update/5
+        [HttpPost]
+        public ActionResult Update(StudentViewModel StudentView)
         {
-            var singleData = StudentBackend.Read(id);
-            List <StudentModel> singleList = new List<StudentModel>();
-            singleList.Add(singleData);
-            var StudentViewModel = new StudentViewModel(singleList);
-            return View(StudentViewModel);
-        }*/
+            if (!ModelState.IsValid)
+            {
+                // Send back for edit
+                return View(StudentView);
+            }
+
+            if (StudentView == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            if(StudentView.Student == null)
+            {
+                // Send to Error Page
+                return RedirectToAction("Error", new { route = "Home", action = "Error" });
+            }
+
+            
+            if (string.IsNullOrEmpty(StudentView.Student.Id))
+            {
+                // Send back for edit
+                return View(StudentView);
+                
+            }
+
+            StudentView.Student.isUpdate = false;
+            StudentBackend.Update(StudentView.Student);
+
+            return RedirectToAction("Manage", new { id = StudentView.Student.Id });
+        }
+
+
+
 
         /// <summary>
         /// Calendar

@@ -59,6 +59,11 @@ namespace _5051.Models
         public StudentStatusEnum Status { get; set; }
 
         /// <summary>
+        /// Used by view to check if the student is subject to update request
+        /// </summary>
+        public bool isUpdate { get; set; }
+
+        /// <summary>
         /// The defaults for a new student
         /// </summary>
         public void Initialize()
@@ -67,6 +72,7 @@ namespace _5051.Models
             Tokens = 0;
             AvatarLevel = 1;
             Status = StudentStatusEnum.Out;
+            isUpdate = false;
         }
 
         /// <summary>
