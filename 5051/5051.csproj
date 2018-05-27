@@ -289,6 +289,7 @@
     <Content Include="Content\img\individualGraph.png" />
     <Content Include="Content\img\KioskLoginPanel.png" />
     <Content Include="Content\img\KioskReg.png" />
+    <Content Include="Content\img\nightimeBackground.png" />
     <Content Include="Content\img\nightime.png" />
     <Content Include="Content\img\PortalAvatars.png" />
     <Content Include="Content\img\PortalCustomize.png" />
