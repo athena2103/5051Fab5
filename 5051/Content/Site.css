@@ -134,10 +134,7 @@ a.navbar-brand {
 }
 
 .banner {
-    background: url(../Content/img/adminBackground.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url(../Content/img/adminBackground.png);
     width: 100%;
     margin: auto;
     padding-top: 70px;
@@ -165,7 +162,7 @@ a.navbar-brand {
 }
 
 .footer {
-    margin-top: 50px;
+    margin-top: 5px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
