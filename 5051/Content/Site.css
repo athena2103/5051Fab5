@@ -92,12 +92,12 @@ textarea {
 
 .community-text-medium {
     margin-top: 5%;
-    font-size: 3.0vh;
+    font-size: 3.5vh;
 }
 
 .community-text-small {
     margin-top: 3%;
-    font-size: calc(1vw + 1vh);
+    font-size: 2.0vh;
 }
 
 #img-community {
