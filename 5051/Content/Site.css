@@ -5,17 +5,13 @@ body {
     padding-bottom: 20px;
     padding-top: 80px;
     font-family: Lato, sans-serif;
+    overflow-x:hidden;
 }
 
 h1 {
     font-family: Catamaran;
     font-size: 60px;
     font-weight: 800;
-}
-
-.student-header {
-    padding-top: 10px;
-    font-size: 5.9vw;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -77,41 +73,18 @@ textarea {
 }
 
 #studentnavicons {
-    position: absolute;
-    left: 50%;
-    top: 12%;
-    font-size: calc(1.3vw + 1.3vh);
-    transform: translate(-50%);
-}
-
-
-#studentnavicons a {
-    font-size: calc(2vw + 2vh);
-    margin-left: 10px;
-}
-
-.student-text-medium {
-    margin-top: 5%;
-    font-size: 3.5vh;
-}
-
-.student-text-small {
-    margin-top: 3%;
-    font-size: 2.0vh;
-}
-
-span.report-color {
-    color: #009e11;
-}
-
-#wireframe-student {
     position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
+    top: -700px;
+    left: 900px
 }
+
+
+       #studentnavicons a {
+        font-size: 2.5em;
+        margin-left: 10px; 
+    }
+
+
 
 
 #studentnaviconstext {
@@ -130,6 +103,8 @@ span.report-color {
 .student-index {
     background: #fefbd8;
     background-size: cover;
+    
+
 }
 
 .nav > li > a {
@@ -159,10 +134,7 @@ a.navbar-brand {
 }
 
 .banner {
-    background: url(../Content/img/adminBackground.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    background: url(../Content/img/adminBackground.png);
     width: 100%;
     margin: auto;
     padding-top: 70px;
@@ -190,7 +162,7 @@ a.navbar-brand {
 }
 
 .footer {
-    margin-top:50px;
+    margin-top: 5px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
@@ -203,6 +175,7 @@ a.navbar-brand {
 }
 
 #avatar {
+    margin-top: 30px;
     border: 5px solid white;
     border-radius: 150px;
 }
@@ -220,12 +193,15 @@ a.navbar-brand {
 #listusers {
     height: 200px;
     overflow-y: auto;
-    margin-bottom: 20px;
-    columns: 100px 2;
+    padding: 10px;
+    margin-bottom: 40px;
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    column-count: 2;
 }
 
-#listusers a {
-    margin-bottom: 20px;
-    margin-left: 20px;
-    color: white;
-}
+    #listusers a {
+        color: darkslategrey;
+        font-size: 18px;
+        line-height: 40px;
+    }
