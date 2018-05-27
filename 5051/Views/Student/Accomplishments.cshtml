@@ -3,17 +3,30 @@
     ViewBag.Title = "Accomplishments";
 }
 
-<head>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-</head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
-<h2 align="center">My Accomplishments</h2>
+<script>
+    $(document).ready(
+    function () {
+        $('#studentnavicons a').hover(
+            function () {
+                $("#studentnaviconstext p").text($(this).attr("title"));
+            },
+	});
+</script>
 
-<div class="container">
+<div id="background">
     <div class="row text-center">
-        <img src="~/Content/img/wireframe_accomplishments.png" width="800" />
-    </div>
-    <div style="font-size:3em">
-        <a href="~/Student/Default"><i class="far fa-hand-point-left"></i></a>
-    </div>
+        <h1 class="student-header" align="center">Yep, I did this</h1>
 
+        <div id="studentnavicons">
+            <a href="~/Student/Community" title="Community"><i class="fas fa-map-signs" style="color:#7a553b"></i></a>
+            <a href="~/Student/Market" title="Marketplace"><i class="fas fa-shopping-cart" style="color:#7a553b"></i></a>
+            <a href="~/Student/Accomplishments" title="Yep, I did this"><i class="fas fa-trophy" style="color:#7a553b"></i></a>
+            <a href="~/Student/Avatar_Fab5" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
+            <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
+        </div>
+        <img src="~/Content/img/wireframe_accomplishments.png" class="img-responsive" id="wireframe-student"  width="800" />
+    </div>
+</div>
