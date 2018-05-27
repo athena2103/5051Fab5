@@ -129,7 +129,7 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-            var count = 0;
+           
             Create(new AvatarModel("defaultF1Avatar.png", "fDefault", "fDefault", 1));
             Create(new AvatarModel("defaultM1Avatar.png", "mDefault", "mDefault", 1));
             Create(new AvatarModel("djhAvatar.png", "fartard", "fartard", 1));
@@ -137,18 +137,7 @@ namespace _5051.Backend
             Create(new AvatarModel("dMN1Avatar.png", "losangeles", "losangels", 1));
             Create(new AvatarModel("dnnAvatar.png", "I tried", "I tried", 1));
             Create(new AvatarModel("dwaAvatar.png", "xoxo", "xoxo", 1));
-            /**
-            Create(new AvatarModel("avatar" + count++.ToString() +".png", "Police", "Happy Officer",1));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Kunoichi", "Ninja Lady",2));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Angry", "Angry, but happy",1));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Playfull", "Anyone want a ride?",1));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Pirate", "Where is my ship?",2));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Blue", "Having a Blue Day",3));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Pigtails", "Love my hair",3));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Ninja", "Taste my Katana",2));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Circus", "Swinging from the Trapeese",4));
-            Create(new AvatarModel("avatar" + count++.ToString() + ".png", "Chief", "I love to cook",4));
-            */
+           
         }
     }
 }

@@ -189,6 +189,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Backend\StudentReportInterface.cs" />
+    <Compile Include="Backend\StudentReportSourceMock.cs" />
+    <Compile Include="Backend\StudentReportBackend.cs" />
     <Compile Include="Backend\StudentInterface.cs" />
     <Compile Include="Backend\StudentDataSourceMock.cs" />
     <Compile Include="Backend\StudentBackend.cs" />
@@ -209,6 +212,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceModel.cs" />
+    <Compile Include="Models\StudentReportModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
     <Compile Include="Models\Enums\StudentStatusEnum.cs" />
     <Compile Include="Models\Enums\DataSourceEnum.cs" />
@@ -263,7 +267,7 @@
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\AvatarLevel.png" />
     <Content Include="Content\img\ChartPlaceholder.png" />
-    <Content Include="Content\img\daytime.png" />
+    <Content Include="Content\img\daytimeBackground.png" />
     <Content Include="Content\img\defaultavatarX.png" />
     <Content Include="Content\img\defaultCalendarIcon.png" />
     <Content Include="Content\img\defaultCalendarX.PNG" />
@@ -300,6 +304,7 @@
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\storeMockup.png" />
+    <Content Include="Content\img\StudentCommunity.PNG" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
@@ -409,6 +414,8 @@
     <Content Include="Views\Student\Avatar.cshtml" />
     <Content Include="Views\Student\Market.cshtml" />
     <Content Include="Views\Student\Report.cshtml" />
+    <Content Include="Views\Home\AdminIntro.cshtml" />
+    <Content Include="Views\Home\StudentIntro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
