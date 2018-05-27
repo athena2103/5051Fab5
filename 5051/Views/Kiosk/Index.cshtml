@@ -44,7 +44,7 @@
         <div class="col-md-6">
 
             <p class="text-white">Select your profile to login</p>
-            <div id="navigation" class="list">
+            <ul class="list-group list-group-flush" id="navigation">
 
                 @{
                     // Logged Out first
@@ -52,13 +52,18 @@
                     {
                         if (item.Status == _5051.Models.StudentStatusEnum.Out)
                         {
-                            <a class="list-group-item" id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri"><i class="glyphicon glyphicon-user"></i> @item.Name</a>
-                        }
-                    }
-                }
-            </div>
+                            <li class="list-group-item">
+                                <a id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                    <!--<img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="25" height="25" class="img-thumbnail" />-->
+                                    <i class="glyphicon glyphicon-user"></i>  @item.Name
+                                </a>
+                                </li>
+                                }
+                                }
+                                }
+                </ul>
 
-        </div>
+</div>
         <div class="col-md-6">
             <div class="box">
                 <center>
@@ -158,11 +163,11 @@
                             <div class="col-sm-2">
                                 <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
                                     <div class="col-sm-1">
-                                        <img id="avatar-logged" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                        <br />
-                                        <span class="text-center">
+                                        <p class="text-center">
+                                            <img id="avatar-green" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                                            <br />
                                             @item.Name
-                                        </span>
+                                        </p>
                                     </div>
                                 </a>
                             </div>
