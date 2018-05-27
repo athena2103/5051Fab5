@@ -226,12 +226,12 @@
                                     <span class="pull-left">
                                         @if (Model.Student == null)
                                         {
-                                            <img id="image" src="~/Content/img/totalGraph.png" width="600" height="300" />
+                                            <img id="image" src="~/Content/img/Admin/totalAttendance.png" width="600" height="300" />
                                         }
                                         else
                                         {
-
-                                            <img id="image" src="~/Content/img/individualGraph.png" width="600" height="300" />
+                                            var reportSource = Model.Student.ReportsId[0];
+                                            <img id="image" src="~/Content/img/Admin/@reportSource" width="600" height="300" />
                                         }
 
                                     </span>

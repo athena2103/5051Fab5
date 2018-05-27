@@ -64,6 +64,11 @@ namespace _5051.Models
         public bool isUpdate { get; set; }
 
         /// <summary>
+        ///The ID list of the reports the student is associated with, this will convert to report pictures
+        /// </summary>
+        public List<string> ReportsId{get; set;}
+
+        /// <summary>
         /// The defaults for a new student
         /// </summary>
         public void Initialize()
@@ -88,7 +93,7 @@ namespace _5051.Models
         /// </summary>
         /// <param name="name">The Name to call the student</param>
         /// <param name="avatarId">The avatar to use, if not specified, will call the backend to get an ID</param>
-        public StudentModel(string name, string avatarId)
+        public StudentModel(string name, string avatarId, List<string> reportsId)
         {
             Initialize();
 
@@ -100,6 +105,7 @@ namespace _5051.Models
                 avatarId = AvatarBackend.Instance.GetFirstAvatarId();
             }
             AvatarId = avatarId;
+            ReportsId = reportsId;
         }
 
         /// <summary>
@@ -115,6 +121,8 @@ namespace _5051.Models
             AvatarLevel = data.AvatarLevel;
             Tokens = data.Tokens;
             Status = data.Status;
+            isUpdate = data.isUpdate;
+            ReportsId = data.ReportsId;
         }
 
         /// <summary>
@@ -190,6 +198,8 @@ namespace _5051.Models
             AvatarName = myDataAvatar.Name;
             AvatarDescription = myDataAvatar.Description;
             AvatarUri = myDataAvatar.Uri;
+            isUpdate = data.isUpdate;
+            ReportsId = data.ReportsId;
         }
     }
 }
