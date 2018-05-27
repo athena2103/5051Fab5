@@ -13,6 +13,10 @@ h1 {
     font-weight: 800;
 }
 
+.student-heading {
+    padding-top: 10px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 0px;
@@ -72,18 +76,18 @@ textarea {
 }
 
 #studentnavicons {
-    position: relative;
-    top: -700px;
-    left: 900px
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    font-size: calc(2vw + 2vh);
+    transform: translate(-50%);
 }
 
 
-       #studentnavicons a {
-        font-size: 2.5em;
-        margin-left: 10px; 
-    }
-
-
+#studentnavicons a {
+    font-size: calc(2vw + 2vh);
+    margin-left: 10px;
+}
 
 
 #studentnaviconstext {
@@ -102,8 +106,6 @@ textarea {
 .student-index {
     background: #fefbd8;
     background-size: cover;
-    
-
 }
 
 .nav > li > a {
