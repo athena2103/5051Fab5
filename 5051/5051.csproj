@@ -305,7 +305,6 @@
     <Content Include="Content\img\StudentProfileBio.png" />
     <Content Include="Content\img\StudentReport.PNG" />
     <Content Include="Content\img\studentReportWireframe.png" />
-    <Content Include="Content\img\student_community.PNG" />
     <Content Include="Content\img\student_logout.PNG" />
     <Content Include="Content\img\sunset.png" />
     <Content Include="Content\img\totalGraph.png" />
@@ -408,7 +407,6 @@
     <Content Include="Views\Portal\AdminLogin.cshtml" />
     <Content Include="Views\Student\Accomplishments.cshtml" />
     <Content Include="Views\Student\Avatar.cshtml" />
-    <Content Include="Views\Student\Avatar_Fab5.cshtml" />
     <Content Include="Views\Student\Market.cshtml" />
     <Content Include="Views\Student\Report.cshtml" />
   </ItemGroup>

@@ -165,7 +165,7 @@ a.navbar-brand {
 }
 
 .footer {
-    margin-top:50px;
+    margin-top: 50px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
@@ -178,6 +178,7 @@ a.navbar-brand {
 }
 
 #avatar {
+    margin-top: 30px;
     border: 5px solid white;
     border-radius: 150px;
 }
@@ -195,12 +196,15 @@ a.navbar-brand {
 #listusers {
     height: 200px;
     overflow-y: auto;
-    margin-bottom: 20px;
-
+    padding: 10px;
+    margin-bottom: 40px;
+    background: #fcfcfc;
+    border: 1px solid #f0f0f0;
+    column-count: 2;
 }
 
     #listusers a {
-        
-        margin-left: 50px;
-        color: white;
+        color: darkslategrey;
+        font-size: 18px;
+        line-height: 40px;
     }
