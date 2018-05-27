@@ -3,33 +3,32 @@
     ViewBag.Title = "Index";
 }
 
-<head>
-    <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
-</head>
+    <div id="background2">
+        <div class="row text-center">
+            <h2>WELCOME TO ADMIN PORTAL</h2>
 
-<div class="container">
-    <h2>WELCOME TO ADMIN PORTAL</h2>
+            <div class="col-md-6">
+                <div>
+                    <a href="~/Admin/Manage">
+                        <img src="~/Content/img/defaultReportIcon.png" class="center">
+                        <br />
+                        <span style="display: block; text-align: center; font-size:2.5em; color: #fff">
+                            View/Edit Reports
+                        </span>
+                    </a>
+                </div>
 
-    <div class="col-md-6">
-        <div>
-            <a id="adminReport" href="~/Admin/Manage">
-                <img src="~/Content/img/defaultReportIcon.png" width="300" height="300" class="center"/>
-                <br />
-                <span style="display: block; text-align: center; color: #364c70">
-                    View/Edit Reports
-                </span>
-            </a>
+            </div>
+            <div class="col-md-6">
+                <a href="~/Admin/Calendar">
+                    <img src="~/Content/img/defaultCalendarIcon.png" class="center">
+                    <br />
+                    <span style="display: block; text-align: center; font-size:2.5em; color: #fff">
+                        Override Calendar
+                    </span>
+                </a>
+            </div>
         </div>
-
     </div>
-    <div class="col-md-6">
-        <a id="adminReport" href="~/Admin/Calendar">
-            <img src="~/Content/img/defaultCalendarIcon.png" width="300" height="300" class="center" />
-            <br />
-            <span style="display: block; text-align: center; color: #364c70">
-                Override Calendar
-            </span>
-        </a>
-    </div>
-</div>
