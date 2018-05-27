@@ -13,8 +13,9 @@ h1 {
     font-weight: 800;
 }
 
-.student-heading {
+.student-header {
     padding-top: 10px;
+    font-size: 5.9vw;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -78,15 +79,34 @@ textarea {
 #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 15%;
-    font-size: calc(2vw + 2vh);
+    top: 12%;
+    font-size: calc(1.5vw + 1.5vh);
     transform: translate(-50%);
 }
 
 
 #studentnavicons a {
-    font-size: calc(2vw + 2vh);
+    font-size: calc(1.5vw + 1.5vh);
     margin-left: 10px;
+}
+
+.community-text-medium {
+    margin-top: 5%;
+    font-size: 3.0vh;
+}
+
+.community-text-small {
+    margin-top: 3%;
+    font-size: calc(1vw + 1vh);
+}
+
+#img-community {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 
@@ -200,8 +220,8 @@ a.navbar-brand {
     columns: 100px 2;
 }
 
-    #listusers a {
-        margin-bottom: 20px;
-        margin-left: 20px;
-        color: white;
-    }
+#listusers a {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: white;
+}
