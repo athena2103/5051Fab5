@@ -80,13 +80,13 @@ textarea {
     position: absolute;
     left: 50%;
     top: 12%;
-    font-size: calc(1.5vw + 1.5vh);
+    font-size: calc(1.3vw + 1.3vh);
     transform: translate(-50%);
 }
 
 
 #studentnavicons a {
-    font-size: calc(1.5vw + 1.5vh);
+    font-size: calc(2vw + 2vh);
     margin-left: 10px;
 }
 
