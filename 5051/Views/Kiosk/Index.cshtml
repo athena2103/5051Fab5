@@ -44,25 +44,26 @@
         <div class="col-md-6">
 
             <p class="text-white">Select your profile to login</p>
-            <ul class="list-group list-group-flush" id="navigation">
+            <div id="listusers">
+                <div id="navigation">
 
-                @{
-                    // Logged Out first
-                    foreach (var item in Model.StudentList)
-                    {
-                        if (item.Status == _5051.Models.StudentStatusEnum.Out)
+                    @{
+                        // Logged Out first
+                        foreach (var item in Model.StudentList)
                         {
-                            <li class="list-group-item">
-                                <a id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
-                                    <!--<img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="25" height="25" class="img-thumbnail" />-->
-                                    <i class="glyphicon glyphicon-user"></i>  @item.Name
-                                </a>
-                                </li>
-                                }
-                                }
-                                }
-                </ul>
-
+                            if (item.Status == _5051.Models.StudentStatusEnum.Out)
+                            {
+                                
+                                    <a id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                        <img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="25" height="25" />
+                                        <!--<i class="glyphicon glyphicon-user"></i>-->  @item.Name
+                                    </a>
+                                
+                            }
+                        }
+                    }
+                </div>
+            </div>
 </div>
         <div class="col-md-6">
             <div class="box">
