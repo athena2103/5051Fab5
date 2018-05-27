@@ -275,6 +275,7 @@
     <Content Include="Content\img\sitelogo.png" />
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
+    <Content Include="Content\img\storeMockup.png" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
@@ -365,11 +366,7 @@
     <Content Include="Views\Home\HouseExample.cshtml" />
     <Content Include="Views\Portal\Index.cshtml" />
     <Content Include="Views\Portal\Settings.cshtml" />
-    <Content Include="Views\Portal\Report.cshtml" />
-    <Content Include="Views\Portal\House.cshtml" />
-    <Content Include="Views\Portal\Avatar.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <Content Include="Views\Portal\Group.cshtml" />
     <Content Include="Views\Portal\Login.cshtml" />
     <Content Include="Views\Shop\Discounts.cshtml" />
     <Content Include="Views\Shop\Specials.cshtml" />
@@ -381,8 +378,6 @@
     <Content Include="Views\Home\AvatarExample.cshtml" />
     <Content Include="Views\Home\Error.cshtml" />
     <Content Include="Views\Kiosk\NewProfile.cshtml" />
-    <Content Include="Views\Portal\Accomplishments.cshtml" />
-    <Content Include="Views\Portal\Market.cshtml" />
     <Content Include="Views\Student\Default.cshtml" />
     <Content Include="Views\Portal\Logout.cshtml" />
     <Content Include="Views\Student\Community.cshtml" />
