@@ -90,14 +90,18 @@ textarea {
     margin-left: 10px;
 }
 
-.community-text-medium {
+.student-text-medium {
     margin-top: 5%;
     font-size: 3.5vh;
 }
 
-.community-text-small {
+.student-text-small {
     margin-top: 3%;
     font-size: 2.0vh;
+}
+
+span.report-color {
+    color: #009e11;
 }
 
 #wireframe-student {
