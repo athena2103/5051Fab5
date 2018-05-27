@@ -77,16 +77,19 @@ textarea {
     left: 900px
 }
 
-    #studentnavicons a {
+
+       #studentnavicons a {
         font-size: 2.5em;
-        margin-left: 10px;
-       
+        margin-left: 10px; 
     }
+
+
 
 
 #studentnaviconstext {
     position: relative;
     text-align:right;
+    margin-right: 20px;
     top:-700px;
     font-size: 16px;
 }
