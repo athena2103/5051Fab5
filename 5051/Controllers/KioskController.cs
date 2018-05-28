@@ -49,13 +49,15 @@ namespace _5051.Controllers
             if (passphase == "")
             {
                 // Send to Error Page
-                return RedirectToAction("Landing", new { route = "Home", action = "Error" });
+                ModelState.AddModelError("Error", "Admin passphase does not match.");
+                return View();
             }
             if(passphase == valid) {
                 return RedirectToAction("Index");
             } else {
 
-                return RedirectToAction("Landing", new { route = "Home", action = "Error" });
+                ModelState.AddModelError("Error", "Admin passphase does not match.");
+                return View();
 
             }
         }
