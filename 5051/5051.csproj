@@ -420,6 +420,9 @@
     <Content Include="Views\Student\Avatar_Fab5.cshtml" />
     <Content Include="Views\Student\Market.cshtml" />
     <Content Include="Views\Student\Report.cshtml" />
+    <Content Include="Views\Home\StudentIntro.cshtml" />
+    <Content Include="Views\Home\KioskIntro.cshtml" />
+    <Content Include="Views\Home\AdminIntro.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
