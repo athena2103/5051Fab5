@@ -43,8 +43,8 @@ body {
     background: #fefbd8;
     padding-bottom: 20px;
     padding-top: 80px;
-    font-family: Lato, sans-serif;
-    overflow-x:hidden;
+    font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
