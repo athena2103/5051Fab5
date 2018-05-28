@@ -14,6 +14,11 @@ h1 {
     font-weight: 800;
 }
 
+.student-header {
+    padding-top: 10px;
+    font-size: 5.9vw;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 0px;
@@ -73,17 +78,41 @@ textarea {
 }
 
 #studentnavicons {
-    position: relative;
-    top: -700px;
-    left: 900px
+
+    position: absolute;
+    left: 50%;
+    top: 12%;
+    font-size: calc(1.3vw + 1.3vh);
+    transform: translate(-50%);
 }
 
 #studentnavicons a {
-     font-size: 2.5em;
-     margin-left: 10px; 
+    font-size: calc(2vw + 2vh);
+    margin-left: 10px;
 }
 
+.community-text-medium {
+    margin-top: 5%;
+    font-size: 3.5vh;
+}
 
+<<<<<<< HEAD
+=======
+.community-text-small {
+    margin-top: 3%;
+    font-size: 2.0vh;
+}
+
+#wireframe-student {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+>>>>>>> bf66fc665a6aad776b4d3b8ca7b562f9d44b54cd
 #studentnaviconstext {
     position: relative;
     text-align:right;
@@ -100,8 +129,6 @@ textarea {
 .student-index {
     background: #fefbd8;
     background-size: cover;
-    
-
 }
 
 .nav > li > a {
