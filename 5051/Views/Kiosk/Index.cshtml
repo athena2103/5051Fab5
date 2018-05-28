@@ -4,7 +4,6 @@
     ViewBag.Title = "Index";
 }
 
-<link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
 <div id="background2">
     <div class="row">
@@ -16,20 +15,21 @@
                             var linkIndex = $(this).attr("data-filename");
                             $(this).addClass('hover');
                             $('.box img').attr('src', linkIndex);
+                            $(".box h2").text($(this).text());
                         }),
                         $('#navigation a').click(
                             function () {
                                 var linkIndex = $(this).attr("data-filename");
                                 $(this).addClass('hover');
                                 $('.box img').attr('src', linkIndex);
-                                $(".box p").text("You have selected" + $(this).text());
+                                $(".box h2").text($(this).text() + " has earned 100 points.");
                             }
                         )
                 });
 
         </script>
 
-        <div class="form">
+        <div class="kiosk">
 
             <div id="row">
                 <center>
@@ -46,104 +46,82 @@
             <div class="row">
                 <div class="col-md-6">
 
-                    <p class="text-white">Select your profile to login</p>
+                    <h2>Press your thumbnail to clock in/out.</h2>
                     <div id="listusers">
                         <div id="navigation">
                             <ul class="list-unstyled">
                                 @{
-                                    // Logged Out first
-                                    foreach (var item in Model.StudentList)
+                                    if (Model.StudentList == null || !Model.StudentList.Any())
                                     {
-                                        if (item.Status == _5051.Models.StudentStatusEnum.Out)
+                                        <br />
+                                        <p>No Students in the System</p>
+                                        <br />
+                                    }
+                                    else
+                                    {
+                                        // Logged IN first
+                                        foreach (var item in Model.StudentList)
                                         {
-                                            <li>
-                                                <a id="@item.Name" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
-                                                    <img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="25" height="25" />
-                                                    <!--<i class="glyphicon glyphicon-user"></i>-->  @item.Name
-                                                </a>
-                                            </li>
+                                            if (item.Status == _5051.Models.StudentStatusEnum.In)
+                                            {
+                                                <li>
+                                                    <div class="serviceBox">
+                                                        <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                                            <div class="service-icon">
+                                                                <img id="avatar-green" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                                                            </div>
+                                                            <p class="description">
+                                                                @item.Name
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
 
+                                            }
+                                            else
+                                            {
+                                                <li>
+                                                    <div class="serviceBox">
+                                                        <a id="@item.Id" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                                            <div class="service-icon">
+                                                                <img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
+                                                            </div>
+                                                            <p class="description">
+                                                                @item.Name
+                                                            </p>
+                                                        </a>
+                                                    </div>
+                                                </li>
+                                            }
                                         }
                                     }
                                 }
                             </ul>
                         </div>
                     </div>
+                    @Html.ActionLink("New profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block" })
                 </div>
                 <div class="col-md-6">
                     <div class="box">
                         <center>
-                            <img id="avatar" src="~/Content/img/defaultavatarX.png" width="200" height="200" />
-                            <p></p>
+                            <img id="avatar" src="" width="350" height="350" />
+                            <div style="height:20px;"><h2></h2></div>
                         </center>
 
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6 text-left">
-                    @Html.ActionLink("New profile", "NewProfile", "Kiosk", null, new { @class = "button button-block" })
-                </div>
-                <div class="col-md-6">
-                    <div class="submitLink text-center">
-                        <a href="#" data-toggle="modal" data-target="#loginModal" class="button">Clock in</a>
-                        <a href="#" data-toggle="modal" data-target="#logoutModal" class="button">Clock Out</a>
-                    </div>
-                </div>
+  
+                    <!--
+    <div text-center">
+        <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-success" id="clockinlink">Clock in</a>
+        <a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-success" id="clockoutlink">Clock Out</a>
+    </div>-->
+
+               
+
             </div>
-
-            <hr />
-            <div class="row"></div>
-
-
-            @{
-                if (Model.StudentList == null || !Model.StudentList.Any())
-                {
-                    <br />
-                    <p>No Students in the System</p>
-                    <br />
-                }
-                else
-                {
-                    // List out the Logged IN Students, then the Logged Out students
-
-                    <div class="row">
-                        <p class="text-white">List of students Logged In</p>
-
-                        @{
-                            // Logged IN first
-                            foreach (var item in Model.StudentList)
-                            {
-                                if (item.Status == _5051.Models.StudentStatusEnum.In)
-                                {
-                                    <div class="col-sm-2">
-                                        <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id">
-                                            <div class="col-sm-1">
-                                                <p class="text-center">
-                                                    <img id="avatar-green" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                                    <br />
-                                                    @item.Name
-                                                </p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                }
-                            }
-                        }
-                    </div>
-
-                    <br />
-                    <br />
-                    <br />
-                    <div class="row">
-
-
-                    </div>
-                }
-            }
-
-        </div>
 
     </div>
 </div>

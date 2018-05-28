@@ -1,5 +1,44 @@
 ﻿/* --------------Fab5 ----------------*/
 
+#background {
+    background-image: url("../Content/img/sunset.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#background2 {
+    background-image: url("../Content/img/daytimeBackground.png");
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#background3 {
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 1;
+    opacity: 0.75;
+    background-image: url("../Content/img/nightimeBackground.png");
+}
+
+
+
 body {
     background: #fefbd8;
     padding-bottom: 20px;
@@ -199,31 +238,43 @@ a.navbar-brand {
 #avatar {
     margin-top: 30px;
     border: 5px solid white;
-    border-radius: 150px;
-}
-
-#avata-red {
-    border: 4px solid red;
-    border-radius: 150px;
+    border-radius: 200px;
 }
 
 #avatar-green {
-    border: 5px solid green;
+    border: 3px solid green;
     border-radius: 150px;
 }
 
 #listusers {
-    height: 200px;
-    overflow-y: auto;
-    padding: 10px;
-    margin-bottom: 40px;
+    height: auto;
     background: #fcfcfc;
-    border: 1px solid #f0f0f0;
-    column-count: 2;
+    column-count: 3;
+    padding: 40px;
 }
 
-    #listusers a {
-        color: darkslategrey;
-        font-size: 18px;
-        line-height: 40px;
-    }
+#listusers a {
+    color: darkslategrey;
+    font-size: 18px;
+}
+
+.kiosk {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    background: #3e4444;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
+}
+
+.kiosk h1{
+    color: white;
+}
+
+.kiosk h2 {
+    color: white;
+    font-size: 20px;
+    font-family: Catamaran, sans-serif;
+}
