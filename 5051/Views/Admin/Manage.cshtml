@@ -3,19 +3,25 @@
 @{
     ViewBag.Title = "Reports";
 }
+
+<head>
+  
+</head>
 <body background="~/Content/img/adminBackground.png">
 
     <div class="container">
         <!--script to switch between report and edit attendance table-->
         <script>
             function changeImage() {
-                 var img = document.getElementById("image");
+                 var img = document.getElementById("report");
                  img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
                  img.style.height = "200px";
                  img.style.width = "800px";
                  return false;
             }
         </script>
+
+       
 
         <div class="col-md-8">
             <h3>Reports</h3>
@@ -226,12 +232,46 @@
                                     <span class="pull-left">
                                         @if (Model.Student == null)
                                         {
-                                            <img id="image" src="~/Content/img/Admin/totalAttendance.png" width="600" height="300" />
+                                            <img id="report" src="~/Content/img/Admin Reports/totalAttendance.PNG" width="600" height="300">
                                         }
                                         else
                                         {
+                                            <!--Script to move between individual reports-->
+                                            <script type="text/javascript">
+                                                    function changeReport(id) {
+                                                        var counter = document.getElementById("counter").innerHTML;
+
+                                                        if (id == "next") {
+                                                            if (counter >= 4) {
+                                                                counter = 4;
+                                                            } else {
+                                                                counter++;
+                                                            }
+                                                         } else {
+                                                            if (counter <= 1) {
+                                                                counter = 1;
+                                                            } else {
+                                                                counter--;
+                                                            }
+                                                        }
+                                                        var img = document.getElementById("report");
+                                                        var newimg = '@Model.Student.ReportsId[0]';
+                                                        newimg = newimg.replace("_1", "_" + counter);
+                                                        img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
+                                                        document.getElementById("counter").innerHTML = counter;
+
+                                                    }
+                                            </script>
+
                                             var reportSource = Model.Student.ReportsId[0];
-                                            <img id="image" src="~/Content/img/Admin/@reportSource" width="600" height="300" />
+                                            <img id="report" src="~/Content/img/Admin Reports/@reportSource" width="600" height="300">
+                                            <br/>
+                                            <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)" 
+                                                     width="50" height="50">
+                                            <img id="next" src="~/Content/img/Admin Reports/nextIcon.png" onclick="changeReport(this.id)"
+                                                         width="50" height="50">
+                                            <a id="counter" visibility: hidden>1</a>
+
                                         }
 
                                     </span>
@@ -242,6 +282,8 @@
                 </div>
             </div>
         </div>
+
+        
 
     </div>
 </body>
