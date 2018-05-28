@@ -57,28 +57,28 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Help/Example page for Shop
+        /// Help/Example page for AdminIntro View
         /// </summary>
         /// <returns></returns>
-        public ActionResult ShopExample ()
+        public ActionResult AdminIntro ()
         {
             return View();
         }
 
         /// <summary>
-        /// Help/Example page for Student View
+        /// Help/Example page for Kiosk Intro View
         /// </summary>
         /// <returns></returns>
-        public ActionResult StudentExample()
+        public ActionResult KioskIntro()
         {
             return View();
         }
 
         /// <summary>
-        /// Help/Example page for Avatar House
+        /// Help/Example page for Student Intro View
         /// </summary>
         /// <returns></returns>
-        public ActionResult HouseExample()
+        public ActionResult StudentIntro()
         {
             return View();
         }
