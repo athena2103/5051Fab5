@@ -32,6 +32,35 @@ namespace _5051.Controllers
         }
 
         /// <summary>
+        /// Landing page for admin to unlock the Kiosk
+        /// </summary>
+        /// <returns></returns>
+        // GET: Kiosk
+        public ActionResult Landing()
+        {           
+            return View(StudentViewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Landing(string passphase = "")
+        {
+            string valid = "schoolworks";
+            if (passphase == "")
+            {
+                // Send to Error Page
+                return RedirectToAction("Landing", new { route = "Home", action = "Error" });
+            }
+            if(passphase == valid) {
+                return RedirectToAction("Index");
+            } else {
+
+                return RedirectToAction("Landing", new { route = "Home", action = "Error" });
+
+            }
+        }
+
+        /// <summary>
         /// For students to create a new profile at the Kiosk
         /// </summary>
         /// <returns></returns>
