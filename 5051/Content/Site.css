@@ -187,11 +187,12 @@ a.navbar-brand {
 }
 
 .intro {
-    padding-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
     background-color: white;
     margin: auto;
-    height: 400px;
+    height: auto;
 }
 
 .banner {
@@ -199,7 +200,8 @@ a.navbar-brand {
     width: 100%;
     margin: auto;
     padding-top: 70px;
-    height:300px;
+    padding-bottom: 70px;
+    height: auto;
 }
 
 .banner hr {
