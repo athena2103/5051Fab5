@@ -7,34 +7,28 @@
 <head>
   
 </head>
-<body background="~/Content/img/adminBackground.png">
+<body>
 
     <div class="container">
-        <!--script to switch between report and edit attendance table-->
+        <!--Support print button-->
         <script>
-            function changeImage() {
-                 var img = document.getElementById("report");
-                 img.src = "@Url.Content("~/Content/img/defaultEditAttendance.png")";
-                 img.style.height = "200px";
-                 img.style.width = "800px";
-                 return false;
+            function Print(){
+                window.print();
             }
         </script>
-
        
 
         <div class="col-md-8">
-            <h3>Reports</h3>
+            <h3>Manage Students</h3>
         </div>
 
         <div class="col-md-4">
             @{
-                if (Model.Student!= null)
-                {
-                    @Html.ActionLink("Manage student info", "Read", "Student",
-                    new { id = Model.Student.Id }, new { @class = "btn btn-primary" })
-                    <a href="#" class="btn btn-primary" role="button" onclick="changeImage();">Edit attendance</a>
-                }
+                <div style="float:right;">
+                    @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
+                    <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
+                </div>
+                    
             }
 
 
@@ -53,6 +47,55 @@
                         }
                         else
                         {
+
+                            <!--script to switch between report and edit attendance table-->
+                            <script type="text/javascript">
+                                function changeImage(cmd) {
+                                    var img = document.getElementById("report");
+                                    if (cmd == "report") {
+
+                                        if ('@Model.StudentList.Count' == 0) {
+
+                                        } else {
+                                            img.src = "@Url.Content("~/Content/img/Admin Reports/totalAttendance.png")";
+                                            img.style.width = "600px";
+                                        }
+
+                                    } else if (cmd == "edit") {
+                                         img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance1.png")";
+                                         img.style.width = "500px";
+                                         document.getElementById("next").style.visibility = "hidden";
+                                         document.getElementById("back").style.visibility = "hidden";
+                                         var EditBttn = document.createElement('a');
+                                         EditBttn.innerHTML = "Edit";
+                                         EditBttn.setAttribute('href', "#");
+                                         EditBttn.setAttribute('class', 'btn btn-primary');
+                                         EditBttn.setAttribute('role', 'button');
+                                         EditBttn.setAttribute('onclick', "changeImage('editEntry')");
+                                         document.getElementById("reportPane").appendChild(EditBttn);
+
+                                         var SubmitBttn = document.createElement('a');
+                                         SubmitBttn.innerHTML = "Save";
+                                         SubmitBttn.setAttribute('href', "#");
+                                         SubmitBttn.setAttribute('class', 'btn btn-success');
+                                         SubmitBttn.setAttribute('role', 'button');
+                                         SubmitBttn.setAttribute('onclick', "changeImage('submit')");
+                                         document.getElementById("reportPane").appendChild(SubmitBttn);
+
+                                       
+                                         
+                                    } else if (cmd == "editEntry") {
+                                        img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance2.png")";
+                                        img.style.width = "500px";
+                                    } else if (cmd == "submit") {
+                                        img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance3.png")";
+                                        img.style.width = "500px";
+                                    }
+
+                                }
+                            </script>
+
+
                             <div class="col-md-4">
                                 <br /><br />
                                 @{
@@ -221,18 +264,24 @@
                                     }
                                 }
                             </div>
-                            <div class="col-md-8">
+                            <div  class="col-md-8">
+                                <!--Menu bar above the report-->
                                 <span class="pull-left">
                                     <label for="frDate">From date:</label>
                                     <input type="date" id="frInput" name="frInput">
                                     <label for="toDate">To date:</label>
                                     <input type="date" id="toInput" name="toInput">
+                                    <a href="#" class="btn btn-success" role="button" 
+                                       onclick="changeImage('report')">Run</a>
+                                    <a href="#" class="btn btn-primary" role="button" onclick="changeImage('edit')">
+                                        Table View
+                                    </a>
                                 </span>
-                                <br\>
-                                    <span class="pull-left">
+                                
+                                <span id="reportPane" class="pull-left">
                                         @if (Model.Student == null)
                                         {
-                                            <img id="report" src="~/Content/img/Admin Reports/totalAttendance.PNG" width="600" height="300">
+                                            <img id="report" src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
                                         }
                                         else
                                         {
@@ -265,17 +314,17 @@
 
                                             var reportSource = Model.Student.ReportsId[0];
                                             <img id="report" src="~/Content/img/Admin Reports/@reportSource" width="600" height="300">
-                                            <br/>
-                                            <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)" 
-                                                     width="50" height="50">
+                                            <br />
+                                            <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)"
+                                                 width="50" height="50">
                                             <img id="next" src="~/Content/img/Admin Reports/nextIcon.png" onclick="changeReport(this.id)"
-                                                         width="50" height="50">
+                                                 width="50" height="50">
                                             <a id="counter" visibility: hidden>1</a>
 
                                         }
 
                                     </span>
-                            </div>
+</div>
 
                         }
                     }
