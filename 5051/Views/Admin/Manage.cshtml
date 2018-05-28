@@ -61,7 +61,7 @@
                                             img.style.width = "600px";
                                         }
 
-                                    } else if (cmd == "edit") {
+                                    } else if (cmd == "edit" && '@Model.StudentList.Count' == 0 ) {
                                          img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance1.png")";
                                          img.style.width = "500px";
                                          document.getElementById("next").style.visibility = "hidden";
@@ -82,8 +82,8 @@
                                          SubmitBttn.setAttribute('onclick', "changeImage('submit')");
                                          document.getElementById("reportPane").appendChild(SubmitBttn);
 
-                                       
-                                         
+
+
                                     } else if (cmd == "editEntry") {
                                         img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance2.png")";
                                         img.style.width = "500px";

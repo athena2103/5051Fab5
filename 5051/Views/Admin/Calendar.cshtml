@@ -5,15 +5,36 @@
 
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
+<script>
+    function overrideCalendar() {
+        if (confirm("Confirm to override")) {
+            var img = document.getElementById("calendar");
+            img.src = "@Url.Content("~/Content/img/Admin Reports/calendar1.png")";
+            alert("System is set to take attendance on this day.");
+        } else {
+            return false;
+        }
+
+
+    }
+</script>
+
 <div id="background3">
     <div class="row text-center">
         <div class="container">
+            <div style="float:right;" align="center">
+                @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
+            </div>
             <h2>Welcome to Admin Calendar</h2>
-            <p>Calendar to override days to take or to not take attendance. To be implemented further</p>
+            <p>Click on calendar to override days to take or to not take attendance
+                
+            </p>
             <br />
             <br />
-
-            <img src="~/Content/img/defaultCalendarX.png" width="700"/>
+            <a href="#" onclick="overrideCalendar()">
+                <img id="calendar" src="~/Content/img/Admin Reports/calendar.png" width="700" />
+            </a>
+            
 
         </div>
     </div>
