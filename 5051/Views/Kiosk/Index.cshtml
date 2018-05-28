@@ -4,169 +4,174 @@
     ViewBag.Title = "Index";
 }
 
+<script>
+    $(document).ready(
+        function () {
+            $('#listusers a').hover(
+                function () {
+                    var linkIndex = $(this).attr("data-filename");
+                    $(this).addClass('hover');
+                    $('.box img').attr('src', linkIndex);
+                    $(".box h2").text($(this).text());
+                }),
+                $('#listusers a').click(
+                    function () {
+                        var linkIndex = $(this).attr("data-filename");
+                        $(this).addClass('hover');
+                        $('.box img').attr('src', linkIndex);
+                        $(".box h4").text($(this).text() + " has earned 100 points.");
+                    }
+                )
+        });
+
+</script>
 
 <div id="background2">
-    <div class="row">
-        <script>
-            $(document).ready(
-                function () {
-                    $('#navigation a').hover(
-                        function () {
-                            var linkIndex = $(this).attr("data-filename");
-                            $(this).addClass('hover');
-                            $('.box img').attr('src', linkIndex);
-                            $(".box h2").text($(this).text());
-                        }),
-                        $('#navigation a').click(
-                            function () {
-                                var linkIndex = $(this).attr("data-filename");
-                                $(this).addClass('hover');
-                                $('.box img').attr('src', linkIndex);
-                                $(".box h2").text($(this).text() + " has earned 100 points.");
-                            }
-                        )
-                });
-
-        </script>
-
-        <div class="kiosk">
-
-            <div id="row">
-                <center>
-                    <h1 class="text-center">Good Morning!</h1>
-                    <div id="clock">
-                        <p class="unit" id="hours"></p>:
-                        <p class="unit" id="minutes"></p>:
-                        <p class="unit" id="seconds"></p>
-                        <p class="unit" id="ampm"></p>
-                        <script src="~/Scripts/clock.js"></script>
-                    </div>
-                </center>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-
-                    <h2>Press your thumbnail to clock in/out.</h2>
-                    <div id="listusers">
-                        <div id="navigation">
-                            <ul class="list-unstyled">
-                                @{
-                                    if (Model.StudentList == null || !Model.StudentList.Any())
-                                    {
-                                        <br />
-                                        <p>No Students in the System</p>
-                                        <br />
-                                    }
-                                    else
-                                    {
-                                        // Logged IN first
-                                        foreach (var item in Model.StudentList)
+    <div id="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <center><h1>Good Morning!</h1></center>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <h4>Click your thumbnail to clock in/out.</h4>
+                            <div id="listusers" class="kiosk">
+                                <ul class="list-unstyled">
+                                    @{
+                                        if (Model.StudentList == null || !Model.StudentList.Any())
                                         {
-                                            if (item.Status == _5051.Models.StudentStatusEnum.In)
+                                            <br />
+                                            <p>No Students in the System</p>
+                                            <br />
+                                        }
+                                        else
+                                        {
+                                            // Logged IN first
+                                            foreach (var item in Model.StudentList)
                                             {
-                                                <li>
-                                                    <div class="serviceBox">
-                                                        <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id" data-filename="/Content/img/@item.AvatarUri">
-                                                            <div class="service-icon">
-                                                                <img id="avatar-green" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                                            </div>
-                                                            <p class="description">
-                                                                @item.Name
-                                                            </p>
-                                                        </a>
-                                                    </div>
-                                                </li>
+                                                if (item.Status == _5051.Models.StudentStatusEnum.In)
+                                                {
+                                                    <li>
+                                                        <div class="serviceBox">
+                                                            <a id="@item.Id" href="~/Kiosk/SetLogOut/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                                                <div class="service-icon">
+                                                                    <img id="avatar-green" src="~/Content/img/@item.AvatarUri" class="img-responsive" />
+                                                                </div>
+                                                                <p class="description">
+                                                                    @item.Name
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
 
-                                            }
-                                            else
-                                            {
-                                                <li>
-                                                    <div class="serviceBox">
-                                                        <a id="@item.Id" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
-                                                            <div class="service-icon">
-                                                                <img id="avatar-red" src="~/Content/img/@item.AvatarUri" width="75" height="75" />
-                                                            </div>
-                                                            <p class="description">
-                                                                @item.Name
-                                                            </p>
-                                                        </a>
-                                                    </div>
-                                                </li>
+                                                }
+                                                else
+                                                {
+                                                    <li>
+                                                        <div class="serviceBox">
+                                                            <a id="@item.Id" href="~/Kiosk/SetLogIn/@item.Id" data-filename="/Content/img/@item.AvatarUri">
+                                                                <div class="service-icon">
+                                                                    <img id="avatar-white" src="~/Content/img/@item.AvatarUri" class="img-responsive" />
+                                                                </div>
+                                                                <p class="description">
+                                                                    @item.Name
+                                                                </p>
+                                                            </a>
+                                                        </div>
+                                                    </li>
+                                                }
                                             }
                                         }
                                     }
-                                }
-                            </ul>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div class="row"> @Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block" })</div>
+
+                        <!--
+                        <div text-center">
+                            <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-success" id="clockinlink">Clock in</a>
+                            <a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-success" id="clockoutlink">Clock Out</a>
+                        </div>-->
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <div id="row">
+                            <center>
+                                <div id="clock">
+                                    <p class="unit" id="hours"></p>:
+                                    <p class="unit" id="minutes"></p>:
+                                    <p class="unit" id="seconds"></p>
+                                    <p class="unit" id="ampm"></p>
+                                    <script src="~/Scripts/clock.js"></script>
+                                </div>
+                            </center>
+                        </div>
+                        <div class="kiosk" id="avatarsidebar">
+                            <div id="row">
+                                <div class="box">
+                                    <center>
+                                        <h2></h2>
+                                        <img id="avatar" src="" class="img-responsive" />
+                                        <h4></h4>
+                                    </center>
+
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    @Html.ActionLink("New profile", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block" })
-                </div>
-                <div class="col-md-6">
-                    <div class="box">
-                        <center>
-                            <img id="avatar" src="" width="350" height="350" />
-                            <div style="height:20px;"><h2></h2></div>
-                        </center>
-
-                    </div>
                 </div>
             </div>
-
-  
-                    <!--
-    <div text-center">
-        <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-success" id="clockinlink">Clock in</a>
-        <a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-success" id="clockoutlink">Clock Out</a>
-    </div>-->
-
-               
-
-            </div>
+        </div>
 
     </div>
 </div>
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
 
-                <h5 class="modal-title" id="exampleModalLabel">Clock in</h5>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                Clock In Successfully! <br>
-                You have earned 100 points from clocking in today!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <h5 class="modal-title" id="exampleModalLabel">Clock in</h5>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    Clock In Successfully! <br>
+                    You have earned 100 points from clocking in today!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Logout Modal -->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
+    <!-- Logout Modal -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
 
-                <h5 class="modal-title" id="exampleModalLabel">Clock out</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Clock out</h5>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body text-center">
-                Clock Out Successfully! <br>
-                You have earned 100 points from clocking out today!
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    Clock Out Successfully! <br>
+                    You have earned 100 points from clocking out today!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
