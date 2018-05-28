@@ -38,6 +38,7 @@
     height: 100%;
     margin: 0 auto;
     z-index: 1;
+    opacity: 0.75;
     background-image: url("../Content/img/nightimeBackground.png");
 }
 
