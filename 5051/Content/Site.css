@@ -265,7 +265,7 @@ a.navbar-brand {
 }
 
 #listusers {
-    height: 600px;
+    height: auto;
     column-count: 3;
 }
 
