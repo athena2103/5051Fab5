@@ -272,7 +272,7 @@
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\AvatarLevel.png" />
     <Content Include="Content\img\ChartPlaceholder.png" />
-    <Content Include="Content\img\daytime.png" />
+    <Content Include="Content\img\daytimeBackground.png" />
     <Content Include="Content\img\defaultavatarX.png" />
     <Content Include="Content\img\defaultCalendarIcon.png" />
     <Content Include="Content\img\defaultCalendarX.PNG" />
@@ -294,7 +294,9 @@
     <Content Include="Content\img\individualGraph.png" />
     <Content Include="Content\img\KioskLoginPanel.png" />
     <Content Include="Content\img\KioskReg.png" />
+    <Content Include="Content\img\month_year.png" />
     <Content Include="Content\img\nightime.png" />
+    <Content Include="Content\img\nightimeBackground.png" />
     <Content Include="Content\img\PortalAvatars.png" />
     <Content Include="Content\img\PortalCustomize.png" />
     <Content Include="Content\img\PortalHouse.png" />
@@ -309,12 +311,12 @@
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\storeMockup.png" />
+    <Content Include="Content\img\StudentCommunity.PNG" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
     <Content Include="Content\img\StudentReport.PNG" />
     <Content Include="Content\img\studentReportWireframe.png" />
-    <Content Include="Content\img\student_community.PNG" />
     <Content Include="Content\img\student_logout.PNG" />
     <Content Include="Content\img\sunset.png" />
     <Content Include="Content\img\totalGraph.png" />
@@ -394,9 +396,6 @@
     <Content Include="Views\Student\Create.cshtml" />
     <Content Include="Views\Student\Delete.cshtml" />
     <Content Include="Views\Home\Privacy.cshtml" />
-    <Content Include="Views\Home\StudentExample.cshtml" />
-    <Content Include="Views\Home\ShopExample.cshtml" />
-    <Content Include="Views\Home\HouseExample.cshtml" />
     <Content Include="Views\Portal\Index.cshtml" />
     <Content Include="Views\Portal\Settings.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
@@ -417,12 +416,12 @@
     <Content Include="Views\Portal\AdminLogin.cshtml" />
     <Content Include="Views\Student\Accomplishments.cshtml" />
     <Content Include="Views\Student\Avatar.cshtml" />
-    <Content Include="Views\Student\Avatar_Fab5.cshtml" />
     <Content Include="Views\Student\Market.cshtml" />
     <Content Include="Views\Student\Report.cshtml" />
     <Content Include="Views\Home\StudentIntro.cshtml" />
     <Content Include="Views\Home\KioskIntro.cshtml" />
     <Content Include="Views\Home\AdminIntro.cshtml" />
+    <Content Include="Views\Kiosk\Landing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
