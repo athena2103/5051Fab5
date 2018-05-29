@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    var t = TempData["ReturnMsg"];
 }
 
 <script>
@@ -19,18 +20,27 @@
                         var linkIndex = $(this).attr("data-filename");
                         $(this).addClass('hover');
                         $('.box img').attr('src', linkIndex);
-                        $(".box h4").text($(this).text() + " has earned 100 points.");
                     }
                 )
         });
 
 </script>
 
+@if (t != null)
+{
+    <script type="text/javascript">
+        $(window).on('load', function () {
+            $('#loginModal').modal('show');
+        });
+    </script>
+}
 <div id="background2">
     <div id="container-fluid">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
-                <center><h1>Good Morning!</h1></center>
+                <center>
+                    <h1>Good Morning!</h1>
+                </center>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
                         <div class="row">
@@ -114,7 +124,6 @@
                                     <center>
                                         <h2></h2>
                                         <img id="avatar" src="" class="img-responsive" />
-                                        <h4></h4>
                                     </center>
 
                                 </div>
@@ -124,54 +133,32 @@
                 </div>
             </div>
         </div>
-
+        <div class="row">
+            <div class="road"><hr /></div>
+        </div>
     </div>
 </div>
 
 
 
-    <!-- Login Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
 
-                    <h5 class="modal-title" id="exampleModalLabel">Clock in</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Login Kiosk</h5>
 
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    Clock In Successfully! <br>
-                    You have earned 100 points from clocking in today!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                @t
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
-
-    <!-- Logout Modal -->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h5 class="modal-title" id="exampleModalLabel">Clock out</h5>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body text-center">
-                    Clock Out Successfully! <br>
-                    You have earned 100 points from clocking out today!
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
