@@ -160,6 +160,39 @@ namespace _5051.Backend
         }
 
         /// <summary>
+        /// Increase student tokens with a input reward
+        /// </summary>
+        public void UpTokens(string id, int amount)
+        {
+            var data = DataSource.Read(id);
+            if (data == null)
+            {
+                return;
+            }
+            data.Tokens += amount;
+            DataSource.Update(data);
+            // TODO:  Make call to the Attendance Log, to track when the student logged In.
+
+        }
+
+        /// <summary>
+        /// Decrease student tokens with a input amount
+        /// </summary>
+        /// <param name="id">The Student ID</param>
+        public void DownTokens(string id, int amount)
+        {
+            var data = DataSource.Read(id);
+            if (data == null)
+            {
+                return;
+            }
+            data.Tokens -= amount;
+            DataSource.Update(data);
+            // TODO:  Make call to the Attendance Log, to track when the student logged In.
+
+        }
+
+        /// <summary>
         /// Sets the student to be logged Out
         /// </summary>
         /// <param name="id">The Student ID</param>
