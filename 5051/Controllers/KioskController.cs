@@ -74,7 +74,7 @@ namespace _5051.Controllers
             return View(StudentViewModel);
         }
 
-        // GET: Kiosk/SetLogout/5
+        // GET: Kiosk/SetLogin/5
         public ActionResult SetLogin(string id)
         {
             if (string.IsNullOrEmpty(id))
@@ -83,6 +83,8 @@ namespace _5051.Controllers
             }
 
             StudentBackend.ToggleStatusById(id);
+            string name = StudentBackend.Read(id).Name;
+            TempData["ReturnMsg"] = "Clock in successful at " + DateTime.Now + ". You have earned 100 points!";
             return RedirectToAction("Index");
         }
 
@@ -93,8 +95,10 @@ namespace _5051.Controllers
             {
                 return RedirectToAction("Error", "Home", "Invalid Data");
             }
-
+            string name = StudentBackend.Read(id).Name;
+            TempData["ReturnMsg"] = "Clocks out successful at " + DateTime.Now + ". You have earned 100 points!";
             StudentBackend.ToggleStatusById(id);
+            
             return RedirectToAction("Index");
         }
     }
