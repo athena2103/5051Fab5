@@ -225,7 +225,6 @@ a.navbar-brand {
 }
 
 .footer {
-    margin-top: 5px;
     width: 100%;
     /* Set the fixed height of the footer here */
     height: 60px;
@@ -293,4 +292,17 @@ a.navbar-brand {
         color: white;
         font-size: 60px;
         font-family: 'Ubuntu', sans-serif;
+}
+
+.road {
+    background: rgb(138,138,138);
+    background: linear-gradient(180deg, rgba(138,138,138,1) 0%, rgba(162,162,162,1) 50%, rgba(85,85,85,1) 100%);
+    height:110px;
+}
+.road hr {
+        vertical-align: middle;
+        border-bottom: 10px dashed white;
+        padding-top: 50px;
+        margin-top:0px;
+        margin-bottom:0px;
 }
