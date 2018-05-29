@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
     var t = TempData["ReturnMsg"];
+    var bal = TempData["balance"];
 }
 
 <script>
@@ -150,6 +151,8 @@
             </div>
             <div class="modal-body text-center">
                 <h4>@t</h4>
+                <p>The reward is 100 points.</p>
+                <p>Your token balance is now @bal</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
