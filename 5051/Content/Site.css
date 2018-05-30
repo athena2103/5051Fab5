@@ -40,7 +40,7 @@
 
 
 body {
-    background: #fefbd8;
+    background: #3f3f3f;
     padding-bottom: 20px;
     padding-top: 80px;
     font-family: 'Ubuntu', sans-serif;
@@ -215,7 +215,7 @@ a.navbar-brand {
 }
 
 .navbar-default {
-    background-color: rgb(33, 209, 146);
+    background-color: #add3d9;
     font-size: 20px;
     color: white;
 }
