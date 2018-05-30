@@ -84,7 +84,7 @@ namespace _5051.Controllers
 
             StudentBackend.ToggleStatusById(id);
             string name = StudentBackend.Read(id).Name;
-            TempData["ReturnMsg"] = "Clock in successfully at " + DateTime.Now + "!";
+            TempData["ReturnMsg"] = StudentBackend.Read(id).Name + " clocked in successfully at " + DateTime.Now + "!";
             StudentBackend.UpTokens(id, 100);
             TempData["balance"] = StudentBackend.Read(id).Tokens;
             return RedirectToAction("Index");
@@ -98,7 +98,7 @@ namespace _5051.Controllers
                 return RedirectToAction("Error", "Home", "Invalid Data");
             }
 
-            TempData["ReturnMsg"] = "Clock out successfully at " + DateTime.Now + "!";
+            TempData["ReturnMsg"] = StudentBackend.Read(id).Name + " clocked out successfully at " + DateTime.Now + "!";
             StudentBackend.UpTokens(id, 100);
             TempData["balance"] = StudentBackend.Read(id).Tokens;
             StudentBackend.ToggleStatusById(id);
