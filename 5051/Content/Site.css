@@ -269,8 +269,11 @@ a.navbar-brand {
 
 
 #listusers {
-    height: auto;
-    column-count: 3;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-height: 550px;
+    columns: 100px 4;
+
 }
 
 #listusers a {
@@ -281,6 +284,7 @@ a.navbar-brand {
 
 #avatarsidebar {
     height: 470px;
+    margin-bottom: 30px;
 }
 
 .kiosk {
@@ -291,8 +295,6 @@ a.navbar-brand {
     box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
     color: white;
     padding: 20px;
-    padding: 20px;
-    margin-bottom: 30px;
     color: white;
 }
 
@@ -324,4 +326,5 @@ a.navbar-brand {
 
 .kioskbtn {
     font-size: 40px;
+    margin-bottom:40px;
 }
