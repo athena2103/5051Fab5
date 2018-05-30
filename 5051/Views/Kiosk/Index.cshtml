@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Index";
     var t = TempData["ReturnMsg"];
-    var bal = TempData["balance"];
+    var t2 = TempData["ReturnMsg2"];
+    var t3 = TempData["ReturnMsg3"];
 }
 
 <script>
@@ -28,8 +29,9 @@
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <h4>Click your thumbnail to clock in/out.</h4>
+
                         <div class="row">
+                            <h4>Click your thumbnail to clock in/out.</h4>
                             <div id="listusers" class="kiosk">
                                 <ul class="list-unstyled">
                                     @{
@@ -110,13 +112,13 @@
                                     <center>
                                         @if (t == null)
                                         {
-                                             <h1>Good Morning!</h1>
+                                            <h1>Good Morning!</h1>
                                         }
                                         else
                                         {
                                             <h4>@t</h4>
-                                            <p>The reward is 100 points.</p>
-                                            <p>Your token balance is now @bal</p>
+                                            <h4>@t2</h4>
+                                            <h4>@t3</h4>
                                         }
                                     </center>
 
