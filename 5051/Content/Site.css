@@ -190,9 +190,17 @@ a.navbar-brand {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
-    background-color: white;
+    background-color: #d7d8d9;
     margin: auto;
     height: auto;
+}
+
+.btn-primary {
+    color: #fff;
+}
+
+.btn.btn-primary{
+    color: #fff;
 }
 
 .banner {
