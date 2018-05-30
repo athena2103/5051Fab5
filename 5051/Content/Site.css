@@ -7,7 +7,7 @@
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 10px;
     min-height: 800px;
     margin: 0 auto;
     z-index: 1;
@@ -27,6 +27,7 @@
 }
 
 #background3 {
+    background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
     background-repeat: repeat;
     background-size: cover;
@@ -37,13 +38,12 @@
     margin: 0 auto;
     z-index: 1;
     opacity: 0.75;
-    background-image: url("../Content/img/nightimeBackground.png");
 }
 
 
 
 body {
-    background: #3f3f3f;
+    background: #666666;
     padding-bottom: 20px;
     padding-top: 80px;
     font-family: 'Ubuntu', sans-serif;
@@ -57,7 +57,7 @@ h1 {
 }
 
 .student-header {
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: 5.9vw;
 }
 
@@ -123,8 +123,8 @@ textarea {
 
     position: absolute;
     left: 50%;
-    top: 12%;
-    font-size: calc(1.3vw + 1.3vh);
+    top: 15%;
+    font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
 }
 
