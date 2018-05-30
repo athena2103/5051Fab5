@@ -129,7 +129,17 @@ namespace _5051.Backend
         /// </summary>
         public void Initialize()
         {
-           
+            Create(new AvatarModel("/Avatar/avatar1.png", "Avatar1", "Avatar1", 1));
+            Create(new AvatarModel("/Avatar/avatar2.png", "Avatar2", "Avatar2", 1));
+            Create(new AvatarModel("/Avatar/avatar3.png", "Avatar3", "Avatar3", 1));
+            Create(new AvatarModel("/Avatar/avatar4.png", "Avatar4", "Avatar4", 1));
+            Create(new AvatarModel("/Avatar/avatar5.png", "Avatar5", "Avatar5", 1));
+            Create(new AvatarModel("/Avatar/avatar6.png", "Avatar6", "Avatar6", 1));
+            Create(new AvatarModel("/Avatar/avatar7.png", "Avatar7", "Avatar7", 1));
+            Create(new AvatarModel("/Avatar/avatar8.png", "Avatar8", "Avatar8", 1));
+            Create(new AvatarModel("/Avatar/avatar9.png", "Avatar9", "Avatar9", 1));
+            Create(new AvatarModel("/Avatar/avatar10.png", "Avatar10", "Avatar10", 1));
+
             Create(new AvatarModel("defaultFAvatar.png", "fDefault", "fDefault", 1));
             Create(new AvatarModel("defaultMAvatar.png", "mDefault", "mDefault", 1));
             Create(new AvatarModel("djhAvatar.png", "fartard", "fartard", 1));
