@@ -66,21 +66,29 @@
                                          img.style.width = "500px";
                                          document.getElementById("next").style.visibility = "hidden";
                                          document.getElementById("back").style.visibility = "hidden";
-                                         var EditBttn = document.createElement('a');
-                                         EditBttn.innerHTML = "Edit";
-                                         EditBttn.setAttribute('href', "#");
-                                         EditBttn.setAttribute('class', 'btn btn-primary');
-                                         EditBttn.setAttribute('role', 'button');
-                                         EditBttn.setAttribute('onclick', "changeImage('editEntry')");
-                                         document.getElementById("reportPane").appendChild(EditBttn);
 
-                                         var SubmitBttn = document.createElement('a');
-                                         SubmitBttn.innerHTML = "Save";
-                                         SubmitBttn.setAttribute('href', "#");
-                                         SubmitBttn.setAttribute('class', 'btn btn-success');
-                                         SubmitBttn.setAttribute('role', 'button');
-                                         SubmitBttn.setAttribute('onclick', "changeImage('submit')");
-                                         document.getElementById("reportPane").appendChild(SubmitBttn);
+                                         if (!document.getElementById("tbEdit")) {
+                                             var EditBttn = document.createElement('a');
+                                             EditBttn.innerHTML = "Edit";
+                                             EditBttn.setAttribute('href', "#");
+                                             EditBttn.setAttribute('id', 'tbEdit');
+                                             EditBttn.setAttribute('class', 'btn btn-primary');
+                                             EditBttn.setAttribute('role', 'button');
+                                             EditBttn.setAttribute('onclick', "changeImage('editEntry')");
+                                             document.getElementById("reportPane").appendChild(EditBttn);
+                                         }
+                                         
+                                         if (!document.getElementById("tbSave")) {
+                                             var SubmitBttn = document.createElement('a');
+                                             SubmitBttn.innerHTML = "Save";
+                                             SubmitBttn.setAttribute('href', "#");
+                                             SubmitBttn.setAttribute('id', 'tbSave');
+                                             SubmitBttn.setAttribute('class', 'btn btn-success');
+                                             SubmitBttn.setAttribute('role', 'button');
+                                             SubmitBttn.setAttribute('onclick', "changeImage('submit')");
+                                             document.getElementById("reportPane").appendChild(SubmitBttn);
+                                         }
+                                         
 
 
 
