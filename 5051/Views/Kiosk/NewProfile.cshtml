@@ -2,7 +2,6 @@
 
 @{
     ViewBag.Title = "Kiosk Mode - New Student Profile";
-    var t = TempData["ReturnMsg"];
 }
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <div id="background2">
@@ -66,10 +65,6 @@
                         <input type="submit" value="Create" class="button button-block">
                     </div>
 
-                }
-                @if (t != null )
-                {
-                    <p>@t</p>
                 }
             </div>
         </div>

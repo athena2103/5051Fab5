@@ -271,6 +271,16 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\AvatarLevel.png" />
+    <Content Include="Content\img\Avatar\avatar1.png" />
+    <Content Include="Content\img\Avatar\avatar10.png" />
+    <Content Include="Content\img\Avatar\avatar2.png" />
+    <Content Include="Content\img\Avatar\avatar3.png" />
+    <Content Include="Content\img\Avatar\avatar4.png" />
+    <Content Include="Content\img\Avatar\avatar5.png" />
+    <Content Include="Content\img\Avatar\avatar6.png" />
+    <Content Include="Content\img\Avatar\avatar7.png" />
+    <Content Include="Content\img\Avatar\avatar8.png" />
+    <Content Include="Content\img\Avatar\avatar9.png" />
     <Content Include="Content\img\ChartPlaceholder.png" />
     <Content Include="Content\img\daytimeBackground.png" />
     <Content Include="Content\img\defaultavatarX.png" />
