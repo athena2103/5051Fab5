@@ -13,33 +13,31 @@
             $('#listusers a').hover(
                 function () {
                     var linkIndex = $(this).attr("data-filename");
-                    $(".box img:hidden").show();
+                    $("#box img:hidden").show();
                     $(this).addClass('hover');
-                    $('.box img').attr('src', linkIndex);
-                    $(".box h2").text($(this).text());
+                    $('#box img').attr('src', linkIndex);
+                    $("#box h2").text($(this).text());
                 })
         });
 
 </script>
 
 
-<div id="background2">
-    <div id="container-fluid">
+
+    <div class="container-fluid" id="kioskbackground">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-
+                        <h1>Click your thumbnail to clock in/out.</h1>
                         <div class="row">
-                            <h4>Click your thumbnail to clock in/out.</h4>
-                            <div id="listusers" class="kiosk">
+
+                            <div id="listusers" class="kioskModule">
                                 <ul class="list-unstyled">
                                     @{
                                         if (Model.StudentList == null || !Model.StudentList.Any())
                                         {
-                                            <br />
-                                            <p>No Students in the System</p>
-                                            <br />
+                                            <li>No Students in the System</li>
                                         }
                                         else
                                         {
@@ -84,45 +82,38 @@
                             </div>
 
                         </div>
-                        <div class="row">@Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block kioskbtn" })</div>
+                        <div class="row">@Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "kioskModule", null, new { @class = "btn btn-success btn-lg btn-block kioskbtn" })</div>
 
                     </div>
                     <div class="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-0 hidden-xs">
-                        <div id="row">
+                        <div id="clock">
+                            <p class="unit" id="hours"></p>:
+                            <p class="unit" id="minutes"></p>:
+                            <p class="unit" id="seconds"></p>
+                            <p class="unit" id="ampm"></p>
+                            <script src="~/Scripts/clock.js"></script>
+                        </div>
+                        <div class="kioskModule" id="avatarsidebar">
+                            <div id="box">
+                                <center>
+                                    <img id="avatar" style="display:none;" class="img-responsive" />
+                                    <h2></h2>
+                                </center>
+                            </div>
+                        </div>
+                        <div class=kioskModule id="box">
                             <center>
-                                <div id="clock">
-                                    <p class="unit" id="hours"></p>:
-                                    <p class="unit" id="minutes"></p>:
-                                    <p class="unit" id="seconds"></p>
-                                    <p class="unit" id="ampm"></p>
-                                    <script src="~/Scripts/clock.js"></script>
-                                </div>
+                                @if (t == null)
+                                {
+                                    <h1>Good Morning!</h1>
+                                }
+                                else
+                                {
+                                    <h4>@t</h4>
+                                    <h4>@t2</h4>
+                                    <h4>@t3</h4>
+                                }
                             </center>
-                        </div>
-                        <div class="kiosk" id="avatarsidebar">
-                                <div class="box">
-                                    <center>
-                                        <img id="avatar" style="display:none;" class="img-responsive"/>
-                                        <h2></h2>
-                                    </center>
-                                </div>
-                        </div>
-                        <div class="kiosk">
-                                <div class="box">
-                                    <center>
-                                        @if (t == null)
-                                        {
-                                            <h1>Good Morning!</h1>
-                                        }
-                                        else
-                                        {
-                                            <h4>@t</h4>
-                                            <h4>@t2</h4>
-                                            <h4>@t3</h4>
-                                        }
-                                    </center>
-
-                                </div>
                         </div>
                     </div>
                 </div>
@@ -132,6 +123,6 @@
             <div class="road"><hr /></div>
         </div>
     </div>
-</div>
+
 
 
