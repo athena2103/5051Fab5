@@ -130,8 +130,8 @@ namespace _5051.Backend
         public void Initialize()
         {
            
-            Create(new AvatarModel("defaultF1Avatar.png", "fDefault", "fDefault", 1));
-            Create(new AvatarModel("defaultM1Avatar.png", "mDefault", "mDefault", 1));
+            Create(new AvatarModel("djhAvatar.png", "fDefault", "fDefault", 1));
+            Create(new AvatarModel("djhAvatar.png", "mDefault", "mDefault", 1));
             Create(new AvatarModel("djhAvatar.png", "fartard", "fartard", 1));
             Create(new AvatarModel("dMNAvatar.png", "royal", "royal", 1));
             Create(new AvatarModel("dMN1Avatar.png", "losangeles", "losangels", 1));
