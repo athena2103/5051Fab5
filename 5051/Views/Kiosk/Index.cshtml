@@ -12,40 +12,24 @@
             $('#listusers a').hover(
                 function () {
                     var linkIndex = $(this).attr("data-filename");
+                    $(".box img:hidden").show();
                     $(this).addClass('hover');
                     $('.box img').attr('src', linkIndex);
                     $(".box h2").text($(this).text());
-                }),
-                $('#listusers a').click(
-                    function () {
-                        var linkIndex = $(this).attr("data-filename");
-                        $(this).addClass('hover');
-                        $('.box img').attr('src', linkIndex);
-                    }
-                )
+                })
         });
 
 </script>
 
-@if (t != null)
-{
-    <script type="text/javascript">
-        $(window).on('load', function () {
-            $('#loginModal').modal('show');
-        });
-    </script>
-}
+
 <div id="background2">
     <div id="container-fluid">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
-                <center>
-                    <h1>Good Morning!</h1>
-                </center>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
+                        <h4>Click your thumbnail to clock in/out.</h4>
                         <div class="row">
-                            <h4>Click your thumbnail to clock in/out.</h4>
                             <div id="listusers" class="kiosk">
                                 <ul class="list-unstyled">
                                     @{
@@ -97,15 +81,9 @@
                                 </ul>
                             </div>
 
-
                         </div>
-                        <div class="row"> @Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block" })</div>
+                        <div class="row">@Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block kioskbtn" })</div>
 
-                        <!--
-                        <div text-center">
-                            <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-success" id="clockinlink">Clock in</a>
-                            <a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-success" id="clockoutlink">Clock Out</a>
-                        </div>-->
                     </div>
                     <div class="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-0 hidden-xs">
                         <div id="row">
@@ -120,15 +98,29 @@
                             </center>
                         </div>
                         <div class="kiosk" id="avatarsidebar">
-                            <div id="row">
                                 <div class="box">
                                     <center>
+                                        <img id="avatar" style="display:none;" class="img-responsive"/>
                                         <h2></h2>
-                                        <img id="avatar" src="" class="img-responsive" />
+                                    </center>
+                                </div>
+                        </div>
+                        <div class="kiosk">
+                                <div class="box">
+                                    <center>
+                                        @if (t == null)
+                                        {
+                                             <h1>Good Morning!</h1>
+                                        }
+                                        else
+                                        {
+                                            <h4>@t</h4>
+                                            <p>The reward is 100 points.</p>
+                                            <p>Your token balance is now @bal</p>
+                                        }
                                     </center>
 
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -141,22 +133,3 @@
 </div>
 
 
-
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Student Kiosk</h5>
-            </div>
-            <div class="modal-body text-center">
-                <h4>@t</h4>
-                <p>The reward is 100 points.</p>
-                <p>Your token balance is now @bal</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
