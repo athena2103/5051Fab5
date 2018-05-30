@@ -256,12 +256,6 @@ a.navbar-brand {
     padding: 5px;
 }
 
-#avatarsidebar {
-    height: 540px;
-    padding-bottom:30px;
-    margin-bottom: 100px;
-    color:white;
-}
 
 #listusers {
     height: auto;
@@ -274,13 +268,20 @@ a.navbar-brand {
     text-align: center;
 }
 
+#avatarsidebar {
+    height: 470px;
+}
+
 .kiosk {
     opacity: 0.7;
     filter: alpha(opacity=70);
     background: #3e4444;
-    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
+    color: white;
+    padding: 20px;
+    padding: 20px;
+    margin-bottom: 30px;
     color: white;
 }
 
@@ -290,7 +291,7 @@ a.navbar-brand {
 
 .kiosk h2 {
         color: white;
-        font-size: 60px;
+        font-size: 50px;
         font-family: 'Ubuntu', sans-serif;
 }
 
@@ -301,10 +302,15 @@ a.navbar-brand {
     border-top: 5px solid white;
     border-bottom: 5px solid white;
 }
+
 .road hr {
-        vertical-align: middle;
-        border-bottom: 10px dashed white;
-        padding-top: 50px;
-        margin-top:0px;
-        margin-bottom:0px;
+    vertical-align: middle;
+    border-bottom: 10px dashed white;
+    padding-top: 50px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+
+.kioskbtn {
+    font-size: 40px;
 }
