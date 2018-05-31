@@ -459,6 +459,7 @@
     <Content Include="Views\Home\KioskIntro.cshtml" />
     <Content Include="Views\Home\AdminIntro.cshtml" />
     <Content Include="Views\Kiosk\Landing.cshtml" />
+    <Content Include="Views\Student\MarketAfter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

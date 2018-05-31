@@ -35,6 +35,11 @@ namespace _5051.Controllers
             return View();
         }
 
+        public ActionResult MarketAfter()
+        {
+            return View();
+        }
+
         /// <summary>
         /// Student's Avatar page
         /// </summary>
