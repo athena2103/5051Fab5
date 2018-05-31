@@ -73,12 +73,12 @@ h1 {
 .scroll-bar-horz {
     position: absolute;
     border: 1px solid black; 
-    width: 1300px; 
-    height: 200px; 
+    width: 1400px; 
+    height: 300px; 
     overflow-y: hidden; 
     overflow-x: scroll;
     margin: 50px;
-    margin-left:270px;
+    margin-left:250px;
 }
 
 
