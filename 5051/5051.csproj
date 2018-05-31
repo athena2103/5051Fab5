@@ -50,6 +50,9 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Rotativa, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rotativa.1.7.3\lib\net461\Rotativa.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -255,7 +258,7 @@
     <Content Include="Content\img\Admin Reports\student4_3Attendance.PNG" />
     <Content Include="Content\img\Admin Reports\student4_4Attendance.PNG" />
     <Content Include="Content\img\Admin Reports\student5_1Attendance.PNG" />
-    <Content Include="Content\img\Admin Reports\student5_2PAttendance.PNG" />
+    <Content Include="Content\img\Admin Reports\student5_2Attendance.PNG" />
     <Content Include="Content\img\Admin Reports\student5_3Attendance.PNG" />
     <Content Include="Content\img\Admin Reports\student5_4Attendance.PNG" />
     <Content Include="Content\img\Admin Reports\totalAttendance.PNG" />
@@ -365,11 +368,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Rotativa\help-wkhtmltoimage.txt" />
+    <Content Include="Rotativa\help-wkhtmltopdf.txt" />
+    <Content Include="Rotativa\wkhtmltoimage.exe" />
+    <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Browsers\qt.browser" />
     <None Include="Properties\PublishProfiles\5051 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Fab5-Staging - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\Fab5-SUperNova - Web Deploy.pubxml" />
@@ -378,6 +386,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.matchHeight.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -385,6 +394,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\scrolling-parallax.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
