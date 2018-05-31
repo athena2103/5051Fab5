@@ -67,6 +67,7 @@
                                          document.getElementById("next").style.visibility = "hidden";
                                          document.getElementById("back").style.visibility = "hidden";
 
+                                        //Do not create button if the button already exists
                                          if (!document.getElementById("tbEdit")) {
                                              var EditBttn = document.createElement('a');
                                              EditBttn.innerHTML = "Edit";
@@ -77,7 +78,8 @@
                                              EditBttn.setAttribute('onclick', "changeImage('editEntry')");
                                              document.getElementById("reportPane").appendChild(EditBttn);
                                          }
-                                         
+
+                                        //Do not create button if the button already exists
                                          if (!document.getElementById("tbSave")) {
                                              var SubmitBttn = document.createElement('a');
                                              SubmitBttn.innerHTML = "Save";
