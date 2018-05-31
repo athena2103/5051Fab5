@@ -1,5 +1,6 @@
 ﻿/* --------------Fab5 ----------------*/
 
+
 #background {
     background-image: url("../Content/img/sunset.png");
     background-position: center bottom;
@@ -342,6 +343,16 @@ a.navbar-brand {
     background-size: cover;
     min-height: 800px;
 }
+
+.form-group select {
+    border: none;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 100%;
+    border-radius: 4px;
+    height: 34px;
+    color: #555;
+}
+
 /**** End Kiosk Page CSS */
 
 
