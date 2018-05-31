@@ -3,7 +3,8 @@
 @{
     ViewBag.Title = "Index";
     var t = TempData["ReturnMsg"];
-    var bal = TempData["balance"];
+    var t2 = TempData["ReturnMsg2"];
+    var t3 = TempData["ReturnMsg3"];
 }
 
 <script>
@@ -12,48 +13,31 @@
             $('#listusers a').hover(
                 function () {
                     var linkIndex = $(this).attr("data-filename");
+                    $("#box img:hidden").show();
                     $(this).addClass('hover');
-                    $('.box img').attr('src', linkIndex);
-                    $(".box h2").text($(this).text());
-                }),
-                $('#listusers a').click(
-                    function () {
-                        var linkIndex = $(this).attr("data-filename");
-                        $(this).addClass('hover');
-                        $('.box img').attr('src', linkIndex);
-                    }
-                )
+                    $('#box img').attr('src', linkIndex);
+                    $("#box h2").text($(this).text());
+                })
         });
 
 </script>
 
-@if (t != null)
-{
-    <script type="text/javascript">
-        $(window).on('load', function () {
-            $('#loginModal').modal('show');
-        });
-    </script>
-}
-<div id="background2">
-    <div id="container-fluid">
+
+
+    <div class="container-fluid" id="kioskbackground">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
-                <center>
-                    <h1>Good Morning!</h1>
-                </center>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
+                        <h1>Click your thumbnail to clock in/out.</h1>
                         <div class="row">
-                            <h4>Click your thumbnail to clock in/out.</h4>
-                            <div id="listusers" class="kiosk">
+
+                            <div id="listusers" class="kioskModule">
                                 <ul class="list-unstyled">
                                     @{
                                         if (Model.StudentList == null || !Model.StudentList.Any())
                                         {
-                                            <br />
-                                            <p>No Students in the System</p>
-                                            <br />
+                                            <li>No Students in the System</li>
                                         }
                                         else
                                         {
@@ -97,38 +81,39 @@
                                 </ul>
                             </div>
 
-
                         </div>
-                        <div class="row"> @Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "Kiosk", null, new { @class = "btn btn-success btn-lg btn-block" })</div>
+                        <div class="row">@Html.ActionLink("CREATE NEW ACCOUNT", "NewProfile", "kioskModule", null, new { @class = "btn btn-success btn-lg btn-block kioskbtn" })</div>
 
-                        <!--
-                        <div text-center">
-                            <a href="#" data-toggle="modal" data-target="#loginModal" class="btn btn-success" id="clockinlink">Clock in</a>
-                            <a href="#" data-toggle="modal" data-target="#logoutModal" class="btn btn-success" id="clockoutlink">Clock Out</a>
-                        </div>-->
                     </div>
                     <div class="col-md-5 col-md-offset-1 col-sm-6 col-sm-offset-0 hidden-xs">
-                        <div id="row">
-                            <center>
-                                <div id="clock">
-                                    <p class="unit" id="hours"></p>:
-                                    <p class="unit" id="minutes"></p>:
-                                    <p class="unit" id="seconds"></p>
-                                    <p class="unit" id="ampm"></p>
-                                    <script src="~/Scripts/clock.js"></script>
-                                </div>
-                            </center>
+                        <div id="clock">
+                            <p class="unit" id="hours"></p>:
+                            <p class="unit" id="minutes"></p>:
+                            <p class="unit" id="seconds"></p>
+                            <p class="unit" id="ampm"></p>
+                            <script src="~/Scripts/clock.js"></script>
                         </div>
-                        <div class="kiosk" id="avatarsidebar">
-                            <div id="row">
-                                <div class="box">
-                                    <center>
-                                        <h2></h2>
-                                        <img id="avatar" src="" class="img-responsive" />
-                                    </center>
-
-                                </div>
+                        <div class="kioskModule" id="avatarsidebar">
+                            <div id="box">
+                                <center>
+                                    <img id="avatar" style="display:none;" class="img-responsive" />
+                                    <h2></h2>
+                                </center>
                             </div>
+                        </div>
+                        <div class=kioskModule id="box">
+                            <center>
+                                @if (t == null)
+                                {
+                                    <h1>Good Morning!</h1>
+                                }
+                                else
+                                {
+                                    <h4>@t</h4>
+                                    <h4>@t2</h4>
+                                    <h4>@t3</h4>
+                                }
+                            </center>
                         </div>
                     </div>
                 </div>
@@ -138,25 +123,6 @@
             <div class="road"><hr /></div>
         </div>
     </div>
-</div>
 
 
 
-<!-- Login Modal -->
-<div class="modal fade" id="loginModal" tabindex="1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Student Kiosk</h5>
-            </div>
-            <div class="modal-body text-center">
-                <h4>@t</h4>
-                <p>The reward is 100 points.</p>
-                <p>Your token balance is now @bal</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
