@@ -2,45 +2,80 @@
 
 #background {
     background-image: url("../Content/img/sunset.png");
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 100%;
+    padding-top: 10px;
+    min-height: 800px;
     margin: 0 auto;
     z-index: 1;
 }
 
 #background2 {
     background-image: url("../Content/img/daytimeBackground.png");
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 800px;
+    padding-top: 100px;
     margin: 0 auto;
     z-index: 1;
 }
 
 #background3 {
-    background-position: center center;
+    background-image: url("../Content/img/nightimeBackground.png");
+    background-position: center bottom;
     background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 800px;
+    padding-top: 50px;
     margin: 0 auto;
     z-index: 1;
     opacity: 0.75;
-    background-image: url("../Content/img/nightimeBackground.png");
+}
+
+#Pgtitle {
+    color: #fff375;
+    margin-top: -20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    
+}
+
+#adminPane {
+    border-radius: 25px;
+    background-color: #f9f3ae;
+    padding: 30px 30px;
+    opacity: 0.90;
+   
 }
 
 
 
+.road {
+    background: rgb(138,138,138);
+    background: linear-gradient(180deg, rgba(138,138,138,1) 0%, rgba(162,162,162,1) 50%, rgba(138,138,138,1) 100%);
+    height: 120px;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+}
+
+.road hr {
+        vertical-align: middle;
+        border-bottom: 10px dashed white;
+        padding-top: 50px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
 body {
-    background: #fefbd8;
+    background: #666666;
     padding-bottom: 20px;
     padding-top: 80px;
     font-family: 'Ubuntu', sans-serif;
@@ -53,8 +88,20 @@ h1 {
     font-weight: 800;
 }
 
+.scroll-bar-horz {
+    position: absolute;
+    border: 1px solid black; 
+    width: 1400px; 
+    height: 300px; 
+    overflow-y: hidden; 
+    overflow-x: scroll;
+    margin: 50px;
+    margin-left:250px;
+}
+
+
 .student-header {
-    padding-top: 10px;
+    padding-top: 0px;
     font-size: 5.9vw;
 }
 
@@ -84,44 +131,12 @@ textarea {
     float: none;
 }
 
-#clock {
-    display: flex;
-    display: -webkit-flex;
-    margin-top: 20px;
-    width: 400px;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 80px;
-    color: white;
-}
-
-.unit {
-    height: 100%;
-    text-align: center;
-    width: 35%;
-    color: white;
-}
-
-.masthead {
-    min-height: 30rem;
-    display: block;
-    width: 100%;
-    height: 550px;
-    padding-top: 20rem;
-    padding-bottom: 20rem;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    text-align: center;
-}
-
 #studentnavicons {
 
     position: absolute;
     left: 50%;
-    top: 12%;
-    font-size: calc(1.3vw + 1.3vh);
+    top: 15%;
+    font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
 }
 
@@ -147,6 +162,13 @@ textarea {
     display: block;
     margin-left: auto;
     margin-right: auto
+}
+
+.shop-scroll {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 
@@ -178,44 +200,30 @@ a.navbar-brand {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-right: 20px;
     display: block;
-    width: 50px;
+    width: 35px;
     height: 50px;
     text-indent: -9999px; /* hides the link text */
 }
 
-.intro {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    width: 100%;
-    background-color: white;
-    margin: auto;
-    height: auto;
+
+.btn-primary {
+    color: #fff;
 }
 
-.banner {
-    background: url(../Content/img/adminBackground.png);
-    width: 100%;
-    margin: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
-    height: auto;
+.btn.btn-primary{
+    color: #fff;
 }
 
-.banner hr {
-    border-color: #F05F40;
-    border-width: 3px;
-    max-width: 200px;
-}
 
 .form p {
     color: white;
 }
 
 .navbar-default {
-    background-color: rgb(33, 209, 146);
+    background-color: #add3d9;
     font-size: 20px;
     color: white;
 }
@@ -234,6 +242,25 @@ a.navbar-brand {
 
 .footer a {
     color: #fff;
+}
+
+/*        Kiosk Page           */
+
+#clock {
+    display: flex;
+    display: -webkit-flex;
+    margin-top: 20px;
+    width: 400px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    color: white;
+}
+
+.unit {
+    height: 100%;
+    text-align: center;
+    width: 35%;
+    color: #3e4444;
 }
 
 #avatar {
@@ -256,16 +283,13 @@ a.navbar-brand {
     padding: 5px;
 }
 
-#avatarsidebar {
-    height: 540px;
-    padding-bottom:30px;
-    margin-bottom: 100px;
-    color:white;
-}
 
 #listusers {
-    height: auto;
-    column-count: 3;
+    overflow-x: hidden;
+    max-width: 100%;
+    min-height: 550px;
+    columns: 100px 3;
+
 }
 
 #listusers a {
@@ -274,37 +298,92 @@ a.navbar-brand {
     text-align: center;
 }
 
-.kiosk {
-    opacity: 0.7;
-    filter: alpha(opacity=70);
+#avatarsidebar {
+    height: 500px;
+    margin-bottom: 30px;
+}
+
+.kioskModule {
+    opacity: 0.9;
+    filter: alpha(opacity=90);
     background: #3e4444;
-    padding: 20px;
     border-radius: 20px;
     box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
     color: white;
-}
-
-.kiosk h1{
+    padding: 20px;
     color: white;
 }
 
-.kiosk h2 {
+#kioskbackground h1 {
+    font-family: 'Ubuntu', sans-serif;
+    color: #3e4444;
+    font-size: 50px;
+}
+
+.kioskModule h2 {
         color: white;
-        font-size: 60px;
+        font-size: 50px;
         font-family: 'Ubuntu', sans-serif;
 }
 
-.road {
-    background: rgb(138,138,138);
-    background: linear-gradient(180deg, rgba(138,138,138,1) 0%, rgba(162,162,162,1) 50%, rgba(138,138,138,1) 100%);
-    height: 120px;
-    border-top: 5px solid white;
-    border-bottom: 5px solid white;
+.kioskbtn {
+    font-size: 40px;
+    margin-bottom:40px;
 }
-.road hr {
-        vertical-align: middle;
-        border-bottom: 10px dashed white;
-        padding-top: 50px;
-        margin-top:0px;
-        margin-bottom:0px;
+
+#box {
+    margin-bottom:40px;
 }
+
+#kioskbackground {
+    background-image: url("../Content/img/daytimeBackground.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 800px;
+}
+/**** End Kiosk Page CSS */
+
+
+/*    Homepage CSS   BEG     */
+.masthead {
+    min-height: 30rem;
+    display: block;
+    width: 100%;
+    height: 550px;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+
+.banner hr {
+    border-color: #F05F40;
+    border-width: 3px;
+    max-width: 200px;
+}
+
+.intro {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background-color: #d7d8d9;
+    margin: auto;
+    height: auto;
+}
+
+.banner {
+    background: url(../Content/img/adminBackground.png);
+    width: 100%;
+    margin: auto;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    height: auto;
+}
+
+
+/*********** Homepage CSS   END ******************/
