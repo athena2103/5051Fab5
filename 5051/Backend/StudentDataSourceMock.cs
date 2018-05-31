@@ -132,12 +132,12 @@ namespace _5051.Backend
             var Avatar = AvatarBackend.Instance.Index();
             var Reports = StudentReportBackend.Instance.Index();
             
-            Create(new StudentModel("Minh", Avatar[4].Id, Reports[4].Uri));
-            Create(new StudentModel("Nina", Avatar[5].Id, Reports[2].Uri));
-            Create(new StudentModel("Winona", Avatar[6].Id, Reports[3].Uri));
-            Create(new StudentModel("Jonathan", Avatar[2].Id, Reports[1].Uri));
-            Create(new StudentModel("Sam", Avatar[1].Id, Reports[0].Uri));
-            Create(new StudentModel("Adam", Avatar[0].Id, Reports[2].Uri));
+            Create(new StudentModel("Minh", Avatar[1].Id, Reports[4].Uri));
+            Create(new StudentModel("Nina", Avatar[9].Id, Reports[2].Uri));
+            Create(new StudentModel("Winona", Avatar[2].Id, Reports[3].Uri));
+            Create(new StudentModel("Jonathan", Avatar[5].Id, Reports[1].Uri));
+            Create(new StudentModel("Sam", Avatar[0].Id, Reports[0].Uri));
+            Create(new StudentModel("Mike", Avatar[3].Id, Reports[2].Uri));
         }
     }
 }
