@@ -1,4 +1,5 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Marketplace";
 }
 
@@ -7,12 +8,12 @@
 
 <script>
     $(document).ready(
-        function () {
-            $('#studentnavicons a').hover(
-                function () {
-                    $("#studentnaviconstext p").text($(this).attr("title"));
-                },
-    });
+    function () {
+        $('#studentnavicons a').hover(
+            function () {
+                $("#studentnaviconstext p").text($(this).attr("title"));
+            },
+	});
 </script>
 
 <div id="background">
@@ -27,23 +28,33 @@
             <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
             <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
         </div>
-
+  
     </div>
     <div class="row">
         <div class="col-md-12">
-            <img src="~/Content/img/Student Market/market_mockup2.png" width="900" class="img-responsive" id="wireframe-student" />
+            <img src="~/Content/img/wireframe_market.png" width="800" class="img-responsive" id="wireframe-student" />
 
             <div class="col-md-4">
 
                 <div style="float:right;" align="center">
-                    @Html.ActionLink("Sell", "MarketAfter", "Student", null, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Sell", "Default", "Student", null, new { @class = "btn btn-primary" })
                 </div>
             </div>
             <div class="col-md-4">
                 <div style="float:right;" align="center">
-                    @Html.ActionLink("Buy", "MarketAfter", "Student", null, new { @class = "btn btn-primary" })
+                    @Html.ActionLink("Buy", "Default", "Student", null, new { @class = "btn btn-primary" })
                 </div>
             </div>
         </div>
     </div>
-</div>
+    </div>
+
+
+
+
+
+
+
+
+
+

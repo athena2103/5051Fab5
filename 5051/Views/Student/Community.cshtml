@@ -5,15 +5,30 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
+<link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
 
 <script>
-    $(document).ready(
-    function () {
-        $('#studentnavicons a').hover(
-            function () {
-                $("#studentnaviconstext p").text($(this).attr("title"));
-            },
-	});
+    (function ($) {
+        $(window).load(function () {
+
+            $("#content-1").mCustomScrollbar({
+                axis: "yx", //set both axis scrollbars
+                advanced: { autoExpandHorizontalScroll: true }, //auto-expand content to accommodate floated elements
+                // change mouse-wheel axis on-the-fly
+                callbacks: {
+                    onOverflowY: function () {
+                        var opt = $(this).data("mCS").opt;
+                        if (opt.mouseWheel.axis !== "y") opt.mouseWheel.axis = "y";
+                    },
+                    onOverflowX: function () {
+                        var opt = $(this).data("mCS").opt;
+                        if (opt.mouseWheel.axis !== "x") opt.mouseWheel.axis = "x";
+                    },
+                }
+            });
+
+        });
+    })(jQuery);
 </script>
 
 <div id="background">
@@ -30,6 +45,19 @@
             <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
             <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
         </div>
-        <img src="~/Content/img/StudentCommunity.png" class="img-responsive" id="wireframe-student" />
+
+        <div class="scroll-bar-horz">
+            <p style="width:150%;">
+                <img src="~/Content/img/plants-n-pop.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/dj-flapp-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/kats-comix-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/man-cave-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/meow-cafe-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/nhus-moo-shoppe-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/sus-salon-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+                <img src="~/Content/img/bobs-bananas-icon.png" style="width: 250px; padding: 20px;" alt="image name">
+            </p>
+        </div>
+
     </div>
 </div>
