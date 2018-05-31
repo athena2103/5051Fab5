@@ -215,6 +215,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AttendanceModel.cs" />
+    <Compile Include="Models\StudentMarketModel.cs" />
     <Compile Include="Models\StudentReportModel.cs" />
     <Compile Include="Models\AvatarModel.cs" />
     <Compile Include="Models\Enums\StudentStatusEnum.cs" />
@@ -274,6 +275,16 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\AvatarLevel.png" />
+    <Content Include="Content\img\Avatar\avatar1.png" />
+    <Content Include="Content\img\Avatar\avatar10.png" />
+    <Content Include="Content\img\Avatar\avatar2.png" />
+    <Content Include="Content\img\Avatar\avatar3.png" />
+    <Content Include="Content\img\Avatar\avatar4.png" />
+    <Content Include="Content\img\Avatar\avatar5.png" />
+    <Content Include="Content\img\Avatar\avatar6.png" />
+    <Content Include="Content\img\Avatar\avatar7.png" />
+    <Content Include="Content\img\Avatar\avatar8.png" />
+    <Content Include="Content\img\Avatar\avatar9.png" />
     <Content Include="Content\img\ChartPlaceholder.png" />
     <Content Include="Content\img\daytimeBackground.png" />
     <Content Include="Content\img\defaultavatarX.png" />
@@ -314,6 +325,31 @@
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\storeMockup.png" />
+    <Content Include="Content\img\Student Market\barstool.png" />
+    <Content Include="Content\img\Student Market\bench.png" />
+    <Content Include="Content\img\Student Market\chocolate%28G%29.png" />
+    <Content Include="Content\img\Student Market\chocolate%28T%29.png" />
+    <Content Include="Content\img\Student Market\coffee%28G%29.png" />
+    <Content Include="Content\img\Student Market\coffee%28T%29.png" />
+    <Content Include="Content\img\Student Market\cone.png" />
+    <Content Include="Content\img\Student Market\cookiedough%28G%29.png" />
+    <Content Include="Content\img\Student Market\counter.png" />
+    <Content Include="Content\img\Student Market\cups.png" />
+    <Content Include="Content\img\Student Market\hangingfern.png" />
+    <Content Include="Content\img\Student Market\hotfudge.png" />
+    <Content Include="Content\img\Student Market\IceCream.png" />
+    <Content Include="Content\img\Student Market\IceCreamTub.png" />
+    <Content Include="Content\img\Student Market\market_mockup2.png" />
+    <Content Include="Content\img\Student Market\mintchip%28G%29.png" />
+    <Content Include="Content\img\Student Market\mintchip%28T%29.png" />
+    <Content Include="Content\img\Student Market\ottomantable.png" />
+    <Content Include="Content\img\Student Market\Plant.png" />
+    <Content Include="Content\img\Student Market\sherbert%28g%29.png" />
+    <Content Include="Content\img\Student Market\strawberry%28G%29.png" />
+    <Content Include="Content\img\Student Market\strawberry%28T%29.png" />
+    <Content Include="Content\img\Student Market\Sunglasses.png" />
+    <Content Include="Content\img\Student Market\vanilla%28G%29.png" />
+    <Content Include="Content\img\Student Market\vanilla%28T%29.png" />
     <Content Include="Content\img\StudentCommunity.PNG" />
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
@@ -350,6 +386,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.matchHeight.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -430,6 +467,7 @@
     <Content Include="Views\Home\KioskIntro.cshtml" />
     <Content Include="Views\Home\AdminIntro.cshtml" />
     <Content Include="Views\Kiosk\Landing.cshtml" />
+    <Content Include="Views\Student\MarketAfter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
