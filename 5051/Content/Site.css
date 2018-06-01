@@ -11,6 +11,7 @@
     padding-top: 10px;
     min-height: 800px;
     margin: 0 auto;
+    margin-bottom:150px;
     z-index: 1;
 }
 
@@ -91,9 +92,9 @@ h1 {
 
 .scroll-bar-horz {
     position: absolute;
-    border: 1px solid black; 
+    border: none; 
     width: 1400px; 
-    height: 300px; 
+    height: 700px; 
     overflow-y: hidden; 
     overflow-x: scroll;
     margin: 50px;
