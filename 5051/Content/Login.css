@@ -160,3 +160,14 @@ textarea {
     margin-top: -20px;
     text-align: right;
 }
+
+/*For Market Display Box*/
+.boxed {
+    margin-top: 90px;
+    display: block;
+    border: 2px solid green;
+    text-align: center;
+    font: bold;
+    background: #fff;
+    opacity: 0.7;
+}
