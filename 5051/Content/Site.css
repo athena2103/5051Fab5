@@ -56,7 +56,60 @@
    
 }
 
+#adminLPane {
+    border-radius: 25px;
+    background-color: #f9f3ae;
+    padding: 30px 30px;
+    opacity: 0.90;
+    min-height: 500px;
+    
+}
 
+#adminLPane:hover {
+        box-shadow: 0px 0px 10px #fff;
+        border-style: solid;
+        border-width: thick;
+        border-color: #ffffff;
+}
+
+#adminRPane {
+    border-radius: 25px;
+    background-color: #f9f3ae;
+    padding: 30px 30px;
+    opacity: 0.90;
+    min-height: 500px;
+    margin-left: 15px;
+    width: 722px;
+}
+
+#adminInnerLPane {
+    margin: auto;
+   
+}
+
+
+#fitTitleText {
+    padding-right: 0px;
+    width: 143px;
+}
+
+#fitInfoText{
+    padding-left: 0px;
+}
+
+#fitEditNameText{
+    overflow:hidden
+}
+
+
+.center {
+    padding-left: 30px;
+}
+
+.listcenter {
+    padding-top: 70px;
+    overflow: auto;
+}
 
 .road {
     background: rgb(138,138,138);
