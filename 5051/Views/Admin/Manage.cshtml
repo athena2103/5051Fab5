@@ -1,275 +1,279 @@
 ﻿@model _5051.Models.StudentViewModel
 
 @{
-    ViewBag.Title = "Reports";
+ViewBag.Title = "Reports";
 }
 
-    <div class="background3">
-        <div class="container">
-            <!--Support print button-->
-            <script>
-                function Print() {
-                    window.print();
-                }
+<head>
+    <link rel="stylesheet" href="glowing.css">
+</head>
+<div id="background3">
+<div class="container">
+    <!--Support print button-->
+    <script>
+        function Print() {
+            window.print();
+        }
                 
-                 //Equalize left and right panes
-                $(function () {
-                    var maxHeight = 0;
-                    $AllCols = $("[id=adminPane]");
-                    $AllCols.each(function () {
+            //Equalize left and right panes
+        $(function () {
+            var maxHeight = 0;
+            $AllCols = $("[id=adminPane]");
+            $AllCols.each(function () {
                         
-                        var thisHeight = $(this).height();
-                        if (thisHeight > maxHeight) {
-                            maxHeight = thisHeight;
-                        }
-                        
-                    });
-                    
-                    $AllCols.height(maxHeight);
-                });
-
-            </script>
-
-
-            <div class="col-sm-8">
-                <h3 id="Pgtitle">Manage Students</h3>
-            </div>
-
-            <div class="col-sm-4">
-                @{
-                    <div style="float:right;">
-                        @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
-                        <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
-                    </div>
-
+                var thisHeight = $(this).height();
+                if (thisHeight > maxHeight) {
+                    maxHeight = thisHeight;
                 }
+                        
+            });
+                    
+            $AllCols.height(maxHeight);
+        });
+
+    </script>
 
 
+    <div class="col-md-8">
+        <h3 id="Pgtitle">Manage Students</h3>
+    </div>
+
+    <div class="col-md-4">
+        @{
+            <div style="float:right;">
+                @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
+                <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
             </div>
-            <br />
 
-            <div class="container">
-                <div class="row-eq-height">
-                    <div class="col-sm-12">
-                        @{
-                            if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
-                            {
-                                <br />
-                                <p>No Students in the System</p>
-                                <br />
-                            }
-                            else
-                            {
+        }
+    </div>
+    <br />
 
-                                <!--script to switch between report and edit attendance table-->
-                                <script type="text/javascript">
-                                function changeImage(cmd) {
-                                    var img = document.getElementById("report");
-                                    if (cmd == "report") {
+    <div class="col-md-12">
+                @{
+                    if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
+                    {
+                        <br />
+                        <p>No Students in the System</p>
+                        <br />
+                    }
+                    else
+                    {
 
-                                        if ('@Model.StudentList.Count' == 0) {
+                        <!--script to switch between report and edit attendance table-->
+                        <script type="text/javascript">
+                        function changeImage(cmd) {
+                            var img = document.getElementById("report");
+                            if (cmd == "report") {
 
-                                        } else {
-                                            img.src = "@Url.Content("~/Content/img/Admin Reports/totalAttendance.png")";
-                                            img.style.width = "600px";
-                                        }
+                                if ('@Model.StudentList.Count' == 0) {
 
-                                    } else if (cmd == "edit" && '@Model.StudentList.Count' == 0 ) {
-                                         img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance1.png")";
-                                         img.style.width = "500px";
-                                         document.getElementById("next").style.visibility = "hidden";
-                                         document.getElementById("back").style.visibility = "hidden";
+                                } else {
+                                    img.src = "@Url.Content("~/Content/img/Admin Reports/totalAttendance.png")";
+                                    img.style.width = "600px";
+                                }
 
-                                        //Only create button if it doesn't exist
-                                         if (!document.getElementById("tbEdit")) {
-                                             var EditBttn = document.createElement('a');
-                                             EditBttn.innerHTML = "Edit";
-                                             EditBttn.setAttribute('href', "#");
-                                             EditBttn.setAttribute('id', 'tbEdit');
-                                             EditBttn.setAttribute('class', 'btn btn-primary');
-                                             EditBttn.setAttribute('role', 'button');
-                                             EditBttn.setAttribute('onclick', "changeImage('editEntry')");
-                                             document.getElementById("reportPane").appendChild(EditBttn);
-                                         }
+                            } else if (cmd == "edit" && '@Model.StudentList.Count' == 0 ) {
+                                    img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance1.png")";
+                                    img.style.width = "500px";
+                                    document.getElementById("next").style.visibility = "hidden";
+                                    document.getElementById("back").style.visibility = "hidden";
 
-                                         if (!document.getElementById("tbSave")) {
-                                             var SubmitBttn = document.createElement('a');
-                                             SubmitBttn.innerHTML = "Save";
-                                             SubmitBttn.setAttribute('href', "#");
-                                             SubmitBttn.setAttribute('id', 'tbSave');
-                                             SubmitBttn.setAttribute('class', 'btn btn-success');
-                                             SubmitBttn.setAttribute('role', 'button');
-                                             SubmitBttn.setAttribute('onclick', "changeImage('submit')");
-                                             document.getElementById("reportPane").appendChild(SubmitBttn);
-                                         }
-
-                                    } else if (cmd == "editEntry") {
-                                        img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance2.png")";
-                                        img.style.width = "500px";
-                                    } else if (cmd == "submit") {
-                                        img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance3.png")";
-                                        img.style.width = "500px";
+                                //Only create button if it doesn't exist
+                                    if (!document.getElementById("tbEdit")) {
+                                        var EditBttn = document.createElement('a');
+                                        EditBttn.innerHTML = "Edit";
+                                        EditBttn.setAttribute('href', "#");
+                                        EditBttn.setAttribute('id', 'tbEdit');
+                                        EditBttn.setAttribute('class', 'btn btn-primary');
+                                        EditBttn.setAttribute('role', 'button');
+                                        EditBttn.setAttribute('onclick', "changeImage('editEntry')");
+                                        document.getElementById("reportPane").appendChild(EditBttn);
                                     }
 
-                                }
-                                </script>
+                                    if (!document.getElementById("tbSave")) {
+                                        var SubmitBttn = document.createElement('a');
+                                        SubmitBttn.innerHTML = "Save";
+                                        SubmitBttn.setAttribute('href', "#");
+                                        SubmitBttn.setAttribute('id', 'tbSave');
+                                        SubmitBttn.setAttribute('class', 'btn btn-success');
+                                        SubmitBttn.setAttribute('role', 'button');
+                                        SubmitBttn.setAttribute('onclick', "changeImage('submit')");
+                                        document.getElementById("reportPane").appendChild(SubmitBttn);
+                                    }
+
+                            } else if (cmd == "editEntry") {
+                                img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance2.png")";
+                                img.style.width = "500px";
+                            } else if (cmd == "submit") {
+                                img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance3.png")";
+                                img.style.width = "500px";
+                            }
+
+                        }
+                        </script>
 
 
-                                <div id="adminPane" class="col-sm-4">
-                                    <br /><br />
-                                    @{
-                                        if (Model.Student != null)
-                                        //For invidiual student
-                                        {
-                                            var item = Model.Student;
-                                            <div class="row">
-                                                <div class="col-sm-5">
-                                                    <img src="~/Content/img/@item.AvatarUri" width="150" height="150" />
-                                                    <br />
-                                                    <br />
-                                                    <br />
+                        <div id="adminLPane" class="col-md-4 glowing pink">
+                                    
+                                @{
+                                    if (Model.Student != null)
+                                    //For invidiual student
+                                    {
+                                        var item = Model.Student;
+                                        <div class="col-md-12" align="center">
+                                                <img src="~/Content/img/@item.AvatarUri" width="150" height="150" />
+                                        </div>
+                                            <br />
+                                            <br />
+                                            <br />
 
-                                                </div>
-                                            </div>
                                             if (Model.Student.isUpdate == true)
                                             {
-                                                //Update student info
-                                                using (Html.BeginForm("Update", "Admin", FormMethod.Post))
-                                                {
-                                                    @Html.AntiForgeryToken()
-                                                    @Html.HiddenFor(i => Model.Student.Id)
-                                                    @Html.HiddenFor(i => Model.Student.AvatarId)
-                                                    @Html.HiddenFor(i => Model.Student.AvatarLevel)
-                                                    @Html.HiddenFor(i => Model.Student.Tokens)
-                                                    @Html.HiddenFor(i => Model.Student.isUpdate)
-                                                    @Html.HiddenFor(i => Model.Student.AvatarUri)
-                                                    <div class="row">
-                                                        <div class="col-sm-5 text-left">
-                                                            @Html.DisplayNameFor(i => Model.Student.Name)
-                                                        </div>
-                                                        <div class="col-sm-7 text-left">
-                                                            @Html.EditorFor(i => Model.Student.Name)
-                                                            @Html.ValidationMessageFor(i => Model.Student.Name)
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-5 text-left">
-                                                            @Html.DisplayNameFor(i => Model.Student.AvatarName)
-                                                        </div>
-                                                        <div class="col-sm-7 text-left">
-                                                            @Html.DisplayFor(i => Model.Student.AvatarName)
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="row">
-                                                        <div class="col-sm-5 text-left">
-                                                            @Html.DisplayNameFor(i => Model.Student.AvatarDescription)
-                                                        </div>
-                                                        <div class="col-sm-7 text-left">
-                                                            @Html.DisplayFor(i => Model.Student.AvatarDescription)
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-5 text-left">
-                                                            @Html.DisplayNameFor(i => Model.Student.AvatarLevel)
-                                                        </div>
-                                                        <div class="col-sm-7 text-left">
-                                                            @Html.DisplayFor(i => Model.Student.AvatarLevel)
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-5 text-left">
-                                                            @Html.DisplayNameFor(i => Model.Student.Status)
-                                                        </div>
-                                                        <div class="col-sm-7 text-left">
-                                                            @Html.EnumDropDownListFor(i => Model.Student.Status, "Select Status")
-                                                            @Html.ValidationMessageFor(i => Model.Student.Status)
-                                                        </div>
-                                                    </div>
-
-                                                    <br />
-                                                    <br />
-                                                    <div class="row">
-                                                        <div class="col-sm-8">
-                                                            @Html.ActionLink("Cancel", "Manage", "Admin", new { @class = "btn btn-success" })
-                                                            <input type="submit" value="Update" class="btn btn-primary">
-
-                                                        </div>
-                                                    </div>
-
-
-                                                }
-                                            }
-                                            else
+                                            //Update student info
+                                            using (Html.BeginForm("Update", "Admin", FormMethod.Post))
                                             {
-                                                //Read student info
+                                            @Html.AntiForgeryToken()
+                                            @Html.HiddenFor(i => Model.Student.Id)
+                                            @Html.HiddenFor(i => Model.Student.AvatarId)
+                                            @Html.HiddenFor(i => Model.Student.AvatarLevel)
+                                            @Html.HiddenFor(i => Model.Student.Tokens)
+                                            @Html.HiddenFor(i => Model.Student.isUpdate)
+                                            @Html.HiddenFor(i => Model.Student.AvatarUri)
+                                            <div class="center">
                                                 <div class="row">
-                                                    <div class="col-sm-5 text-left">
+                                                    <div class="col-md-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.Name)
+                                                    </div>
+                                                    <div id="fitEditNameText" class="col-md-7 text-left">
+                                                        @Html.EditorFor(i => Model.Student.Name)
+                                                        @Html.ValidationMessageFor(i => Model.Student.Name)
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarName)
+                                                    </div>
+                                                    <div class="col-md-7 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarName)
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div id="fitTitleText" class="col-md-6 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarDescription)
+                                                    </div>
+                                                    <div id="fitInfoText" class="col-md-6 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarDescription)
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.AvatarLevel)
+                                                    </div>
+                                                    <div class="col-md-7 text-left">
+                                                        @Html.DisplayFor(i => Model.Student.AvatarLevel)
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-5 text-left">
+                                                        @Html.DisplayNameFor(i => Model.Student.Status)
+                                                    </div>
+                                                    <div class="col-md-7 text-left">
+                                                        @Html.EnumDropDownListFor(i => Model.Student.Status, "Select Status")
+                                                        @Html.ValidationMessageFor(i => Model.Student.Status)
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <br />
+                                            <br />
+                                             <div class="row">
+                                                    <div class="col-md-12 text-center">
+                                                        @Html.ActionLink("Cancel", "Manage", "Admin", new { @class = "btn btn-success" })
+                                                        <input type="submit" value="Update" class="btn btn-primary">
+
+                                                    </div>
+                                             </div>
+
+
+                                            }
+                                        }
+                                        else
+                                        {
+                                            //Read student info
+                                            <div class ="center">
+                                                <div class="row">
+                                                    <div class="col-md-5 text-left">
                                                         @Html.DisplayNameFor(i => item.Name)
                                                     </div>
-                                                    <div class="col-sm-7 text-left">
+                                                    <div class="col-md-7 text-left">
                                                         @Html.DisplayFor(i => item.Name)
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-sm-5 text-left">
+                                                    <div class="col-md-5 text-left">
                                                         @Html.DisplayNameFor(i => item.AvatarName)
                                                     </div>
-                                                    <div class="col-sm-7 text-left">
+                                                    <div class="col-md-7 text-left">
                                                         @Html.DisplayFor(i => item.AvatarName)
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-sm-5 text-left">
+                                                    <div id="fitTitleText" class="col-md-6 text-left">
                                                         @Html.DisplayNameFor(i => item.AvatarDescription)
                                                     </div>
-                                                    <div class="col-sm-7 text-left">
+                                                    <div id="fitInfoText" class="col-md-6 text-left">
                                                         @Html.DisplayFor(i => item.AvatarDescription)
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-sm-5 text-left">
+                                                    <div class="col-md-5 text-left">
                                                         @Html.DisplayNameFor(i => item.AvatarLevel)
                                                     </div>
-                                                    <div class="col-sm-7 text-left">
+                                                    <div class="col-md-7 text-left">
                                                         @Html.DisplayFor(i => item.AvatarLevel)
                                                     </div>
                                                 </div>
 
                                                 <div class="row">
-                                                    <div class="col-sm-5 text-left">
+                                                    <div class="col-md-5 text-left">
                                                         @Html.DisplayNameFor(i => item.Status)
                                                     </div>
-                                                    <div class="col-sm-7 text-left">
+                                                    <div class="col-md-7 text-left">
                                                         @Html.DisplayFor(i => item.Status)
                                                     </div>
                                                 </div>
+                                            </div>
+                                                
 
-                                                <br />
-                                                <br />
-                                                <div class="row">
-                                                    <div class="col-sm-8">
-                                                        @Html.ActionLink("Edit", "Manage", "Admin", new { id = item.Id, cmd = "Update" }, new { @class = "btn btn-primary" })
-                                                        @Html.ActionLink("Back", "Manage", "Admin", new { id = "" }, new { @class = "btn btn-success" })
-                                                    </div>
+                                            <br />
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-md-12 text-center">
+                                                    @Html.ActionLink("Edit", "Manage", "Admin", new { id = item.Id, cmd = "Update" }, new { @class = "btn btn-primary" })
+                                                    @Html.ActionLink("Back", "Manage", "Admin", new { id = "" }, new { @class = "btn btn-success" })
                                                 </div>
+                                            </div>
 
                                             }
 
-                                        }
-                                        else
-                                        {
-                                            //For list of students
-                                            foreach (var item in Model.StudentList)
+                                            }
+                                            else
                                             {
-                                                <div class="col-sm-6 text-center">
+                                            //For list of students
+                                            <div class ="listcenter">
+                                                @foreach (var item in Model.StudentList)
+                                                {
+                                                <div class="col-md-6 text-center">
                                                     <a id="@item.Id" href="~/Admin/Manage/@item.Id">
                                                         <img src="~/Content/img/@item.AvatarUri" width="50" height="50" />
                                                         <br />
@@ -279,79 +283,82 @@
                                                     </a>
                                                 </div>
 
+                                                }
+                                            </div>
+                                           
                                             }
-                                        }
-                                    }
-                                </div>
-                                <div margin-left: 10px;>
-                                    <div id="adminPane" class="col-sm-8">
+                                            }
+                                        </div>
+                                
+
+                        <div id="adminRPane" class="col-md-7">
+                            <div class="row">
                                     <!--Menu bar above the report-->
-                                    <span class="pull-center">
+                                    <span>
                                         <label for="frDate">From date:</label>
                                         <input type="date" id="frInput" name="frInput">
                                         <label for="toDate">To date:</label>
                                         <input type="date" id="toInput" name="toInput">
                                         <a href="#" class="btn btn-success" role="button"
-                                           onclick="changeImage('report')">Run</a>
+                                            onclick="changeImage('report')">Run</a>
                                         <a href="#" class="btn btn-primary" role="button" onclick="changeImage('edit')">
                                             Table View
                                         </a>
                                     </span>
 
-                                    <span id="reportPane" class="pull-center">
+                                    <span id="reportPane">
                                         @if (Model.Student == null)
                                         {
                                             <img id="report" src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
                                         }
                                         else
                                         {
-                                            <!--Script to move between individual reports-->
+                                    <!--Script to move between individual reports-->
                                             <script type="text/javascript">
-                                                    function changeReport(id) {
-                                                        var counter = document.getElementById("counter").innerHTML;
+                                            function changeReport(id) {
+                                                var counter = document.getElementById("counter").innerHTML;
 
-                                                        if (id == "next") {
-                                                            if (counter >= 4) {
-                                                                counter = 4;
-                                                            } else {
-                                                                counter++;
-                                                            }
-                                                         } else {
-                                                            if (counter <= 1) {
-                                                                counter = 1;
-                                                            } else {
-                                                                counter--;
-                                                            }
-                                                        }
-                                                        var img = document.getElementById("report");
-                                                        var newimg = '@Model.Student.ReportsId[0]';
-                                                        newimg = newimg.replace("_1", "_" + counter);
-                                                        img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
-                                                        document.getElementById("counter").innerHTML = counter;
-
+                                                if (id == "next") {
+                                                    if (counter >= 4) {
+                                                        counter = 4;
+                                                    } else {
+                                                        counter++;
                                                     }
+                                                    } else {
+                                                    if (counter <= 1) {
+                                                        counter = 1;
+                                                    } else {
+                                                        counter--;
+                                                    }
+                                                }
+                                                var img = document.getElementById("report");
+                                                var newimg = '@Model.Student.ReportsId[0]';
+                                                newimg = newimg.replace("_1", "_" + counter);
+                                                img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
+                                                document.getElementById("counter").innerHTML = counter;
+
+                                            }
                                             </script>
 
                                             var reportSource = Model.Student.ReportsId[0];
                                             <img id="report" src="~/Content/img/Admin Reports/@reportSource" width="600" height="300">
                                             <br />
                                             <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)"
-                                                 width="50" height="50">
+                                                    width="50" height="50">
                                             <img id="next" src="~/Content/img/Admin Reports/nextIcon.png" onclick="changeReport(this.id)"
-                                                 width="50" height="50">
+                                                    width="50" height="50">
                                             <a id="counter" visibility: hidden>1</a>
 
                                         }
 
                                     </span>
                                 </div>
-                                </div>
-                                
+                            </div>
+                               
 
-                            }
-                        }
-                    </div>
-                </div>
+                    }
+                }
             </div>
         </div>
-</div>
+    </div>
+  
