@@ -17,6 +17,14 @@
 	});
 </script>
 
+<script>
+    window.setTimeout(function () {
+        // Move to a new location or you can do something else
+        window.location.href = "../Portal/Login";
+    }, 4000);
+
+</script>
+
 <div id="background">
     <div class="row text-center">
         <h1 class="student-header" align="center">Later!</h1>
@@ -28,8 +36,14 @@
             <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
             <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
         </div>
-        <p class="student-text-medium">You are now logged out.</p>
+        <p class="student-text-medium">You are now logged out and redirected to Login Screen.</p>
         <p class="student-text-small">Come back soon. We'll miss you.</p>
         <img src="~/Content/img/student_logout.png" class="img-responsive" id="wireframe-student" />
     </div>
 </div>
+
+
+<h2>
+    @Html.ActionLink("Done", "Login", null, new { @class = "btn btn-primary" })
+</h2>
+

@@ -19,32 +19,36 @@
 <div id="background">
     <div class="row text-center">
         <h1 class="student-header" align="center">Marketplace</h1>
-
-        <div id="studentnavicons">
-            <a href="~/Student/Default" title="Store"><i class="fas fa-store-alt" style="color:#7a553b"></i></a>
-            <a href="~/Student/Community" title="Community"><i class="fas fa-map-signs" style="color:#7a553b"></i></a>
-            <a href="~/Student/Market" title="Marketplace"><i class="fas fa-shopping-cart" style="color:#7a553b"></i></a>
-            <a href="~/Student/Accomplishments" title="Yep, I did this"><i class="fas fa-trophy" style="color:#7a553b"></i></a>
-            <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
-            <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
+        <div class="row text-center">
+            <div id="studentnavicons">
+                <a href="~/Student/Default" title="Store"><i class="fas fa-store-alt" style="color:#7a553b"></i></a>
+                <a href="~/Student/Community" title="Community"><i class="fas fa-map-signs" style="color:#7a553b"></i></a>
+                <a href="~/Student/Market" title="Marketplace"><i class="fas fa-shopping-cart" style="color:#7a553b"></i></a>
+                <a href="~/Student/Accomplishments" title="Yep, I did this"><i class="fas fa-trophy" style="color:#7a553b"></i></a>
+                <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
+                <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
+            </div>
         </div>
-  
-    </div>
+        </div>
+
     <div class="row">
         <div class="col-md-12">
-            <img src="~/Content/img/wireframe_market.png" width="800" class="img-responsive" id="wireframe-student" />
-
-            <div class="col-md-4">
-
-                <div style="float:right;" align="center">
-                    @Html.ActionLink("Sell", "Default", "Student", null, new { @class = "btn btn-primary" })
+            
+                <div class="boxed" align="center">
+                    <font size="10">Points: 150</font>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div style="float:right;" align="center">
-                    @Html.ActionLink("Buy", "Default", "Student", null, new { @class = "btn btn-primary" })
+                <img src="~/Content/img/wireframe_market.png" width="800" class="img-responsive" id="wireframe-student" />
+
+                <div class="col-md-4">
+                    <div style="float: right; margin-top:-70px;" align="center">
+                        @Html.ActionLink("Sell", "Default", "Student", null, new { @class = "btn btn-primary" })
+                    </div>
                 </div>
-            </div>
+                <div class="col-md-4">
+                    <div style="float:right; margin-top:-70px;" align="center">
+                        @Html.ActionLink("Buy", "Default", "Student", null, new { @class = "btn btn-primary" })
+                    </div>
+                </div>
         </div>
     </div>
     </div>

@@ -1,5 +1,6 @@
 ﻿/* --------------Fab5 ----------------*/
 
+
 #background {
     background-image: url("../Content/img/sunset.png");
     background-position: center bottom;
@@ -34,11 +35,29 @@
     position: relative;
     width: 100%;
     min-height: 800px;
-    padding-top: 100px;
+    padding-top: 50px;
     margin: 0 auto;
     z-index: 1;
     opacity: 0.75;
 }
+
+#Pgtitle {
+    color: #fff375;
+    margin-top: -20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    
+}
+
+#adminPane {
+    border-radius: 25px;
+    background-color: #f9f3ae;
+    padding: 30px 30px;
+    opacity: 0.90;
+   
+}
+
+
 
 .road {
     background: rgb(138,138,138);
@@ -48,7 +67,7 @@
     border-bottom: 5px solid white;
 }
 
-    .road hr {
+.road hr {
         vertical-align: middle;
         border-bottom: 10px dashed white;
         padding-top: 50px;
@@ -324,6 +343,16 @@ a.navbar-brand {
     background-size: cover;
     min-height: 800px;
 }
+
+.form-group select {
+    border: none;
+    padding: 5px; /* If you add too much padding here, the options won't show in IE */
+    width: 100%;
+    border-radius: 4px;
+    height: 34px;
+    color: #555;
+}
+
 /**** End Kiosk Page CSS */
 
 

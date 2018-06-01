@@ -4,7 +4,6 @@
     ViewBag.Title = "Reports";
 }
 
-
     <div id="background3">
         <div class="container">
             <!--Support print button-->
@@ -12,14 +11,31 @@
                 function Print() {
                     window.print();
                 }
+                
+                 //Equalize left and right panes
+                $(function () {
+                    var maxHeight = 0;
+                    $AllCols = $("[id=adminPane]");
+                    $AllCols.each(function () {
+                        
+                        var thisHeight = $(this).height();
+                        if (thisHeight > maxHeight) {
+                            maxHeight = thisHeight;
+                        }
+                        
+                    });
+                    
+                    $AllCols.height(maxHeight);
+                });
+
             </script>
 
 
-            <div class="col-md-8">
-                <h3>Manage Students</h3>
+            <div class="col-sm-8">
+                <h3 id="Pgtitle">Manage Students</h3>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-sm-4">
                 @{
                     <div style="float:right;">
                         @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
@@ -33,7 +49,7 @@
             <br />
 
             <div class="container">
-                <div class="row text-center">
+                <div class="row-eq-height">
                     <div class="col-sm-12">
                         @{
                             if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
@@ -64,6 +80,7 @@
                                          document.getElementById("next").style.visibility = "hidden";
                                          document.getElementById("back").style.visibility = "hidden";
 
+                                        //Only create button if it doesn't exist
                                          if (!document.getElementById("tbEdit")) {
                                              var EditBttn = document.createElement('a');
                                              EditBttn.innerHTML = "Edit";
@@ -86,9 +103,6 @@
                                              document.getElementById("reportPane").appendChild(SubmitBttn);
                                          }
 
-
-
-
                                     } else if (cmd == "editEntry") {
                                         img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance2.png")";
                                         img.style.width = "500px";
@@ -101,7 +115,7 @@
                                 </script>
 
 
-                                <div class="col-md-4">
+                                <div id="adminPane" class="col-sm-4">
                                     <br /><br />
                                     @{
                                         if (Model.Student != null)
@@ -255,7 +269,7 @@
                                             //For list of students
                                             foreach (var item in Model.StudentList)
                                             {
-                                                <div class="col-md-6 text-center">
+                                                <div class="col-sm-6 text-center">
                                                     <a id="@item.Id" href="~/Admin/Manage/@item.Id">
                                                         <img src="~/Content/img/@item.AvatarUri" width="50" height="50" />
                                                         <br />
@@ -269,9 +283,10 @@
                                         }
                                     }
                                 </div>
-                                <div class="col-md-8">
+                                <div margin-left: 10px;>
+                                    <div id="adminPane" class="col-sm-8">
                                     <!--Menu bar above the report-->
-                                    <span class="pull-left">
+                                    <span class="pull-center">
                                         <label for="frDate">From date:</label>
                                         <input type="date" id="frInput" name="frInput">
                                         <label for="toDate">To date:</label>
@@ -283,7 +298,7 @@
                                         </a>
                                     </span>
 
-                                    <span id="reportPane" class="pull-left">
+                                    <span id="reportPane" class="pull-center">
                                         @if (Model.Student == null)
                                         {
                                             <img id="report" src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
@@ -330,6 +345,8 @@
 
                                     </span>
                                 </div>
+                                </div>
+                                
 
                             }
                         }
