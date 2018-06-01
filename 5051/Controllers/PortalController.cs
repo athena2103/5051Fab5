@@ -38,16 +38,6 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Student default page after login
-        /// </summary>
-        /// <returns></returns>
-        // GET: Portal
-        public ActionResult FirstIndex()
-        {
-            return View();
-        }
-        
-        /// <summary>
         /// Index Page
         /// </summary>
         /// <returns></returns>
