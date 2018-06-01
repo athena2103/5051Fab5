@@ -157,6 +157,7 @@ h1 {
 .student-header {
     padding-top: 0px;
     font-size: 5.9vw;
+    z-index:0;
 }
 
 /* Set padding to keep content from hitting the edges */
