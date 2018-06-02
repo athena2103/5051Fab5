@@ -103,7 +103,7 @@
     padding-top: 20px;
 }
 
- #adminReportBttn .attnEdit {
+#adminReportBttn .attnEdit {
        text-align: center;
        margin-left: 3px;
 }
@@ -286,6 +286,7 @@ a.navbar-brand {
 .footer a {
     color: #fff;
 }
+
 
 /*----------------------Kiosk Page------------------------*/
 
