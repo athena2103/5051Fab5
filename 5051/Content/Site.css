@@ -1,38 +1,36 @@
 ﻿/* --------------Fab5 ----------------*/
+#community {
+    margin-bottom: 150px;
+    padding-top: 10px;
+}
 
-
-#background {
+.background {
     background-image: url("../Content/img/sunset.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 2`0px;
     min-height: 800px;
     margin: 0 auto;
-    margin-bottom:150px;
     z-index: 1;
 }
 
-#background2 {
+.background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
     min-height: 800px;
-    padding-top: 100px;
+    padding-top: 50px;
     margin: 0 auto;
     z-index: 1;
 }
 
-/******************ADMIN SECTION*****************************************************/
-#background3 {
+.background3 {
     background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
@@ -44,7 +42,6 @@
 }
 
 #Pgtitle {
-    font-size: 25px;
     color: #fff375;
     margin-top: -20px;
     padding-left: 20px;
@@ -52,18 +49,12 @@
     
 }
 
-#mainMenu {
-    margin-top: -20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-
-
 #adminPane {
     border-radius: 25px;
     background-color: #f9f3ae;
     padding: 30px 30px;
     opacity: 0.90;
+   
 }
 
 #adminLPane {
@@ -121,8 +112,6 @@
     overflow: auto;
 }
 
-/****************************************************************************************/
-
 .road {
     background: rgb(138,138,138);
     background: linear-gradient(180deg, rgba(138,138,138,1) 0%, rgba(162,162,162,1) 50%, rgba(138,138,138,1) 100%);
@@ -140,7 +129,7 @@
     }
 
 body {
-    background: #666666;
+    background: #857c73;
     padding-bottom: 20px;
     padding-top: 80px;
     font-family: 'Ubuntu', sans-serif;
@@ -151,17 +140,19 @@ h1 {
     font-family: Catamaran;
     font-size: 60px;
     font-weight: 800;
+    z-index: 0;
 }
 
 .scroll-bar-horz {
     position: absolute;
-    border: none; 
-    width: 1400px; 
-    height: 700px; 
-    overflow-y: hidden; 
+    border: none;
+    width: 100%;
+    height: 700px;
+    overflow-y: hidden;
     overflow-x: scroll;
-    margin: 50px;
-    margin-left:250px;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 
@@ -229,6 +220,15 @@ textarea {
     margin-right: auto
 }
 
+#market-pic {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .shop-scroll {
     display: inline;
     width: 100%;
@@ -288,7 +288,7 @@ a.navbar-brand {
 }
 
 .navbar-default {
-    background-color: #add3d9;
+    background-color: #85bad7;
     font-size: 20px;
     color: white;
 }
@@ -436,17 +436,12 @@ a.navbar-brand {
     text-align: center;
 }
 
-.banner hr {
-    border-color: #F05F40;
-    border-width: 3px;
-    max-width: 200px;
-}
 
 .intro {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 100%;
-    background-color: #d7d8d9;
+    background-color: #F5FFFA;
     margin: auto;
     height: auto;
 }
@@ -455,8 +450,8 @@ a.navbar-brand {
     background: url(../Content/img/adminBackground.png);
     width: 100%;
     margin: auto;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     height: auto;
 }
 

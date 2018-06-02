@@ -29,6 +29,7 @@ a {
     box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .3);
 }
 
+
 h1 {
     text-align: center;
     color: #fff;
@@ -70,6 +71,7 @@ label {
     label .req {
         margin: 2px;
         color: #1ab188;
+        width: 100%;
     }
 
     label.active {
@@ -151,11 +153,6 @@ textarea {
         background: #64dfed;
     }
 
-.button-block {
-    text-align: center;
-    width: 100%;
-}
-
 .forgot {
     margin-top: -20px;
     text-align: right;
@@ -165,7 +162,6 @@ textarea {
 .boxed {
     margin-top: 90px;
     display: block;
-    border: 2px solid green;
     text-align: center;
     font: bold;
     background: #fff;
