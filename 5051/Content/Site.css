@@ -10,7 +10,7 @@
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 2`0px;
+    padding-top: 50px;
     min-height: 800px;
     margin: 0 auto;
     z-index: 1;
@@ -158,7 +158,6 @@
 body {
     background: #857c73;
     padding-bottom: 20px;
-    padding-top: 80px;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
 }
@@ -315,15 +314,22 @@ a.navbar-brand {
     color: white;
 }
 
+.navbar {
+    margin-bottom:0px;
+    border: 0px;
+}
+
 .navbar-default {
-    background-color: #85bad7;
+    background: transparent;
     font-size: 20px;
     color: white;
+    border-bottom: 0px solid white;
 }
 
 .navbar-default .navbar-nav > li > a {
-        color: #fff; /*Sets the text hover color on navbar*/
+    color: #fff; /*Sets the text hover color on navbar*/
 }
+
 
 .footer {
     width: 100%;
