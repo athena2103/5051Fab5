@@ -17,14 +17,15 @@
 	});
 </script>
 
-<script type="text/javascript">
-    function changePic() {
-        var checkbox = document.getElementById("wireframe-student");
+<script>
+            var checkbox = document.getElementById("wireframe-student");
         checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
-        var img =  "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
-        var img1 = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
-        var img2 = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
+        var img =  "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
+        var img1 = "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
+        var img2 = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
         var img3 = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
+    function changePic() {
+
         if (checkbox.src == img) {
             checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
         } else if (checkbox.src == img1) {
@@ -56,7 +57,7 @@
                     <font size="10">Points: 150</font>
                 </div>
             <a href="#" onclick="changePic()">
-                <img id="wireframe-student" src="~/Content/img/Student Market/market_mockup2.png" width="1000" class="img-responsive" />
+                <img id="wireframe-student" src="~/Content/img/Student Market/Market_demo2.png" width="1000" class="img-responsive" />
             </a>
 
                 <div class="col-md-4">
