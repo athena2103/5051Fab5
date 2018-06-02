@@ -59,19 +59,20 @@ ViewBag.Title = "Reports";
                         } else if (cmd == "edit" && '@Model.StudentList.Count' == 0 ) {
                                 img.src = "@Url.Content("~/Content/img/Admin Reports/editAttendance1.png")";
                                 img.style.width = "500px";
-                                document.getElementById("next").style.visibility = "hidden";
-                                document.getElementById("back").style.visibility = "hidden";
+                                document.getElementById("next").outerHTML = "";
+                                document.getElementById("back").outerHTML = "";
 
+                                
                             //Only create button if it doesn't exist
                                 if (!document.getElementById("tbEdit")) {
                                     var EditBttn = document.createElement('a');
                                     EditBttn.innerHTML = "Edit";
                                     EditBttn.setAttribute('href', "#");
                                     EditBttn.setAttribute('id', 'tbEdit');
-                                    EditBttn.setAttribute('class', 'btn btn-primary');
+                                    EditBttn.setAttribute('class', 'btn btn-primary attnEdit');
                                     EditBttn.setAttribute('role', 'button');
                                     EditBttn.setAttribute('onclick', "changeImage('editEntry')");
-                                    document.getElementById("reportPane").appendChild(EditBttn);
+                                    document.getElementById("adminReportBttn").appendChild(EditBttn);
                                 }
 
                                 if (!document.getElementById("tbSave")) {
@@ -79,10 +80,10 @@ ViewBag.Title = "Reports";
                                     SubmitBttn.innerHTML = "Save";
                                     SubmitBttn.setAttribute('href', "#");
                                     SubmitBttn.setAttribute('id', 'tbSave');
-                                    SubmitBttn.setAttribute('class', 'btn btn-success');
+                                    SubmitBttn.setAttribute('class', 'btn btn-success attnEdit');
                                     SubmitBttn.setAttribute('role', 'button');
                                     SubmitBttn.setAttribute('onclick', "changeImage('submit')");
-                                    document.getElementById("reportPane").appendChild(SubmitBttn);
+                                    document.getElementById("adminReportBttn").appendChild(SubmitBttn);
                                 }
 
                         } else if (cmd == "editEntry") {
@@ -97,7 +98,7 @@ ViewBag.Title = "Reports";
                 </script>
 
 
-                <div id="adminLPane" class="col-md-4 pull-left">
+                <div id="adminLPane" class="col-md-4 hoverGlow">
 
                         @{
                             if (Model.Student != null)
@@ -274,10 +275,10 @@ ViewBag.Title = "Reports";
                     </div>
 
 
-                    <div id="adminRPane" class="col-md-7">
+                    <div id="adminRPane" class="col-md-7 hoverGlow">
                            <div class="row">
                                             <!--Menu bar above the report-->
-                                            <span>
+                                            <div  id="adminInnerRPane">
                                                 <label for="frDate">From date:</label>
                                                 <input type="date" id="frInput" name="frInput">
                                                 <label for="toDate">To date:</label>
@@ -287,54 +288,57 @@ ViewBag.Title = "Reports";
                                                 <a href="#" class="btn btn-primary" role="button" onclick="changeImage('edit')">
                                                     Table View
                                                 </a>
-                                            </span>
+                                            </div>
 
-                                            <span id="reportPane">
+                                            <div id="reportPane">
                                                 @if (Model.Student == null)
                                                 {
                                                     <img id="report" src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
                                                 }
                                                 else
                                                 {
-                                <!--Script to move between individual reports-->
-                                                    <script type="text/javascript">
-                                        function changeReport(id) {
-                                            var counter = document.getElementById("counter").innerHTML;
+                                                <!--Script to move between individual reports-->
+                                                 <script type="text/javascript">
+                                                        function changeReport(id) {
+                                                            var counter = document.getElementById("counter").innerHTML;
 
-                                            if (id == "next") {
-                                                if (counter >= 4) {
-                                                    counter = 4;
-                                                } else {
-                                                    counter++;
-                                                }
-                                                } else {
-                                                if (counter <= 1) {
-                                                    counter = 1;
-                                                } else {
-                                                    counter--;
-                                                }
-                                            }
-                                            var img = document.getElementById("report");
-                                            var newimg = '@Model.Student.ReportsId[0]';
-                                            newimg = newimg.replace("_1", "_" + counter);
-                                            img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
-                                            document.getElementById("counter").innerHTML = counter;
+                                                        if (id == "next") {
+                                                            if (counter >= 4) {
+                                                                counter = 4;
+                                                            } else {
+                                                                counter++;
+                                                            }
+                                                         } else {
+                                                            if (counter <= 1) {
+                                                            counter = 1;
+                                                            } else {
+                                                            counter--;
+                                                            }
+                                                        }
+                                                var img = document.getElementById("report");
+                                                var newimg = '@Model.Student.ReportsId[0]';
+                                                newimg = newimg.replace("_1", "_" + counter);
+                                                img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
+                                                document.getElementById("counter").innerHTML = counter;
 
-                                        }
+                                                }
                                                     </script>
 
                                                     var reportSource = Model.Student.ReportsId[0];
                                                     <img id="report" src="~/Content/img/Admin Reports/@reportSource" width="600" height="300">
                                                     <br />
-                                                    <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)"
-                                                            width="50" height="50">
-                                                    <img id="next" src="~/Content/img/Admin Reports/nextIcon.png" onclick="changeReport(this.id)"
-                                                            width="50" height="50">
-                                                    <a id="counter" visibility: hidden>1</a>
+                                                    <div id="adminReportBttn">
+                                                        <img id="back" src="~/Content/img/Admin Reports/backIcon.png" onclick="changeReport(this.id)"
+                                                             width="50" height="50">
+                                                        <img id="next" src="~/Content/img/Admin Reports/nextIcon.png" onclick="changeReport(this.id)"
+                                                             width="50" height="50">
+                                                        <a id="counter" visibility: hidden>1</a>
+                                                    </div>
+                                                    
 
                                                 }
 
-                                            </span>
+                                            </div>
                                         </div>
                                     </div>
 

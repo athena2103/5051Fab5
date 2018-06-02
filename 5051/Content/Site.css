@@ -52,7 +52,7 @@
 
 #mainMenu {
     margin-top: -20px;
-    padding-left: 20px;
+    padding-left: 660px;
     padding-bottom: 20px;
 }
 
@@ -72,12 +72,14 @@
     min-height: 500px;
 }
 
- #adminLPane:hover {
+.hoverGlow:hover {
         box-shadow: 0px 0px 10px #fff;
         border-style: solid;
         border-width: thick;
         border-color: #ffffff;
 }
+
+
 
 #adminRPane {
     border-radius: 25px;
@@ -93,6 +95,24 @@
     margin: auto;
 }
 
+#adminInnerRPane{
+    padding-left: 48px;
+    padding-bottom: 15px;
+}
+
+#reportPane{
+    padding-left: 48px;
+}
+
+#adminReportBttn{
+    padding-left: 255px;
+    padding-top: 20px;
+}
+
+ #adminReportBttn .attnEdit {
+       text-align: center;
+       margin-left: 3px;
+}
 
 #fitTitleText {
     padding-right: 0px;
