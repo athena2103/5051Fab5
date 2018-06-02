@@ -13,7 +13,6 @@
     padding-top: 50px;
     min-height: 800px;
     margin: 0 auto;
-    z-index:-999;
 }
 
 .background2 {
@@ -25,7 +24,6 @@
     min-height: 800px;
     padding-top: 50px;
     margin: 0 auto;
-    z-index: -999;
 }
 
 /******************ADMIN SECTION*****************************************************/
@@ -40,7 +38,6 @@
     padding-top: 50px;
     margin: 0 auto;
     opacity: 0.75;
-    z-index: -999;
 }
 
 #Pgtitle {
@@ -228,20 +225,6 @@ textarea {
     padding-bottom: 30px;
 }
 
-a.navbar-brand {
-    background: url(../Content/img/sitelogo.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    margin-right: 20px;
-    display: block;
-    width: 35px;
-    height: 50px;
-    text-indent: -9999px; /* hides the link text */
-}
-
-
 .btn-primary {
     color: #fff;
 }
@@ -253,6 +236,18 @@ a.navbar-brand {
 
 .form p {
     color: white;
+}
+
+a.navbar-brand {
+    background: url(../Content/img/sitelogo.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    display: block;
+    width: 70px;
+    height: 120px;
+    text-indent: -9999px; /* hides the link text */
 }
 
 .nav-wrapper {
