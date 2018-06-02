@@ -60,7 +60,8 @@ namespace _5051.Controllers
         /// <returns></returns>
         // POST: Student/Update/5
         [HttpPost]
-        public ActionResult Update(StudentViewModel StudentView)
+        public ActionResult Update([Bind(Include=
+                                      "Student")]StudentViewModel StudentView)
         {
             if (!ModelState.IsValid)
             {
@@ -93,8 +94,6 @@ namespace _5051.Controllers
 
             return RedirectToAction("Manage", new { id = StudentView.Student.Id });
         }
-
-
 
 
         /// <summary>

@@ -73,10 +73,11 @@
 }
 
 .hoverGlow:hover {
-        box-shadow: 0px 0px 10px #fff;
-        border-style: solid;
-        border-width: thick;
-        border-color: #ffffff;
+    box-shadow: 0px 0px 10px #fff;
+    border-style: solid;
+    border-width: thick;
+    border-color: #ffffff;
+    
 }
 
 
@@ -116,11 +117,11 @@
 
 #fitTitleText {
     padding-right: 0px;
-    width: 143px;
+    width: 142px;
 }
 
-#fitInfoText {
-    padding-left: 0px;
+#fitInfoText{
+    padding-left: 70px;
 }
 
 #fitEditNameText {
