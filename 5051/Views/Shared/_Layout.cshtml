@@ -16,62 +16,65 @@
 
 </head>
 <body>
-    <div class="navbar navbar-default">
-        <div class="container-full">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("SUperNova", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
 
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Student", "Login", "Portal")</li>
-                    <li>@Html.ActionLink("Admin", "AdminLogin", "Portal")</li>
-                    <li>@Html.ActionLink("Kiosk Mode", "Landing", "Kiosk")</li>
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
-        </div>
-    </div>
-    <div class="body-content">
-        @RenderBody()
-    </div>
+    <header class="nav-wrapper">
+        <nav class="navbar-custom">
 
-
-    <!-- Footer -->
-
-    <footer>
-        <div class="footer">
-
-            <div style="background-color: #5f5851;">
-
-                    <!-- Grid row-->
-                    <div class="row">
-
-                        <!-- Grid column -->
-                        <div class="col-lg-12 text-center">
-                            @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
-                            @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
-                            @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                    <div class="col-md-10 col-md-offset-2">
+                        <div class="navbar-header col-md-2">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink("Nova Town", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         </div>
-                        <!-- Grid column -->
-                        <!-- Grid column -->
-
+                        <div class="navbar-collapse collapse col-md-10 col-md-offset-5">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>@Html.ActionLink("Student", "Login", "Portal")</li>
+                                <li>@Html.ActionLink("Admin", "AdminLogin", "Portal")</li>
+                                <li>@Html.ActionLink("Kiosk Mode", "Landing", "Kiosk")</li>
+                            </ul>
+                            @*@Html.Partial("_LoginPartial")*@
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <p class="copyright text-muted small">&nbsp;&nbsp;&copy; @DateTime.Now.Year - Nova Town, all rights reserved. This website is made with <i class="fa fa-heart" aria-hidden="true"></i> by Fab5.</p>
+            </nav>
+            </header>
 
-                    </div>
-                </div>
+            <div class="body-content">
+                @RenderBody()
             </div>
-    </footer>
+
+
+            <!-- Footer -->
+
+            <footer>
+                <div class="footer">
+
+                    <div style="background-color: #5f5851;">
+
+                        <!-- Grid row-->
+                        <div class="row">
+
+                            <!-- Grid column -->
+                            <div class="col-lg-12 text-center">
+                                @Html.ActionLink("About", "About", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
+                                @Html.ActionLink("Privacy Policy", "Privacy", "Home", new { controller = "Home" }, new { @class = "btn btn-link" }) &sdot;
+                                @Html.ActionLink("Contact", "Contact", "Home", new { controller = "Home" }, new { @class = "btn btn-link" })
+                            </div>
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="copyright text-muted small">&nbsp;&nbsp;&copy; @DateTime.Now.Year - Nova Town, all rights reserved. This website is made with <i class="fa fa-heart" aria-hidden="true"></i> by Fab5.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
 </body>
 </html>
