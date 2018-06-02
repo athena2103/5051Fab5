@@ -72,8 +72,6 @@
         border-color: #ffffff;
 }
 
-
-
 #adminRPane {
     border-radius: 25px;
     background-color: #f9f3ae;
@@ -216,11 +214,6 @@ textarea {
     background-size: cover;
 }
 
-.nav > li > a {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .btn-primary {
     color: #fff;
 }
@@ -234,15 +227,20 @@ textarea {
     color: white;
 }
 
+.nav > li > a {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
 a.navbar-brand {
     background: url(../Content/img/sitelogo.png) no-repeat;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-top: 10px;
+    margin-top: 30px;
     display: block;
-    width: 70px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     text-indent: -9999px; /* hides the link text */
 }
 
@@ -269,9 +267,10 @@ a.navbar-brand {
         text-transform: uppercase;
 }
 
-.nav-custom > li > a:hover, .nav > li > a:focus {
+.nav-custom > li > a:hover, .nav-custom > li > a:focus {
     background-color: cyan;
     text-transform: uppercase;
+    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
 }
 
 .footer {
@@ -279,7 +278,7 @@ a.navbar-brand {
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
-    background-color: #21d192;
+    background-color: #5f5851;
 }
 
 .footer a {
