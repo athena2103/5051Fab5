@@ -474,7 +474,6 @@
     <Content Include="Views\Portal\Logout.cshtml" />
     <Content Include="Views\Student\Community.cshtml" />
     <Content Include="Views\Portal\AdminLogin.cshtml" />
-    <Content Include="Views\Student\Accomplishments.cshtml" />
     <Content Include="Views\Student\Avatar.cshtml" />
     <Content Include="Views\Student\Market.cshtml" />
     <Content Include="Views\Student\Report.cshtml" />

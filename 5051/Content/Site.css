@@ -201,7 +201,7 @@ textarea {
 }
 
 .nav > li > a {
-    padding-top: 50px;
+    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -210,7 +210,7 @@ a.navbar-brand {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-top: 30px;
+    margin-top: 10px;
     display: block;
     width: 50px;
     height: 50px;
@@ -265,9 +265,9 @@ a.navbar-brand {
     display: flex;
     display: -webkit-flex;
     margin-top: 20px;
-    width: 400px;
+    width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 80px;
+    font-size: 5em;
     color: white;
 }
 
@@ -332,17 +332,17 @@ a.navbar-brand {
 #kioskbackground h1 {
     font-family: 'Ubuntu', sans-serif;
     color: #3e4444;
-    font-size: 50px;
+    font-size: 2em;
 }
 
 .kioskModule h2 {
-        color: white;
-        font-size: 50px;
-        font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .kioskbtn {
-    font-size: 40px;
+    font-size: 2em;
     margin-bottom:40px;
 }
 
@@ -434,13 +434,12 @@ a.navbar-brand {
 }
 
 
-.student_header {
+.student-header {
     padding-top: 0px;
     font-size: 5.9vw;
-    z-index: 0;
 }
 
-    #studentnavicons {
+#studentnavicons {
     position: absolute;
     left: 50%;
     top: 10%;
