@@ -18,23 +18,23 @@
 </script>
 
 <script type="text/javascript">
-    var checkbox = document.getElementById('wireframe-student');
-    var img = <img src="~/Content/img/Student Market/market_mockup2.png" />;
-    var img1 = <img src="~/Content/img/Student Market/market_mockup3.png" />;
-    var img2 = <img src="~/Content/img/Student Market/market_mockup4.png" />;
-    var img3 = <img src="~/Content/img/Student Market/market_mockup5.png" />;
-
-    checkbox.onclick = function () {
+    function changePic() {
+        var checkbox = document.getElementById("wireframe-student");
+        checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
+        var img =  "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
+        var img1 = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
+        var img2 = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
+        var img3 = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
         if (checkbox.src == img) {
-            checkbox.src = img1;
+            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
         } else if (checkbox.src == img1) {
-            checkbox.src = img2;
+            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
         } else if (checkbox.src == img2) {
-            checkbox.src = img3;
+            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
         } else {
-            checkbox.src = img3;
+            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
         }
-    }
+
 </script>
 
 <div class="background">
@@ -55,7 +55,9 @@
                 <div class="boxed" align="center">
                     <font size="10">Points: 150</font>
                 </div>
-                <img id="wireframe-student" src="~/Content/img/Student Market/market_mockup2.png" width="1000" class="img-responsive"  />
+            <a href="#" onclick="changePic()">
+                <img id="wireframe-student" src="~/Content/img/Student Market/market_mockup2.png" width="1000" class="img-responsive" />
+            </a>
 
                 <div class="col-md-4">
 
