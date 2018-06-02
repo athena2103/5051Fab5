@@ -4,16 +4,6 @@
     padding-top: 10px;
 }
 
-.background {
-    background-image: url("../Content/img/sunset.png");
-    background-position: center bottom;
-    background-size: cover;
-    width: 100%;
-    padding-top: 50px;
-    min-height: 800px;
-    margin: 0 auto;
-}
-
 .background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
@@ -435,6 +425,16 @@ a.navbar-brand {
 /*------------------Homepage CSS END--------------------------------*/
 
 /*------------------Student Report section--------------------------*/
+.background {
+    background-image: url("../Content/img/sunset.png");
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    padding-top: 50px;
+    min-height: 800px;
+    margin: 0 auto;
+}
+
 #student-icons a {
     color:#fff;
 }
