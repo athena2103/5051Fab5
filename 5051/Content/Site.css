@@ -4,16 +4,6 @@
     padding-top: 10px;
 }
 
-.background {
-    background-image: url("../Content/img/sunset.png");
-    background-position: center bottom;
-    background-size: cover;
-    width: 100%;
-    padding-top: 50px;
-    min-height: 800px;
-    margin: 0 auto;
-}
-
 .background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
@@ -66,14 +56,11 @@
 }
 
 .hoverGlow:hover {
-    box-shadow: 0px 0px 10px #fff;
-    border-style: solid;
-    border-width: thick;
-    border-color: #ffffff;
-    
+        box-shadow: 0px 0px 10px #fff;
+        border-style: solid;
+        border-width: thick;
+        border-color: #ffffff;
 }
-
-
 
 #adminRPane {
     border-radius: 25px;
@@ -110,11 +97,11 @@
 
 #fitTitleText {
     padding-right: 0px;
-    width: 142px;
+    width: 143px;
 }
 
-#fitInfoText{
-    padding-left: 70px;
+#fitInfoText {
+    padding-left: 0px;
 }
 
 #fitEditNameText {
@@ -162,24 +149,6 @@ h1 {
     z-index: 0;
 }
 
-.scroll-bar-horz {
-    position: absolute;
-    border: none;
-    width: 100%;
-    height: 700px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-
-.student-header {
-    padding-top: 0px;
-    font-size: 5.9vw;
-    z-index:0;
-}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -217,11 +186,6 @@ textarea {
     background-size: cover;
 }
 
-.nav > li > a {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
 .btn-primary {
     color: #fff;
 }
@@ -235,15 +199,20 @@ textarea {
     color: white;
 }
 
+.nav > li > a {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
 a.navbar-brand {
     background: url(../Content/img/sitelogo.png) no-repeat;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    margin-top: 10px;
+    margin-top: 30px;
     display: block;
-    width: 70px;
-    height: 120px;
+    width: 50px;
+    height: 50px;
     text-indent: -9999px; /* hides the link text */
 }
 
@@ -270,9 +239,10 @@ a.navbar-brand {
         text-transform: uppercase;
 }
 
-.nav-custom > li > a:hover, .nav > li > a:focus {
+.nav-custom > li > a:hover, .nav-custom > li > a:focus {
     background-color: cyan;
     text-transform: uppercase;
+    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
 }
 
 .footer {
@@ -280,7 +250,7 @@ a.navbar-brand {
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
-    background-color: #21d192;
+    background-color: #5f5851;
 }
 
 .footer a {
@@ -440,10 +410,39 @@ a.navbar-brand {
     color:#fff;
 }
 
-#studentnavicons {
+.background {
+    background-image: url("../Content/img/sunset.png");
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    padding-top: 50px;
+    min-height: 800px;
+    margin: 0 auto;
+}
+
+.scroll-bar-horz {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 700px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+
+.student_header {
+    padding-top: 0px;
+    font-size: 5.9vw;
+    z-index: 0;
+}
+
+    #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 10%;
     font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
 }
