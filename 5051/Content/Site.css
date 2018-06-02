@@ -4,28 +4,14 @@
     padding-top: 10px;
 }
 
-.background {
-    background-image: url("../Content/img/sunset.png");
-    background-position: center bottom;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    padding-top: 50px;
-    min-height: 800px;
-    margin: 0 auto;
-    z-index: 1;
-}
-
 .background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
     background-size: cover;
-    position: relative;
     width: 100%;
     min-height: 800px;
     padding-top: 50px;
     margin: 0 auto;
-    z-index: 1;
 }
 
 /******************ADMIN SECTION*****************************************************/
@@ -34,13 +20,10 @@
     background-position: center bottom;
     background-repeat: repeat;
     background-size: cover;
-    position: relative;
     width: 100%;
     min-height: 800px;
     padding-top: 50px;
     margin: 0 auto;
-    z-index: 1;
-    opacity: 0.75;
 }
 
 #Pgtitle {
@@ -73,10 +56,11 @@
 }
 
 .hoverGlow:hover {
-        box-shadow: 0px 0px 10px #fff;
-        border-style: solid;
-        border-width: thick;
-        border-color: #ffffff;
+    box-shadow: 0px 0px 10px #fff;
+    border-style: solid;
+    border-width: thick;
+    border-color: #ffffff;
+    
 }
 
 
@@ -116,11 +100,11 @@
 
 #fitTitleText {
     padding-right: 0px;
-    width: 143px;
+    width: 142px;
 }
 
-#fitInfoText {
-    padding-left: 0px;
+#fitInfoText{
+    padding-left: 70px;
 }
 
 #fitEditNameText {
@@ -156,8 +140,7 @@
     }
 
 body {
-    background: #857c73;
-    padding-bottom: 20px;
+    background-color: #857c73;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
 }
@@ -214,64 +197,6 @@ textarea {
     float: none;
 }
 
-#studentnavicons {
-
-    position: absolute;
-    left: 50%;
-    top: 15%;
-    font-size: calc(1.0vw + 1.0vh);
-    transform: translate(-50%);
-}
-
-#studentnavicons a {
-    font-size: calc(2vw + 2vh);
-    margin-left: 10px;
-}
-
-.student-text-medium {
-    margin-top: 5%;
-    font-size: 3.5vh;
-}
-
-.student-text-small {
-    margin-top: 3%;
-    font-size: 2.0vh;
-}
-
-#wireframe-student {
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-#market-pic {
-    position: relative;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-
-.shop-scroll {
-    display: inline;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-
-#studentnaviconstext {
-    position: relative;
-    text-align:right;
-    margin-right: 20px;
-    top:-700px;
-    font-size: 16px;
-}
-
 .container-full {
     width:100%;
     margin: 0 auto;
@@ -287,20 +212,6 @@ textarea {
     padding-bottom: 30px;
 }
 
-a.navbar-brand {
-    background: url(../Content/img/sitelogo.png) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    margin-top: 10px;
-    margin-right: 20px;
-    display: block;
-    width: 35px;
-    height: 50px;
-    text-indent: -9999px; /* hides the link text */
-}
-
-
 .btn-primary {
     color: #fff;
 }
@@ -314,22 +225,45 @@ a.navbar-brand {
     color: white;
 }
 
-.navbar {
-    margin-bottom:0px;
-    border: 0px;
+a.navbar-brand {
+    background: url(../Content/img/sitelogo.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    display: block;
+    width: 70px;
+    height: 120px;
+    text-indent: -9999px; /* hides the link text */
 }
 
-.navbar-default {
-    background: transparent;
-    font-size: 20px;
+.nav-wrapper {
+    width: 100%;
+    top: 0;
+    left: 0;
     color: white;
-    border-bottom: 0px solid white;
+    background-color: transparent;
+    margin-bottom: 0px;
+    z-index: 999;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: #fff; /*Sets the text hover color on navbar*/
+.navbar-custom {
+    background-color: transparent;
+    margin-bottom: 0px;
+    border: 0px;
+    font-size: 20px;
+    z-index: 999;
 }
 
+.navbar-custom .navbar-nav > li > a {
+        color: #fff; /*Sets the text hover color on navbar*/
+        text-transform: uppercase;
+}
+
+.nav-custom > li > a:hover, .nav > li > a:focus {
+    background-color: cyan;
+    text-transform: uppercase;
+}
 
 .footer {
     width: 100%;
@@ -343,7 +277,7 @@ a.navbar-brand {
     color: #fff;
 }
 
-/*        Kiosk Page           */
+/*----------------------Kiosk Page------------------------*/
 
 #clock {
     display: flex;
@@ -488,8 +422,70 @@ a.navbar-brand {
     padding-bottom: 60px;
     height: auto;
 }
+/*------------------Homepage CSS END--------------------------------*/
 
-/*Student Report section*/
+/*------------------Student Report section--------------------------*/
+.background {
+    background-image: url("../Content/img/sunset.png");
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    padding-top: 50px;
+    min-height: 800px;
+    margin: 0 auto;
+}
+
+#student-icons a {
+    color:#fff;
+}
+
+#studentnavicons {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    font-size: calc(1.0vw + 1.0vh);
+    transform: translate(-50%);
+}
+
+    #studentnavicons a {
+        font-size: calc(2vw + 2vh);
+        margin-left: 10px;
+    }
+
+.student-text-medium {
+    margin-top: 5%;
+    font-size: 3.5vh;
+}
+
+.student-text-small {
+    margin-top: 3%;
+    font-size: 2.0vh;
+}
+
+#wireframe-student {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#market-pic {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.shop-scroll {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 .span5 {
     height: 600px;
