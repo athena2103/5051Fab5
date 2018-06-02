@@ -253,13 +253,13 @@ ViewBag.Title = "Reports";
                         <div class="listcenter">
                             @foreach (var item in Model.StudentList)
                                     {
-                                    <div id="li" class="col-md-6 text-center">
+                                    <div class="col-md-6 text-center">
                                         <a id="@item.Id" href="~/Admin/Manage/@item.Id">
-                                            <img src="~/Content/img/@item.AvatarUri" class="image-responsive" />
+                                            <img src="~/Content/img/@item.AvatarUri" width="50" height="50">
                                             <br />
-                                            <span>
+                                            <div text-align:center>
                                                 @item.Name
-                                            </span>
+                                            </div>
                                         </a>
                                     </div>
 

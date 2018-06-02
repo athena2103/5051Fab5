@@ -15,6 +15,7 @@
 }
 
 /******************ADMIN SECTION*****************************************************/
+/*background for all pucs*/
 #background3 {
     background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
@@ -90,7 +91,7 @@
     padding-top: 20px;
 }
 
- #adminReportBttn .attnEdit {
+#adminReportBttn .attnEdit {
        text-align: center;
        margin-left: 3px;
 }
@@ -256,6 +257,7 @@ a.navbar-brand {
 .footer a {
     color: #fff;
 }
+
 
 /*----------------------Kiosk Page------------------------*/
 
