@@ -482,5 +482,17 @@ a.navbar-brand {
     height: auto;
 }
 
+/*Student Report section*/
+
+.span5 {
+    margin-top: 20px;
+    padding-left: 20px;
+    height: auto;
+    width: auto;
+    position: center;
+    background: #fff;
+    opacity: 0.7;
+    display: inline-block;
+}
 
 /*********** Homepage CSS   END ******************/
