@@ -240,11 +240,12 @@ a.navbar-brand {
         text-transform: uppercase;
 }
 
-.nav-custom > li > a:hover, .nav-custom > li > a:focus {
-    background-color: cyan;
-    text-transform: uppercase;
-    box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
-}
+    .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+        background-color: cyan;
+        color: #3e4444;
+        text-transform: uppercase;
+        box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
+    }
 
 .footer {
     width: 100%;
