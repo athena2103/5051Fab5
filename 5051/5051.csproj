@@ -360,11 +360,10 @@
     <Content Include="Content\img\studentGameLogin.PNG" />
     <Content Include="Content\img\StudentProfile.png" />
     <Content Include="Content\img\StudentProfileBio.png" />
-    <Content Include="Content\img\StudentReport.PNG" />
-    <Content Include="Content\img\studentReportWireframe.png" />
     <Content Include="Content\img\student_logout.PNG" />
     <Content Include="Content\img\sunset.png" />
     <Content Include="Content\img\totalGraph.png" />
+    <Content Include="Content\img\townB.png" />
     <Content Include="Content\img\wireframe_accomplishments.png" />
     <Content Include="Content\img\wireframe_avatar.png" />
     <Content Include="Content\img\wireframe_market.png" />
@@ -400,7 +399,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\scrolling-parallax.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

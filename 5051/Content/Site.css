@@ -1,37 +1,36 @@
 ﻿/* --------------Fab5 ----------------*/
+#community {
+    margin-bottom: 150px;
+    padding-top: 10px;
+}
 
-
-#background {
+.background {
     background-image: url("../Content/img/sunset.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 10px;
+    padding-top: 50px;
     min-height: 800px;
     margin: 0 auto;
-    margin-bottom:150px;
     z-index: 1;
 }
 
-#background2 {
+.background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
     min-height: 800px;
-    padding-top: 100px;
+    padding-top: 50px;
     margin: 0 auto;
     z-index: 1;
 }
 
-#background3 {
+.background3 {
     background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
-    background-repeat: repeat;
     background-size: cover;
     position: relative;
     width: 100%;
