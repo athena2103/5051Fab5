@@ -28,6 +28,7 @@
     z-index: 1;
 }
 
+/******************ADMIN SECTION*****************************************************/
 #background3 {
     background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
@@ -43,6 +44,7 @@
 }
 
 #Pgtitle {
+    font-size: 25px;
     color: #fff375;
     margin-top: -20px;
     padding-left: 20px;
@@ -50,12 +52,18 @@
     
 }
 
+#mainMenu {
+    margin-top: -20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+
 #adminPane {
     border-radius: 25px;
     background-color: #f9f3ae;
     padding: 30px 30px;
     opacity: 0.90;
-   
 }
 
 #adminLPane {
@@ -112,6 +120,8 @@
     padding-top: 70px;
     overflow: auto;
 }
+
+/****************************************************************************************/
 
 .road {
     background: rgb(138,138,138);

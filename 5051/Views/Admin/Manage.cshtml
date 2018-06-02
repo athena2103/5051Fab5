@@ -4,9 +4,7 @@
 ViewBag.Title = "Reports";
 }
 
-<head>
-    <link rel="stylesheet" href="glowing.css">
-</head>
+
 <div id="background3">
 <div class="container">
     <!--Support print button-->
@@ -33,20 +31,21 @@ ViewBag.Title = "Reports";
 
     </script>
 
-
-    <div class="col-md-8">
-        <h3 id="Pgtitle">Manage Students</h3>
+<div class="col-md-12">
+    <div id="Pgtitle" class="col-md-3">
+        Manage Students
     </div>
-
-    <div class="col-md-4">
-        @{
-            <div style="float:right;">
-                @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
-                <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
-            </div>
-
-        }
+    <div id="mainMenu" class="col-md-9 pull-right">
+        
+            @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
+            <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
+       
     </div>
+</div>
+
+
+
+    
     <br />
 
     <div class="col-md-12">
@@ -114,7 +113,7 @@ ViewBag.Title = "Reports";
                         </script>
 
 
-                        <div id="adminLPane" class="col-md-4 glowing pink">
+                        <div id="adminLPane" class="col-md-4">
                                     
                                 @{
                                     if (Model.Student != null)
