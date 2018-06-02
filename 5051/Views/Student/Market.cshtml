@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Marketplace";
 }
 
@@ -7,47 +6,50 @@
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <link rel="stylesheet" type="text/css" href="~/Content/Site.css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        // Handler for .ready() called.
+
+        $('#wireframe-student').on('click', function () {
+            var img_src = $(this).attr('alt');
+            if (img_src == 'image1') {
+                $(this).attr({ src: '/Content/img/Student Market/Market_demo3.png', alt: 'image2' });
+            } else if (img_src == 'image2') {
+                $(this).attr({ src: '/Content/img/Student Market/Market_demo4.png', alt: 'image3' });
+            } else if (img_src == 'image3') {
+                $(this).attr({ src: '/Content/img/Student Market/Market_demo5.png', alt: 'image4' });
+            } else {
+                /* carry on..... */
+            }
+        });
+    });
+</script>
+
 <div class="background">
     <div class="row text-center">
         <h1 class="student-header" align="center">Marketplace</h1>
-            <div id="studentnavicons">
-                <a href="~/Student/Default" title="Store"><i class="fas fa-store-alt" style="color:#7a553b"></i></a>
-                <a href="~/Student/Community" title="Community"><i class="fas fa-map-signs" style="color:#7a553b"></i></a>
-                <a href="~/Student/Market" title="Marketplace"><i class="fas fa-shopping-cart" style="color:#7a553b"></i></a>
-                <a href="~/Student/Accomplishments" title="Yep, I did this"><i class="fas fa-trophy" style="color:#7a553b"></i></a>
-                <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
-                <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
-            </div>
+        <div id="studentnavicons">
+            <a href="~/Student/Default" title="Store"><i class="fas fa-store-alt" style="color:#7a553b"></i></a>
+            <a href="~/Student/Community" title="Community"><i class="fas fa-map-signs" style="color:#7a553b"></i></a>
+            <a href="~/Student/Market" title="Marketplace"><i class="fas fa-shopping-cart" style="color:#7a553b"></i></a>
+            <a href="~/Student/Accomplishments" title="Yep, I did this"><i class="fas fa-trophy" style="color:#7a553b"></i></a>
+            <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user" style="color:#7a553b"></i></a>
+            <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt" style="color:#7a553b"></i></a>
         </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12">
-                <div class="boxed" align="center">
-                    <font size="10">Points: 150</font>
-                </div>
-                <img src="~/Content/img/Student Market/market_mockup2.png" width="1000" class="img-responsive" id="wireframe-student" />
+            <div class="boxed" align="center">
+                <font size="10">Points: 150</font>
+            </div>
 
-                <div class="col-md-4">
-
-                    <div style="float: right; margin-top:-70px;" align="center">
-                        @Html.ActionLink("Sell", "MarketAfter", "Student", null, new { @class = "btn btn-primary" })
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div style="float:right; margin-top:-70px;" align="center">
-                        @Html.ActionLink("Buy", "MarketAfter", "Student", null, new { @class = "btn btn-primary" })
-                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <img id="wireframe-student" src="/Content/img/Student Market/Market_demo2.png" width="1000" class="img-responsive" alt="image1" />
                 </div>
             </div>
+        </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-

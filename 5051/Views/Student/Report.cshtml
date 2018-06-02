@@ -5,16 +5,45 @@
 
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
+<script>
+function openTab(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    document.getElementById(cityName).style.display = "block";
+}
+</script>
+
+
 <div class="background">
     <div class="row text-center">
         <h2 align="center">My Report</h2>
-        <div class="btn-group" style="margin-right: 10px">
-            <button class="btn">Month</button>
-            <button class="btn">Year</button>
-            <button class="btn">Stat</button>
+        <div class="col-md-12">
+            <div class="w3-bar w3-black">
+                <button class="w3-bar-item w3-button" onclick="openTab('Month')">Month</button>
+                <button class="w3-bar-item w3-button" onclick="openTab('Year')">Year</button>
+                <button class="w3-bar-item w3-button" onclick="openTab('Stats')">Stats</button>
+            </div>
+
+            <div id="Month" class="w3-container city">
+                <div class="span5">
+                        <h3>Month</h3>
+                    <div style="position: relative;"><img src="~/Content/img/StudentCalendar1.png" width="1000" class="img-responsive" id="wireframe-student" /></div>
+                </div>
+            </div>
+
+            <div id="Year" class="w3-container city" style="display:none">
+                <h3>Year</h3>
+                <p>Paris is the capital of France.</p>
+            </div>
+
+            <div id="Stats" class="w3-container city" style="display:none">
+                <h3>Stats</h3>
+                <p>Tokyo is the capital of Japan.</p>
+            </div>
         </div>
-        <p class="student-text-small">Total hours: <span class="report-color">120h 45m</span>&nbsp;&nbsp;&nbsp;Average hours: <span class="report-color">5h 30m</span></p>
-        <p style="font-size: 2.0vh">Best day(s): <span class="report-color">16th, 19th, 24th</span>&nbsp;&nbsp;&nbsp;Gone: <span class="report-color">9th, 26th </span></p>
-        <img src="~/Content/img/StudentReportsWireframe.png" width="800" class="img-responsive" id="wireframe-student" />
+
     </div>
 </div>
