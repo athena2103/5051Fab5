@@ -263,9 +263,9 @@ a.navbar-brand {
     display: flex;
     display: -webkit-flex;
     margin-top: 20px;
-    width: 400px;
+    width: 100%;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 80px;
+    font-size: 5em;
     color: white;
 }
 
@@ -330,17 +330,17 @@ a.navbar-brand {
 #kioskbackground h1 {
     font-family: 'Ubuntu', sans-serif;
     color: #3e4444;
-    font-size: 50px;
+    font-size: 2em;
 }
 
 .kioskModule h2 {
-        color: white;
-        font-size: 50px;
-        font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .kioskbtn {
-    font-size: 40px;
+    font-size: 2em;
     margin-bottom:40px;
 }
 
