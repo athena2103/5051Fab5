@@ -4,33 +4,29 @@
     ViewBag.Title = "Kiosk Mode - New Student Profile";
 }
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
-<div class="background2">
-        <div class="row">
-            <div class="form">
 
-                <div class="row">
-                    <div class="col-md-6">
-                        @Html.ActionLink("< Back", "Index", "Kiosk", null, new { @class = "btn btn-primary btn-sm" })
-                        <br /><br />
-                        <p class="text-white"><strong>Create a new profile.</strong></p>
-                    </div>
+<div class="container-fluid" id="kioskbackground">
+    
+    <div class="row">
+        <h2>Create a new profile.</h2>
+        <div class="kioskModule col-md-4 col-md-offset-4 col-sm-12">
 
-                </div>
-
+            <div class="row">
+                @Html.ActionLink("< Back", "Index", "Kiosk", null, new { @class = "btn btn-primary" })
+            </div>
+            <div class="row">
 
                 @using (Html.BeginForm())
                 {
-                    @Html.AntiForgeryToken()
-                    @Html.HiddenFor(m => m.Id)
-
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Id)
+                <div class="col-md-6 col-md-offset-3">
                     <div class="form-group">
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
-                            </div>
-                            <p>@Html.ValidationMessageFor(m => m.Name)</p>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
                         </div>
+                        <p>@Html.ValidationMessageFor(m => m.Name)</p>
                     </div>
 
                     <div class="form-group">
@@ -60,12 +56,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="form-group ">
-                        <input type="submit" value="Create" class="button button-block">
+                    <div class="form-group">
+                        <div class="cols-sm-12">
+                            <input type="submit" value="Create" class="btn btn-success btn-lg btn-block kioskbtn"></div>
+                        </div>
                     </div>
-
                 }
             </div>
         </div>
     </div>
+
+</div>
