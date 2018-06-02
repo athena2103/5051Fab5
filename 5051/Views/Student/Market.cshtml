@@ -17,26 +17,6 @@
 	});
 </script>
 
-<script>
-            var checkbox = document.getElementById("wireframe-student");
-        checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
-        var img =  "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
-        var img1 = "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
-        var img2 = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
-        var img3 = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
-    function changePic() {
-
-        if (checkbox.src == img) {
-            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo2.png")";
-        } else if (checkbox.src == img1) {
-            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo3.png")";
-        } else if (checkbox.src == img2) {
-            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo4.png")";
-        } else {
-            checkbox.src = "@Url.Content("~/Content/img/Student Market/Market_demo5.png")";
-        }
-
-</script>
 
 <div class="background">
     <div class="row text-center">
@@ -56,12 +36,11 @@
                 <div class="boxed" align="center">
                     <font size="10">Points: 150</font>
                 </div>
-            <a href="#" onclick="changePic()">
-                <img id="wireframe-student" src="~/Content/img/Student Market/Market_demo2.png" width="1000" class="img-responsive" />
-            </a>
-
+         
+                <img id="wireframe-student" src="/Content/img/Student Market/Market_demo2.png" 
+                     onclick="this.src='/Content/img/Student Market/Market_demo3.png'" width="1000" class="img-responsive" />
+          
                 <div class="col-md-4">
-
                     <div style="float: right; margin-top:-70px;" align="center">
                         @Html.ActionLink("Sell", "MarketAfter", "Student", null, new { @class = "btn btn-primary" })
                     </div>
