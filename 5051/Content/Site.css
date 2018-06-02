@@ -4,18 +4,6 @@
     padding-top: 10px;
 }
 
-.background {
-    background-image: url("../Content/img/sunset.png");
-    background-position: center bottom;
-    background-size: cover;
-    position: relative;
-    width: 100%;
-    padding-top: 50px;
-    min-height: 800px;
-    margin: 0 auto;
-    z-index: 1;
-}
-
 .background2 {
     background-image: url("../Content/img/daytimeBackground.png");
     background-position: center bottom;
@@ -167,25 +155,6 @@ h1 {
     font-size: 60px;
     font-weight: 800;
     z-index: 0;
-}
-
-.scroll-bar-horz {
-    position: absolute;
-    border: none;
-    width: 100%;
-    height: 700px;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    margin: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-
-
-.student-header {
-    padding-top: 0px;
-    font-size: 5.9vw;
-    z-index:0;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -433,14 +402,40 @@ a.navbar-brand {
 /*------------------Homepage CSS END--------------------------------*/
 
 /*------------------Student Report section--------------------------*/
-#student-icons a {
-    color:#fff;
+.background {
+    background-image: url("../Content/img/sunset.png");
+    background-position: center bottom;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding-top: 20px;
+    min-height: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.scroll-bar-horz {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 700px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.student_header {
+    padding-top: 0px;
+    font-size: 5.9vw;
+    z-index: 0;
 }
 
 #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 15%;
+    top: 10%;
     font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
 }
@@ -448,6 +443,7 @@ a.navbar-brand {
     #studentnavicons a {
         font-size: calc(2vw + 2vh);
         margin-left: 10px;
+        color:white;
     }
 
 .student-text-medium {
