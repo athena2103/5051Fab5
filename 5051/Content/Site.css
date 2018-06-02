@@ -13,7 +13,7 @@
     padding-top: 50px;
     min-height: 800px;
     margin: 0 auto;
-    z-index: 1;
+    z-index:-999;
 }
 
 .background2 {
@@ -25,7 +25,7 @@
     min-height: 800px;
     padding-top: 50px;
     margin: 0 auto;
-    z-index: 1;
+    z-index: -999;
 }
 
 /******************ADMIN SECTION*****************************************************/
@@ -39,8 +39,8 @@
     min-height: 800px;
     padding-top: 50px;
     margin: 0 auto;
-    z-index: 1;
     opacity: 0.75;
+    z-index: -999;
 }
 
 #Pgtitle {
@@ -156,8 +156,7 @@
     }
 
 body {
-    background: #857c73;
-    padding-bottom: 20px;
+    background-color: #857c73;
     font-family: 'Ubuntu', sans-serif;
     overflow-x: hidden;
 }
@@ -314,22 +313,31 @@ a.navbar-brand {
     color: white;
 }
 
-.navbar {
-    margin-bottom:0px;
-    border: 0px;
-}
-
-.navbar-default {
-    background: transparent;
-    font-size: 20px;
+.nav-wrapper {
+    width: 100%;
+    top: 0;
+    left: 0;
     color: white;
-    border-bottom: 0px solid white;
+    background-color: transparent;
+    margin-bottom: 0px;
 }
 
-.navbar-default .navbar-nav > li > a {
-    color: #fff; /*Sets the text hover color on navbar*/
+.navbar-custom {
+    background-color: transparent;
+    margin-bottom: 0px;
+    border: 0px;
+    font-size: 20px;
 }
 
+.navbar-custom .navbar-nav > li > a {
+        color: #fff; /*Sets the text hover color on navbar*/
+        text-transform: uppercase;
+}
+
+.nav-custom > li > a:hover, .nav > li > a:focus {
+    background-color: cyan;
+    text-transform: uppercase;
+}
 
 .footer {
     width: 100%;
