@@ -7,7 +7,16 @@
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <link rel="stylesheet" type="text/css" href="~/Content/Student.css" />
 
-
+<script>
+    function openTab(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+    }
+</script>
 
 
 
@@ -62,18 +71,9 @@
             </div>
     </div>
 
-<script>
-    function openTab(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
-    }
-</script>
 
-            <script>
+
+  <script>
                 var slideIndex = 1;
                 showDivs(slideIndex);
 
@@ -91,5 +91,5 @@
                     }
                     x[slideIndex - 1].style.display = "block";
                 }
-            </script>
+  </script>
 
