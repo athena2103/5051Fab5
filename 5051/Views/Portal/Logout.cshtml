@@ -9,8 +9,8 @@
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <link rel="stylesheet" type="text/css" href="~/Content/Student.css" />
 
-
-   <script>
+<!--
+    <script>
     window.setTimeout(function () {
         // Move to a new location or you can do something else
         window.location.href = "../Portal/Login";
@@ -18,13 +18,14 @@
 
 </script>
 
+-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-    $(function() {
-     $(".speech-bubble2").delay(2000).fadeIn(500);
-    });
     $(function () {
-        $(".speech-bubble").delay(1500).fadeOut(500);
+        $(".speech-bubble2").css("display", "none");
+        $(".speech-bubble2").delay(2000).fadeIn(500);
+        $(".speech-bubble2").css("display", "inline-block");
     });
 </script>
 
@@ -42,9 +43,10 @@
 
         <p class="student-text-medium">You are logged out!<br />Redirecting to login screen...</p>
         <div class="dog-container">
-            <img class="speech-bubble" id="dog-pic" src="~/Content/img/speech-bubble-blue.png" />
-            <img class="speech-bubble2" id="dog-pic" src="~/Content/img/speech-bubble-fab.png" />
             <img class="dog" id="dog-pic" src="~/Content/img/wasabi.png" />
+            <img class="speech-bubble" id="dog-pic" src="~/Content/img/speech-bubble-blue.png" />
+
+            <img class="speech-bubble2" id="dog-pic" src="~/Content/img/speech-bubble-fab.png" />
         </div>
     </div>
 </div>
