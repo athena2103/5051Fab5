@@ -24,10 +24,8 @@ namespace _5051
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                "~/Content/Student.css",
-                 "~/Content/Login.css",
                       "~/Content/bootstrap.css",
-                      "~/Content/Site.css"));
+                      "~/Content/site.css"));
         }
     }
 }
