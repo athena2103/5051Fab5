@@ -3,15 +3,18 @@
     ViewBag.Title = "My Reports";
 }
 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
+
 <script>
-function openTab(cityName) {
-    var i;
-    var x = document.getElementsByClassName("city");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";
+    function openTab(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
     }
-    document.getElementById(cityName).style.display = "block";
-}
 </script>
 
 
@@ -27,7 +30,7 @@ function openTab(cityName) {
 
             <div id="Month" class="w3-container city">
                 <div class="span5">
-                        <h3>Month</h3>
+                    <h3>Month</h3>
                 </div>
             </div>
             <div class="student-report"> <img src="~/Content/img/studentCalendar1.png" width="1000" class="img-responsive" id="wireframe-student" /></div>
