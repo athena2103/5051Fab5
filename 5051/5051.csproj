@@ -336,10 +336,12 @@
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\storeMockup.png" />
+    <Content Include="Content\img\Student Market\Market_demo1.png" />
     <Content Include="Content\img\Student Market\Market_demo2.png" />
     <Content Include="Content\img\Student Market\Market_demo3.png" />
     <Content Include="Content\img\Student Market\Market_demo4.png" />
     <Content Include="Content\img\Student Market\Market_demo5.png" />
+    <Content Include="Content\img\Student Market\Market_demo6.png" />
     <Content Include="Content\img\Student Market\market_mockup2.png" />
     <Content Include="Content\img\studentCalendar.PNG" />
     <Content Include="Content\img\studentCalendar1.PNG" />
