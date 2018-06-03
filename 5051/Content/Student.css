@@ -63,6 +63,10 @@
     margin-right: auto;
 }
 
+.avatar-block {
+    margin-top: 100px;
+}
+
 .dog-container {
     position: relative;
     margin-bottom: 600px;
