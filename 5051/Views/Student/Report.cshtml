@@ -7,16 +7,7 @@
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <link rel="stylesheet" type="text/css" href="~/Content/Student.css" />
 
-<script>
-    function openTab(cityName) {
-        var i;
-        var x = document.getElementsByClassName("city");
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementById(cityName).style.display = "block";
-    }
-</script>
+
 
 
 
@@ -24,11 +15,12 @@
     <div class="row text-center">
         <h2 align="center">My Report</h2>
         <div class="col-md-12">
-            <div class="w3-bar w3-pale-yellow">
+            <div class="w3-bar">
                 <button class="w3-bar-item w3-button" onclick="openTab('Month')">Month</button>
                 <button class="w3-bar-item w3-button" onclick="openTab('Year')">Year</button>
                 <button class="w3-bar-item w3-button" onclick="openTab('Shops')">My Shops</button>
             </div>
+
             <div class="col-md-12">
                 <div id="Month" class="w3-container city">
                     <div class="span5">
@@ -44,21 +36,42 @@
                     </div>
                 </div>
             </div>
-            <div id="Year" class="w3-container city" style="display:none">
-                <div class="span5">
-                    <h3>Year</h3>
+
+            <div class="col-md-12">
+                <div id="Year" class="w3-container city" style="display:none">
+                    <div class="span5">
+                        <h3>Year</h3>
+                    </div>
+
+                    <div class="w3-content w3-display-container">
+                        <img class="shops" src="~/Content/img/YearChart.png" />
+                    </div>
                 </div>
             </div>
+
+            <div class="col-md-12">
                 <div id="Shops" class="w3-container city" style="display:none">
                     <div class="span5">
                         <h3>My Shops</h3>
                     </div>
-                    <img id="shops" src="/Content/img/MyShops.png" />
+
+                    <div class="w3-content w3-display-container">
+                        <img class="shops" src="~/Content/img/MyShops.png" style="width: 780px;"/>
+                    </div>
                 </div>
             </div>
-
-        </div>
     </div>
+
+<script>
+    function openTab(cityName) {
+        var i;
+        var x = document.getElementsByClassName("city");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        document.getElementById(cityName).style.display = "block";
+    }
+</script>
 
             <script>
                 var slideIndex = 1;

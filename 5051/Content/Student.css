@@ -125,10 +125,13 @@
     z-index: 0;
 }
 
-#shops {
-    position: center;
-    margin-top: -580px;
-    z-index: 2;
+.shops {
+    top: -500px;
+    margin-bottom: -430px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-right: 50px;
 }
 
 .mySlides {
@@ -140,7 +143,7 @@
     margin-bottom: -750px;
 }
 
-/*manage right */
+/*manage right button position in student/report */
 .slideButtonLeft {
     margin-bottom: -580px;
 }
