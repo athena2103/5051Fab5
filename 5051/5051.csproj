@@ -379,6 +379,7 @@
     <Content Include="Content\img\wireframe_market.png" />
     <Content Include="Content\img\wireframe_student_index.png" />
     <Content Include="Content\Login.css" />
+    <Content Include="Content\Student.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
