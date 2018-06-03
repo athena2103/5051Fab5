@@ -15,7 +15,7 @@
 }
 
 /******************ADMIN SECTION*****************************************************/
-/*background for all pucs*/
+
 #background3 {
     background-image: url("../Content/img/nightimeBackground.png");
     background-position: center bottom;
@@ -28,14 +28,19 @@
 }
 
 #Pgtitle {
-    font-size: 25px;
+    font-size: 30px;
     color: #fff375;
     margin-top: -20px;
     padding-left: 20px;
 }
 
+#adminHeader {
+    padding-top: 60px;
+}
+
 #mainMenu {
     margin-top: -20px;
+    padding-top: 5px;
     padding-left: 660px;
     padding-bottom: 20px;
 }
@@ -102,7 +107,7 @@
 }
 
 #fitInfoText {
-    padding-left: 0px;
+    padding-left: 11px;
 }
 
 #fitEditNameText {
