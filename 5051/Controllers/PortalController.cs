@@ -9,7 +9,7 @@ namespace _5051.Controllers
     public class PortalController : Controller
     {
         /// <summary>
-        /// The Login in page for the Portal, shows all the Students
+        /// The Login in page for the student portal, ask user for email and password
         /// </summary>
         /// <returns></returns>
         // GET: Portal
@@ -29,7 +29,7 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Display logout page
+        /// Display logout page for the student portal
         /// </summary>
         /// <returns></returns>
         public ActionResult Logout()
@@ -38,7 +38,7 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// Index Page
+        /// Index Page for student portal
         /// </summary>
         /// <returns></returns>
         // GET: Portal

@@ -35,6 +35,11 @@ namespace _5051.Controllers
             return View();
         }
 
+
+        /// <summary>
+        /// This display the store after something is bought from the market
+        /// </summary>
+        /// <returns></returns>
         public ActionResult MarketAfter()
         {
             return View();
@@ -51,7 +56,7 @@ namespace _5051.Controllers
         }
 
         /// <summary>
-        /// My Attendance Reports
+        /// My Attendance Reports for student
         /// </summary>
         /// <returns></returns>
         // GET: Portal
@@ -60,15 +65,6 @@ namespace _5051.Controllers
             return View();
         }
 
-        /// <summary>
-        ///Market Page
-        /// </summary>
-        /// <returns></returns>
-        // GET: Portal
-        public ActionResult Accomplishments()
-        {
-            return View();
-        }
 
         /// <summary>
         /// Read information on a single Student
