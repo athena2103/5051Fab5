@@ -124,9 +124,22 @@
     margin-top: 10px;
 }
 
-.student-report {
+.mySlides {
+    display: none;
+    height: auto;
+    width: 100%;
     position: relative;
-    top: -600px;
     padding-left: 50px;
+    margin-bottom: -750px;
+}
+
+/*manage right */
+.slideButtonLeft {
+    margin-bottom: -580px;
+
+}
+
+/*manage right button position in student/report */
+.slideButtonRight {
     margin-bottom: -580px;
 }
