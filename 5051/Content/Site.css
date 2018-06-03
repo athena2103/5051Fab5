@@ -241,13 +241,13 @@ a.navbar-brand {
     left: 0;
     color: white;
     background-color: transparent;
-    margin-bottom: 0px;
+    padding-right: 20px;
     z-index: 999;
+    position: fixed;
 }
 
 .navbar-custom {
     background-color: transparent;
-    margin-bottom: 0px;
     border: 0px;
     font-size: 20px;
     z-index: 999;
@@ -258,10 +258,14 @@ a.navbar-brand {
         text-transform: uppercase;
 }
 
-    .navbar-custom .navbar-nav > li > a:hover, .navbar-custom .navbar-nav > li > a:focus {
+    .navbar-custom .navbar-nav > li > a:hover {
         background-color: cyan;
         color: #3e4444;
         text-transform: uppercase;
+        box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
+    }
+
+    .navbar-custom .navbar-nav > li:nth-child(3) a:hover {
         box-shadow: 0 4px 10px 4px rgba(62, 68, 68, .7);
     }
 
@@ -350,13 +354,13 @@ a.navbar-brand {
 
 #kioskbackground h1 {
     font-family: 'Ubuntu', sans-serif;
-    color: #3e4444;
+    color: #fff;
     font-size: 2em;
 }
 
 .kioskModule h2 {
     color: white;
-    font-size: 1em;
+    font-size: 2em;
     font-family: 'Ubuntu', sans-serif;
 }
 
