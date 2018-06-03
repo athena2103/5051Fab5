@@ -143,3 +143,19 @@
 .slideButtonRight {
     margin-bottom: -580px;
 }
+
+.w3-display-left{
+    position: absolute;
+    top: 50%;
+    margin-left: -100px;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%, -50%);
+}
+
+.w3-display-right {
+    position: absolute;
+    top: 50%;
+    margin-right: -100px;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%, -50%);
+}
