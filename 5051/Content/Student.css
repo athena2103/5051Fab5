@@ -28,15 +28,16 @@
 
 .student-header {
     padding-top: 0px;
-    font-size: 5.9vw;
+    font-size: 5.0vw;
 }
 
 #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 20%;
+    top: 18%;
     font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
+    z-index: 2;
 }
 
     #studentnavicons a {
@@ -56,15 +57,16 @@
 
 #wireframe-student {
     position: relative;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-bottom: 100px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    z-index: 1;
 }
 
 .avatar-block {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 .dog-container {
