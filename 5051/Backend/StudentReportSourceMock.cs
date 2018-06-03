@@ -99,18 +99,29 @@ namespace _5051.Backend
             var countX = 0;
             
            
-            for (count = 1; count < 6; count++)
+            for (count = 1; count < 7; count++)
             {
+                
                 List<string> reports = new List<string>();
-                for (countX = 1; countX < 5; countX++)
+                if (count == 6)
                 {
-                    reports.Add("student" + count.ToString() + "_" + countX.ToString()
-                    + "Attendance.PNG");
+                    reports = Enumerable.Repeat("blankReport.PNG", 4).ToList();
                 }
+                else
+                {
+                    for (countX = 1; countX < 5; countX++)
+                    {
+                        reports.Add("student" + count.ToString() + "_" + countX.ToString()
+                        + "Attendance.PNG");
+                    }
+                }
+                
                 Create(new StudentReportModel(reports, "Report"
                     + count.ToString()));
             }
+
             
+
         }
     }
 }

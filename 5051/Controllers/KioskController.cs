@@ -107,6 +107,12 @@ namespace _5051.Controllers
                 return View(data);
             }
 
+            //Assign blank reports to a new student
+            var Reports = StudentReportBackend.Instance.Index();
+            var Report = Reports[Reports.Count - 1].Uri;
+            data.ReportsId = Report;
+
+
             StudentBackend.Create(data);
 
             TempData["ReturnMsg"] = "Account created successfully.";

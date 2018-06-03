@@ -140,14 +140,6 @@ namespace _5051.Backend
             Create(new AvatarModel("/Avatar/avatar9.png", "Avatar9", "Avatar9", 1));
             Create(new AvatarModel("/Avatar/avatar10.png", "Avatar10", "Avatar10", 1));
 
-            Create(new AvatarModel("defaultFAvatar.png", "fDefault", "fDefault", 1));
-            Create(new AvatarModel("defaultMAvatar.png", "mDefault", "mDefault", 1));
-            Create(new AvatarModel("djhAvatar.png", "fartard", "fartard", 1));
-            Create(new AvatarModel("dMNAvatar.png", "royal", "royal", 1));
-            Create(new AvatarModel("dMN1Avatar.png", "losangeles", "losangels", 1));
-            Create(new AvatarModel("dnnAvatar.png", "I tried", "I tried", 1));
-            Create(new AvatarModel("dwaAvatar.png", "xoxo", "xoxo", 1));
-           
         }
     }
 }
