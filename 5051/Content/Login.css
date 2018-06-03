@@ -30,7 +30,7 @@ a {
 }
 
 
-h1 {
+.form h1 {
     text-align: center;
     color: #fff;
     position: relative;
@@ -40,7 +40,7 @@ h1 {
     z-index: 2;
 }
 
-h2{
+.form h2 {
     font-size: 50px;
     text-align: center;
     color: #364c70;
@@ -57,7 +57,7 @@ h2{
 
 }
 
-label {
+.form label {
     position: absolute;
     transform: translateY(6px);
     left: 13px;
@@ -68,27 +68,27 @@ label {
     font-size: 22px;
 }
 
-    label .req {
+    .form label .req {
         margin: 2px;
         color: #1ab188;
         width: 100%;
     }
 
-    label.active {
+    .form label.active {
         transform: translateY(50px);
         left: 2px;
         font-size: 14px;
     }
 
-        label.active .req {
+        .form label.active .req {
             opacity: 0;
         }
 
-    label.highlight {
+    .form label.highlight {
         color: #fff;
     }
 
-input, textarea {
+.form input, .form textarea {
     font-size: 22px;
     display: block;
     width: 100%;
@@ -102,17 +102,17 @@ input, textarea {
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-    input:focus, textarea:focus {
+    .form input:focus, .form textarea:focus {
         outline: 0;
         border-color: #1ab188;
     }
 
-textarea {
+.form textarea {
     border: 2px solid #a0b3b0;
     resize: vertical;
 }
 
-.field-wrap {
+.form .field-wrap {
     position: relative;
     margin-bottom: 40px;
 }
