@@ -8,7 +8,7 @@
     background-position: center bottom;
     background-size: cover;
     width: 100%;
-    padding-top: 50px;
+    padding-top: 30px;
     min-height: 800px;
     margin: 0 auto;
 }
@@ -34,14 +34,14 @@
 #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 20%;
     font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
 }
 
     #studentnavicons a {
         font-size: calc(2vw + 2vh);
-        margin-left: 10px;
+        margin-left: 25px;
     }
 
 .student-text-medium {
@@ -56,11 +56,39 @@
 
 #wireframe-student {
     position: relative;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 100px;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+}
+
+.dog-container {
+    position: relative;
+    margin-bottom: 600px;
+}
+
+    .dog-container .dog {
+        position: absolute;
+        top: 10px;
+        left: 600px;
+        z-index: 1;
+    }
+
+#dog-block {
+    display: inline-block;
+}
+
+.speech-bubble {
+    display: inline-block;
+    margin-right: 1000px;
+    width: 400px;
+}
+
+.speech-bubble2 {
+    display: none;
+    margin-left: 1000px;
+    width: 400px;
 }
 
 #market-pic {

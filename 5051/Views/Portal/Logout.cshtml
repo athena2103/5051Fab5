@@ -1,15 +1,15 @@
 
 @{
-                /**/
+    /**/
 
-                ViewBag.Title = "Logout";
+    ViewBag.Title = "Logout";
 }
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 <link rel="stylesheet" type="text/css" href="~/Content/Student.css" />
 
-<!--
+
    <script>
     window.setTimeout(function () {
         // Move to a new location or you can do something else
@@ -18,7 +18,15 @@
 
 </script>
 
--->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $(function() {
+     $(".speech-bubble2").delay(2000).fadeIn(500);
+    });
+    $(function () {
+        $(".speech-bubble").delay(1500).fadeOut(500);
+    });
+</script>
 
 
 <div class="background">
@@ -31,14 +39,18 @@
             <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user"></i></a>
             <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
-        <p class="student-text-medium">You are now logged out and redirected to Login Screen.</p>
-        <p class="student-text-small">Come back soon. We'll miss you.</p>
-        <img src="~/Content/img/wasabi.png" class="img-responsive" id="wireframe-student" />
+
+        <p class="student-text-medium">You are logged out!<br />Redirecting to login screen...</p>
+        <div class="dog-container">
+            <img class="speech-bubble" id="dog-pic" src="~/Content/img/speech-bubble-blue.png" />
+            <img class="speech-bubble2" id="dog-pic" src="~/Content/img/speech-bubble-fab.png" />
+            <img class="dog" id="dog-pic" src="~/Content/img/wasabi.png" />
+        </div>
     </div>
 </div>
 
-
+<!--
 <h2>
     @Html.ActionLink("Done", "Login", null, new { @class = "btn btn-primary" })
 </h2>
-
+-->
