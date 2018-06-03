@@ -113,18 +113,18 @@
 
 .span5 {
     height: 600px;
-    width: 1000px;
+    width: 1050px;
     position: center;
     display: inline-block;
     background-color: #fff;
     opacity: 0.7;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .student-report {
     position: relative;
-    top: -580px;
-    padding-left: 25px;
+    top: -600px;
+    padding-left: 50px;
     margin-bottom: -580px;
 }
