@@ -121,7 +121,7 @@
     border-radius: 25px;
     opacity: 0.7;
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 
 .mySlides {
@@ -159,3 +159,91 @@
     transform: translate(0%,-50%);
     -ms-transform: translate(-0%, -50%);
 }
+
+.w3-bar {
+    width: 100%;
+    overflow: hidden
+}
+
+.w3-bar .w3-bar-item {
+    position:center;
+    padding: 8px 16px;
+    float: none;
+    width: auto;
+    border: none;
+    outline: 0
+}
+
+
+.w3-bar .w3-button {
+    white-space: normal
+}
+
+
+.w3-content {
+    max-width: 980px;
+    margin: auto
+}
+
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.w3-button:hover {
+    color: #000 !important;
+    background-color: #ccc !important
+}
+
+
+.w3-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%)
+}
+
+.w3-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%)
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px
+}
+
+.w3-display-container {
+    position: relative
+}
+
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #000 !important;
+    background-color: #fff !important
+}
+
