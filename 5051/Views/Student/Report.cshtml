@@ -28,7 +28,7 @@
             <div class="w3-bar w3-pale-yellow">
                 <button class="w3-bar-item w3-button" onclick="openTab('Month')">Month</button>
                 <button class="w3-bar-item w3-button" onclick="openTab('Year')">Year</button>
-                <button class="w3-bar-item w3-button" onclick="openTab('Stats')">My Shops</button>
+                <button class="w3-bar-item w3-button" onclick="openTab('Shops')">My Shops</button>
             </div>
             <div class="col-md-12">
                 <div id="Month" class="w3-container city">
@@ -45,41 +45,40 @@
                     </div>
                 </div>
             </div>
-                <div id="Year" class="w3-container city" style="display:none">
-                    <div class="span5">
-                        <h3>Year</h3>
-                    </div>
-
+            <div id="Year" class="w3-container city" style="display:none">
+                <div class="span5">
+                    <h3>Year</h3>
                 </div>
-
-                <div id="Stats" class="w3-container city" style="display:none">
+            </div>
+                <div id="Shops" class="w3-container city" style="display:none">
                     <div class="span5">
                         <h3>My Shops</h3>
-                        <div class="w3-content w3-display-container">
-                            <img src="/Content/img/MyShops.png" />
-                        </div>
+                        <img src="/Content/img/MyShops.png" />
                     </div>
+                    
+                </div>
+            </div>
 
+        </div>
     </div>
-</div>
 
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
+            <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
 
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
+                function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                }
 
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = x.length }
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        x[slideIndex - 1].style.display = "block";
-    }
-</script>
+                function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = x.length }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex - 1].style.display = "block";
+                }
+            </script>
 
