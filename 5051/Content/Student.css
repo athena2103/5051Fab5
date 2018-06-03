@@ -1,8 +1,4 @@
 ﻿
-#student-icons a {
-    color: #fff;
-}
-
 .background {
     background-image: url("../Content/img/sunset.png");
     background-position: center bottom;
@@ -29,6 +25,7 @@
 .student-header {
     padding-top: 0px;
     font-size: 5.0vw;
+    color:#fff;
 }
 
 #studentnavicons {
@@ -41,6 +38,7 @@
 }
 
     #studentnavicons a {
+        color: #9cdbec;
         font-size: calc(2vw + 2vh);
         margin-left: 25px;
     }

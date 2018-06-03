@@ -275,6 +275,8 @@
     <Content Include="Content\img\avatar8.png" />
     <Content Include="Content\img\avatar9.png" />
     <Content Include="Content\img\AvatarLevel.png" />
+    <Content Include="Content\img\AvatarMockUp.png" />
+    <Content Include="Content\img\AvatarMockUp2.png" />
     <Content Include="Content\img\AvatarMockUp_final.png" />
     <Content Include="Content\img\Avatar\avatar1.png" />
     <Content Include="Content\img\Avatar\avatar10.png" />
