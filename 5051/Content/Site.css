@@ -45,6 +45,19 @@
     padding-bottom: 20px;
 }
 
+#mainMenuCal{
+    text-align: right;
+}
+
+#mainAdminTitle {
+    color: #fff375;
+    padding-top: 30px;
+}
+
+#mainAdminTitleCal {
+    color: #fff375;
+}
+
 
 #adminPane {
     border-radius: 25px;
