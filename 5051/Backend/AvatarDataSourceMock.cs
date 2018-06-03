@@ -139,7 +139,7 @@ namespace _5051.Backend
             Create(new AvatarModel("/Avatar/avatar8.png", "Avatar8", "Avatar8", 1));
             Create(new AvatarModel("/Avatar/avatar9.png", "Avatar9", "Avatar9", 1));
             Create(new AvatarModel("/Avatar/avatar10.png", "Avatar10", "Avatar10", 1));
-
+            Create(new AvatarModel("/Avatar/defaultavatar1.png", "Default", "Default", 1));
         }
     }
 }

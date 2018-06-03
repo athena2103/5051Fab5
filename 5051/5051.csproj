@@ -288,10 +288,10 @@
     <Content Include="Content\img\Avatar\avatar7.png" />
     <Content Include="Content\img\Avatar\avatar8.png" />
     <Content Include="Content\img\Avatar\avatar9.png" />
+    <Content Include="Content\img\Avatar\defaultavatar1.png" />
     <Content Include="Content\img\bobs-bananas-icon.png" />
     <Content Include="Content\img\ChartPlaceholder.png" />
     <Content Include="Content\img\daytimeBackground.png" />
-    <Content Include="Content\img\defaultavatarX.png" />
     <Content Include="Content\img\defaultCalendarIcon.png" />
     <Content Include="Content\img\defaultCalendarX.PNG" />
     <Content Include="Content\img\defaultEditAttendance.PNG" />
