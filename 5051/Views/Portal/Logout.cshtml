@@ -1,29 +1,24 @@
 
 @{
-    ViewBag.Title = "Logout";
-}
+                /**/
 
+                ViewBag.Title = "Logout";
+}
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="~/Content/Login.css" />
 
-<script>
-    $(document).ready(
-    function () {
-        $('#studentnavicons a').hover(
-            function () {
-                $("#studentnaviconstext p").text($(this).attr("title"));
-            }
-	});
-</script>
-
-<script>
+<!--
+   <script>
     window.setTimeout(function () {
         // Move to a new location or you can do something else
         window.location.href = "../Portal/Login";
     }, 4000);
 
 </script>
+
+-->
+
 
 <div class="background">
     <div class="row text-center">
@@ -37,7 +32,7 @@
         </div>
         <p class="student-text-medium">You are now logged out and redirected to Login Screen.</p>
         <p class="student-text-small">Come back soon. We'll miss you.</p>
-        <img src="~/Content/img/student_logout.png" class="img-responsive" id="wireframe-student" />
+        <img src="~/Content/img/wasabi.png" class="img-responsive" id="wireframe-student" />
     </div>
 </div>
 
