@@ -311,11 +311,11 @@ ViewBag.Title = "Reports";
                                                             counter--;
                                                             }
                                                         }
-                                                var img = document.getElementById("report");
-                                                var newimg = '@Model.Student.ReportsId[0]';
-                                                newimg = newimg.replace("_1", "_" + counter);
-                                                img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
-                                                document.getElementById("counter").innerHTML = counter;
+                                                         var img = document.getElementById("report");
+                                                         var newimg = '@Model.Student.ReportsId[0]';
+                                                         newimg = newimg.replace("_1", "_" + counter);
+                                                         img.src = "@Url.Content("~/Content/img/Admin Reports/")" + newimg;
+                                                         document.getElementById("counter").innerHTML = counter;
 
                                                 }
                                 </script>
