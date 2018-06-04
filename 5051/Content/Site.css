@@ -45,8 +45,9 @@
     padding-bottom: 20px;
 }
 
-#mainMenuCal{
+#mainMenuCal {
     text-align: right;
+    padding-top: 40px;
 }
 
 #mainAdminTitle {
