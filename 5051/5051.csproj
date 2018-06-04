@@ -317,6 +317,7 @@
     <Content Include="Content\img\man-cave-icon.png" />
     <Content Include="Content\img\meow-cafe-icon.png" />
     <Content Include="Content\img\month_year.png" />
+    <Content Include="Content\img\MyShops.png" />
     <Content Include="Content\img\nhus-moo-shoppe-icon.png" />
     <Content Include="Content\img\nightime.png" />
     <Content Include="Content\img\nightimeBackground.png" />
@@ -365,6 +366,8 @@
     <Content Include="Content\img\wireframe_avatar.png" />
     <Content Include="Content\img\wireframe_market.png" />
     <Content Include="Content\img\wireframe_student_index.png" />
+    <Content Include="Content\img\YearChartCopy.png" />
+    <Content Include="Content\img\YearChart.png" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Student.css" />
     <Content Include="favicon.ico" />

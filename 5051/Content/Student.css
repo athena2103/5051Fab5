@@ -9,6 +9,16 @@
     margin: 0 auto;
 }
 
+.student-index-h2 {
+    margin-top: 50px;
+    color: #fff;
+}
+
+.my-progress-h2 {
+    margin-top: 50px;
+    color: #fff;
+}
+
 .scroll-bar-horz {
     position: absolute;
     border: none;
@@ -31,7 +41,7 @@
 #studentnavicons {
     position: absolute;
     left: 50%;
-    top: 18%;
+    top: 15%;
     font-size: calc(1.0vw + 1.0vh);
     transform: translate(-50%);
     z-index: 2;
@@ -67,33 +77,35 @@
     margin-top: 120px;
 }
 
+/*----------------Logout---------------*/
 .dog-container {
     position: relative;
-    margin-bottom: 600px;
+    margin-bottom: 10px;
+    margin-right: 200px;
 }
 
     .dog-container .dog {
-        position: absolute;
         top: 10px;
-        left: 600px;
-        z-index: 1;
+        margin-left: auto;
+        margin-right: auto;
+        z-index: 0;
     }
 
-#dog-block {
-    display: inline-block;
-}
-
 .speech-bubble {
-    display: inline-block;
-    margin-right: 1000px;
+    position: absolute;
+    margin-left: -300px;
+    margin-right: auto;
     width: 400px;
 }
 
 .speech-bubble2 {
-    display: none;
-    margin-left: 1000px;
+    position: absolute;
+    margin-left: 100px;
+    margin-right: auto;
     width: 400px;
 }
+
+/*---------------Logout END-------------*/
 
 #market-pic {
     position: relative;
@@ -122,6 +134,16 @@
     opacity: 0.7;
     padding: 10px;
     margin-top: 10px;
+    z-index: 0;
+}
+
+.shops {
+    top: -500px;
+    margin-bottom: -430px;
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding-right: 50px;
 }
 
 .mySlides {
@@ -133,10 +155,9 @@
     margin-bottom: -750px;
 }
 
-/*manage right */
+/*manage right button position in student/report */
 .slideButtonLeft {
     margin-bottom: -580px;
-
 }
 
 /*manage right button position in student/report */
@@ -144,7 +165,7 @@
     margin-bottom: -580px;
 }
 
-.w3-display-left{
+.w3-display-left {
     position: absolute;
     top: 50%;
     margin-left: -100px;
@@ -159,3 +180,90 @@
     transform: translate(0%,-50%);
     -ms-transform: translate(-0%, -50%);
 }
+
+.w3-bar {
+    width: 100%;
+    overflow: hidden
+}
+
+    .w3-bar .w3-bar-item {
+        position: center;
+        padding: 8px 16px;
+        float: none;
+        width: auto;
+        border: none;
+        outline: 0
+    }
+
+
+    .w3-bar .w3-button {
+        white-space: normal
+    }
+
+
+.w3-content {
+    max-width: 980px;
+    margin: auto
+}
+
+.w3-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+    .w3-button:hover {
+        color: #000 !important;
+        background-color: #ccc !important
+    }
+
+
+.w3-display-left {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(-0%,-50%)
+}
+
+.w3-display-right {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    -ms-transform: translate(0%,-50%)
+}
+
+.w3-container, .w3-panel {
+    padding: 0.01em 16px
+}
+
+.w3-display-container {
+    position: relative
+}
+
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+
+.w3-panel {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.w3-white, .w3-hover-white:hover {
+    color: #000 !important;
+    background-color: #fff !important
+}
+

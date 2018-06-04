@@ -45,8 +45,9 @@
     padding-bottom: 20px;
 }
 
-#mainMenuCal{
+#mainMenuCal {
     text-align: right;
+    padding-top: 40px;
 }
 
 #mainAdminTitle {
@@ -424,6 +425,44 @@ a.navbar-brand {
     height: auto;
 }
 
+/*-----------Intro Student, Admin, Kiosk pages----------*/
 
+.intro-h2 {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 3em;
+}
 
+.intro-container {
+    width: 650px;
+    margin: auto;
+}
 
+.intro-p {
+    margin-top: 20px;
+    margin-bottom:60px;
+    color:#ffffff;
+    font-size: 1.2em;
+}
+
+.progress-h3 {
+    margin-top: 50px;
+    color: #f39c12;
+}
+
+.game-h3 {
+    color: #76c2af;
+}
+
+.manage-students-h3 {
+    margin-top: 50px;
+    color: #ba1010;
+}
+
+.override-calendar-h3 {
+    color: #f6871f;
+}
+
+.kiosk-h3 {
+    color: #68b2ee;
+}
