@@ -9,6 +9,11 @@
     margin: 0 auto;
 }
 
+.student-index-h2 {
+    margin-top: 100px;
+    color: #fff;
+}
+
 .scroll-bar-horz {
     position: absolute;
     border: none;
@@ -70,26 +75,28 @@
 /*----------------Logout---------------*/
 .dog-container {
     position: relative;
-    margin-bottom: 550px;
+    margin-bottom: 10px;
+    margin-right: 200px;
 }
 
     .dog-container .dog {
-        position: absolute;
         top: 10px;
-        margin-left: 250px;
+        margin-left: auto;
         margin-right: auto;
         z-index: 0;
     }
 
 .speech-bubble {
-    display: inline-block;
-    margin-right: 800px;
+    position: absolute;
+    margin-left: -300px;
+    margin-right: auto;
     width: 400px;
-   
 }
 
 .speech-bubble2 {
-    margin-left: 1200px;
+    position: absolute;
+    margin-left: 100px;
+    margin-right: auto;
     width: 400px;
 }
 
@@ -245,7 +252,6 @@
 }
 
 
-
 .w3-panel {
     margin-top: 16px;
     margin-bottom: 16px
@@ -256,5 +262,3 @@
     background-color: #fff !important
 }
 
-
-}
