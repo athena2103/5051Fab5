@@ -334,6 +334,7 @@
     <Content Include="Content\img\ReportStudentMay.png" />
     <Content Include="Content\img\sitelogo.png" />
     <Content Include="Content\img\speech-bubble-blue.png" />
+    <Content Include="Content\img\speech-bubble-fab.png" />
     <Content Include="Content\img\Store.png" />
     <Content Include="Content\img\storeMockup.jpg" />
     <Content Include="Content\img\storeMockup.png" />
