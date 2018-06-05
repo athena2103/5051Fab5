@@ -96,9 +96,10 @@ ViewBag.Title = "Reports";
                             var reportFile = fullPath.replace(/^.*[\\\/]/, '');
                             if ('@Model.StudentList.Count' > 0) {
                                  if (reportFile == "blankReport.png") {
-                                    window.location.href = '@Url.Action("PrintReport", "Admin")';
+                                     window.open('@Url.Action("PrintReport", "Admin")', '_blank');
                                 } else {
-                                    window.location.href = '@Url.Action("PrintReport", "Admin",new { id = "", isEmpty = "no" })';
+                                     window.open('@Url.Action("PrintReport", "Admin",new { id = "", isEmpty = "no" })',
+                                        '_blank');
                                  }
                             } else {
 
@@ -312,8 +313,9 @@ ViewBag.Title = "Reports";
                                 <script type="text/javascript">
 
                                     function PrintOne() {
-                                            var SID = '@Model.Student.Id';
-                                            window.location.href = '@Url.Action("PrintReport", "Admin")/' + SID;
+                                        var SID = '@Model.Student.Id';
+                                        var link = '@Url.Action("PrintReport", "Admin")/' + SID;
+                                        window.open(link, '_blank');
                                     }
                                 </script>
 
