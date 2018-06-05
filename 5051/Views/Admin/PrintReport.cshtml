@@ -9,8 +9,8 @@
 
 </head>
 
-<body id="printBody">
-    <h1>NOVATOWN STUDENT REPORT</h1>
+<div id="printBody">
+    <div id="PrintHeader">NOVATOWN STUDENT REPORT</div>
   
      @if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
      {
@@ -20,12 +20,12 @@
      {
          if (Model.Student == null)
          {
-            <div class="row">
+            <div id="PrintStudentBox"class="row">
                 <div class="col-md-12">
                     @foreach (var item in Model.StudentList)
                     {
                         <div class="col-md-3 col-xs-4 text-center">
-                            <img src="~/Content/img/@item.AvatarUri" width="50" height="50">
+                            <img src="~/Content/img/@item.AvatarUri" width="70" height="70">
                             <br />
                             <div text-align:center>
                                 @item.Name
@@ -36,97 +36,102 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
+                <div id="PrintTotalReport" class="col-md-12 text-center">
                      @{
 
                          if (TempData["ck"] != null)
                          {
-                                <img src="~/Content/img/Admin Reports/totalAttendance.png" width="600" height="300">
+                                <img src="~/Content/img/Admin Reports/totalAttendance.png" width="1000" height="500">
                          }
                          else
                          {
 
-                                <img src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
+                                <img src="~/Content/img/Admin Reports/blankReport.png" width="1000" height="400">
                          }
                     }
                 </div>
             </div>
-          }
-         else
-         {
-            <div class="row">
-                @{
-                    var item = Model.Student;
-                    <div class="col-xs-12">
-                        <div class="col-xs-4 minH">
-                            <img src="~/Content/img/@item.AvatarUri" width="150" height="150" />
-                        </div>
-                        <div class="col-xs-8 minH">
-                            <div class="row">
-                                <div class="col-xs-5 text-left">
-                                    @Html.DisplayNameFor(i => item.Name)
+            }
+            else
+            {
+                <div id="PrintStudentBox2" class="row">
+                            @{
+                                var item = Model.Student;
+                                <div class="col-xs-12">
+                                    <div id="PrintLeft" class="col-xs-4 text-center">
+                                        <img src="~/Content/img/@item.AvatarUri" width="150" height="150" />
+                                    </div>
+                                    <div id="PrintRight" class="col-xs-8">
+                                        <div class="row">
+                                            <div id="PrintTitle" class="col-xs-5 text-left">
+                                                @Html.DisplayNameFor(i => item.Name)
+                                            </div>
+                                            <div id="PrintData" class="col-xs-7 text-left">
+                                                @Html.DisplayFor(i => item.Name)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div id="PrintTitle" class="col-xs-5 text-left">
+                                                @Html.DisplayNameFor(i => item.AvatarName)
+                                            </div>
+                                            <div id="PrintData" class="col-xs-7 text-left">
+                                                @Html.DisplayFor(i => item.AvatarName)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div id="PrintTitle" class="col-xs-5 text-left">
+                                                @Html.DisplayNameFor(i => item.AvatarDescription)
+                                            </div>
+                                            <div id="PrintData" class="col-xs-7">
+                                                @Html.DisplayFor(i => item.AvatarDescription)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div id="PrintTitle" class="col-xs-5 text-left">
+                                                @Html.DisplayNameFor(i => item.AvatarLevel)
+                                            </div>
+                                            <div id="PrintData" class="col-xs-7 text-left">
+                                                @Html.DisplayFor(i => item.AvatarLevel)
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div id="PrintTitle" class="col-xs-5 text-left">
+                                                @Html.DisplayNameFor(i => item.Status)
+                                            </div>
+                                            <div id="PrintData" class="col-xs-7 text-left">
+                                                @Html.DisplayFor(i => item.Status)
+                                            </div>
+                                        </div>
+                                    </div>
+                     
                                 </div>
-                                <div class="col-xs-7 text-left">
-                                    @Html.DisplayFor(i => item.Name)
-                                </div>
+                                }
                             </div>
+                            <div id="PrintReportAlBum" class="row">
+                                        <div class="row">
+                                            @foreach (var report in Model.Student.ReportsId)
+                                            {
+                                                <div id="PrintEachReport" class="col-xs-6 text-center">
+                                                    <img src="~/Content/img/Admin Reports/@report" width="490" height="250">
+                                                    <br />
+                                                </div>
+                                            }
+                                        </div>
+                             </div>
 
-                            <div class="row">
-                                <div class="col-xs-5 text-left">
-                                    @Html.DisplayNameFor(i => item.AvatarName)
-                                </div>
-                                <div class="col-xs-7 text-left">
-                                    @Html.DisplayFor(i => item.AvatarName)
-                                </div>
-                            </div>
 
-                            <div class="row">
-                                <div id="fitTitleText" class="col-xs-6 text-left">
-                                    @Html.DisplayNameFor(i => item.AvatarDescription)
-                                </div>
-                                <div id="fitInfoText" class="col-xs-6">
-                                    @Html.DisplayFor(i => item.AvatarDescription)
-                                </div>
-                            </div>
+            }
 
-                            <div class="row">
-                                <div class="col-xs-5 text-left">
-                                    @Html.DisplayNameFor(i => item.AvatarLevel)
-                                </div>
-                                <div class="col-xs-7 text-left">
-                                    @Html.DisplayFor(i => item.AvatarLevel)
-                                </div>
-                            </div>
+               
 
-                            <div class="row">
-                                <div class="col-xs-5 text-left">
-                                    @Html.DisplayNameFor(i => item.Status)
-                                </div>
-                                <div class="col-xs-7 text-left">
-                                    @Html.DisplayFor(i => item.Status)
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        @foreach (var report in Model.Student.ReportsId)
-                        {
-                            <div class="col-xs-6 text-center">
-                                <img src="~/Content/img/Admin Reports/@report" width="600" height="300">
-                                <br />
-                            </div>
-                        }
-                    </div>
 
-                }
-
-            </div>
-
-         }
-      }
-
-</body>
-
+                        
+        }
+</div>
 <footer>
     <div class="row">
         <div class="col-lg-12 text-center">

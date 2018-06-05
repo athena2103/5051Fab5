@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using _5051.Models;
 using _5051.Backend;
+using Rotativa;
 
 namespace _5051.Controllers
 {
@@ -110,13 +111,13 @@ namespace _5051.Controllers
                 var StudentViewModel = new StudentViewModel(myDataList);
                 var a = isEmpty;
                 TempData["ck"] = isEmpty;
-                return View(StudentViewModel);
+                return new Rotativa.ViewAsPdf (StudentViewModel);
             }
             else
             {
                 var singleData = StudentBackend.Read(id);
                 var StudentViewModel = new StudentViewModel(singleData);
-                return View(StudentViewModel);
+                return new Rotativa.ViewAsPdf(StudentViewModel);
             }
             
         }

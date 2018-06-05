@@ -4,6 +4,87 @@
     display:none;
 }
 
-#printbody {
-    background-color: #5f5851;
+.nav-wrapper {
+    display: none;
+}
+
+
+#printBody {
+    padding-top: 200px;
+    padding-bottom: 300px;
+ 
+}
+
+#PrintHeader {
+    padding-left: 60px;
+    align-content: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+#PrintStudentBox {
+    background-image: url("img/adminBackground.png");
+    border-radius: 25px;
+    border-width: medium thick;
+    border-style: solid;
+    border-color: #32373d;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#PrintStudentBox2 {
+    background-image: url("img/adminBackground.png");
+    border-radius: 25px;
+    border-width: medium thick;
+    border-style: solid;
+    border-color: #32373d;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+   
+}
+
+#PrintTotalReport {
+    padding-top: 70px;
+    
+}
+
+#PrintLeft{
+    padding-top: 10px;
+    min-height: 200px;
+}
+
+#PrintRight {
+    padding-top: 30px;
+    min-height: 200px;
+    padding-left: 200px;
+}
+
+#PrintTitle {
+   
+    font-weight: 600;
+    font-size: 16px;
+    width: 170px;
+}
+
+#PrintData {
+    
+    font-size: 16px;
+}
+
+#PrintReportAlBum {
+    padding-top: 40px;
+    margin-left: -2px;
+    margin-right: -2px;
+}
+
+#PrintEachReport{
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 10px;
+
 }
