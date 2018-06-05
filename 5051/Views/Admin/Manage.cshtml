@@ -5,25 +5,18 @@ ViewBag.Title = "Reports";
 }
 
 
+
 <div id="background3">
 <div class="container-full">
     <div class= "col-md-12">
-        <!--Support print button-->
-        <script>
-            function Print() {
-                window.print();
-            }
-
-        </script>
-
+        
         <div id="adminHeader" class="col-md-12">
             <div id="Pgtitle" class="col-md-3">
                 Manage Students
             </div>
             <div id="mainMenu" class="col-md-9 pull-right">
                 @Html.ActionLink("Main Menu", "Index", "Admin", null, new { @class = "btn btn-primary" })
-                <a href="#" class="btn btn-danger" role="button" onclick="Print()">Print</a>
-
+                <div class="btn btn-danger" role="button" onclick="Print()">Print</div>
             </div>
         </div>
 
@@ -40,8 +33,20 @@ ViewBag.Title = "Reports";
                 else
                 {
 
+                    <script>
+                        function Print() {
+                            var fullPath = document.getElementById("report").src;
+                            var reportFile = fullPath.replace(/^.*[\\\/]/, '');
+                            if (reportFile == "blankReport.png") {
+                                window.location.href = '@Url.Action("PrintReport", "Admin")';
+                            } else {
+                                window.location.href = '@Url.Action("PrintReport", "Admin",new { id = "", isEmpty = "no" })';
+                            }
+
+                        }
+                    </script>
                     <!--script to switch between report and edit attendance table-->
-            <script type="text/javascript">
+                    <script type="text/javascript">
                     function changeImage(cmd) {
                         var img = document.getElementById("report");
                         if (cmd == "report") {
@@ -91,8 +96,12 @@ ViewBag.Title = "Reports";
                             img.style.width = "500px";
                         }
 
-                    }
+                }
+
+                
             </script>
+
+      
 
             <div id="adminLPane" class="col-md-4 hoverGlow">
 

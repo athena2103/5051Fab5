@@ -1,0 +1,70 @@
+﻿@model _5051.Models.StudentViewModel
+
+@{
+    ViewBag.Title = "Print Report";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="~/Content/PrintReport.css" />
+
+</head>
+
+<body id="printBody">
+    <h1>NOVATOWN STUDENT REPORT</h1>
+  
+     @if ((Model.StudentList == null || Model.StudentList.Count == 0) && Model.Student == null)
+     {
+        <p> No student's information</p>
+     }
+     else
+     {
+         if (Model.Student == null)
+         {
+            <div class="row">
+                <div class="col-md-12">
+                    @foreach (var item in Model.StudentList)
+                    {
+                        <div class="col-md-3 col-xs-4 text-center">
+                            <img src="~/Content/img/@item.AvatarUri" width="50" height="50">
+                            <br />
+                            <div text-align:center>
+                                @item.Name
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                     @{
+                         
+                         if (TempData["ck"] != null)
+                         {
+                                <img src="~/Content/img/Admin Reports/totalAttendance.png" width="600" height="300">
+                         }
+                         else
+                         {
+                             
+                                <img src="~/Content/img/Admin Reports/blankReport.png" width="600" height="300">
+                            }
+                    }
+                </div>
+            </div>
+         }
+     }
+
+</body>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p class="copyright text-muted small">&nbsp;&nbsp;&copy; @DateTime.Now.Year - Nova Town, all rights reserved. This website is made with <i class="fa fa-heart" aria-hidden="true"></i> by Fab5.</p>
+
+        </div>
+    </div>
+</footer>
+
+
+
+

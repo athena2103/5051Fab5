@@ -95,6 +95,32 @@ namespace _5051.Controllers
             return RedirectToAction("Manage", new { id = StudentView.Student.Id });
         }
 
+        /// <summary>
+        /// Print reports
+        /// </summary>
+        /// <returns></returns>
+        // GET: Report
+        public ActionResult PrintReport(string id = null, string isEmpty = null)
+        {
+            // Load the list of data into the StudentList. If has ID, return one student's info
+            //Otherwise, return all
+            if (string.IsNullOrEmpty(id))
+            {
+                var myDataList = StudentBackend.Index();
+                var StudentViewModel = new StudentViewModel(myDataList);
+                var a = isEmpty;
+                TempData["ck"] = isEmpty;
+                return View(StudentViewModel);
+            }
+            else
+            {
+                var singleData = StudentBackend.Read(id);
+                var StudentViewModel = new StudentViewModel(singleData);
+                return View(StudentViewModel);
+            }
+            
+        }
+
 
         /// <summary>
         /// Calendar
