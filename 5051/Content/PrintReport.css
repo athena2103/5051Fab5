@@ -3,3 +3,7 @@
 .footer{
     display:none;
 }
+
+#printbody {
+    background-color: #5f5851;
+}
