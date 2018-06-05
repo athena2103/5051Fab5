@@ -142,5 +142,18 @@ namespace _5051.Controllers
         {
             return View();
         }
+
+        /// <summary>
+        /// Calls the data sources and has them reset to default data
+        /// </summary>
+        /// <returns></returns>
+        // GET: Reset
+        public ActionResult Reset()
+        {
+            AvatarDataSourceMock.Instance.Reset();
+            StudentDataSourceMock.Instance.Reset();
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }
