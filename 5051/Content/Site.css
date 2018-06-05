@@ -406,7 +406,7 @@ a.navbar-brand {
     height: 550px;
     padding-top: 20rem;
     padding-bottom: 20rem;
-    background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../Content/img/headerbg.png");
+    background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.1)), url("../Content/img/headerbg.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
