@@ -19,6 +19,13 @@
     color: #fff;
 }
 
+#main-menu-student {
+    margin-top: -60px;
+    padding-top: 5px;
+    padding-left: 740px;
+    padding-bottom: 20px;
+}
+
 .scroll-bar-horz {
     position: absolute;
     border: none;
@@ -33,7 +40,7 @@
 
 
 .student-header {
-    padding-top: 0px;
+    padding-top: 15px;
     font-size: 5.0vw;
     color:#fff;
 }

@@ -10,6 +10,9 @@
 <div class="background">
     <div class="row text-center">
         <h1 class="student-header" align="center">Create Avatar</h1>
+        <div id="main-menu-student" class="col-md-9 pull-right">
+            @Html.ActionLink("Student Menu", "Index", "Portal", null, new { @class = "btn btn-primary" })
+        </div>
 
         <div id="studentnavicons">
             <a href="~/Student/Default" title="Store"><i class="fas fa-store-alt"></i></a>
@@ -18,11 +21,11 @@
             <a href="~/Student/Avatar" title="Avatar"><i class="fas fa-user"></i></a>
             <a href="~/Portal/Logout" title="Logout"><i class="fas fa-sign-out-alt"></i></a>
         </div>
-      
+
         <div class="avatar-block">
             <img src="~/Content/img/AvatarMockup.png" onclick="this.src='/Content/img/AvatarMockUp2.png'" width="800" class="img-responsive" id="wireframe-student" />
         </div>
-       
-     
+
+
     </div>
 </div>
