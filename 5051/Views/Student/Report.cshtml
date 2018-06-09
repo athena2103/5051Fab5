@@ -22,14 +22,16 @@
     <div class="row text-center">
         <h2 class="my-progress-h2" align="center">My Progress</h2>
         <div class="col-md-12">
+
+            <div id="main-menu-student" class="col-md-9 pull-right" style="display: inline-block">
+                @Html.ActionLink("Student Menu", "Index", "Portal", null, new { @class = "btn btn-primary" })
+            </div>
             <div class="w3-bar">
                 <button class="w3-bar-item w3-button w3-white" onclick="openTab('Month')">Month</button>
                 <button class="w3-bar-item w3-button w3-white" onclick="openTab('Year')">Year</button>
                 <button class="w3-bar-item w3-button w3-white" onclick="openTab('Shops')">My Shops</button>
             </div>
-            <div id="main-menu-student" class="col-md-9 pull-right">
-                @Html.ActionLink("Student Menu", "Index", "Portal", null, new { @class = "btn btn-primary" })
-            </div>
+
             <div class="col-md-12">
                 <div id="Month" class="w3-container city">
                     <div class="span5">
