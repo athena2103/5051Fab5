@@ -32,18 +32,24 @@ namespace _5051.Controllers
             return View(StudentViewModel);
         }
 
-        
+
 
         /// <summary>
         /// Landing page for admin to unlock the Kiosk
         /// </summary>
         /// <returns></returns>
-        // GET: Kiosk
+        // GET: Kiosk/Landing
         public ActionResult Landing()
         {           
             return View(StudentViewModel);
         }
 
+        /// <summary>
+        /// Landing page for admin to unlock the Kiosk
+        /// </summary>
+        /// <param name="form"></param>
+        /// <returns></returns>
+        // POST: Kiosk/Landing
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Landing(string passphase = "")
@@ -69,7 +75,7 @@ namespace _5051.Controllers
         /// For students to create a new profile at the Kiosk
         /// </summary>
         /// <returns></returns>
-        // GET: Kiosk
+        // GET: Kiosk/NewProfile
         public ActionResult NewProfile()
         {
             var myData = new StudentModel();
@@ -81,7 +87,7 @@ namespace _5051.Controllers
         /// </summary>
         /// <param name="collection"></param>
         /// <returns></returns>
-        // POST: Student/Create
+        // POST: Kiosk/NewProfile
         [HttpPost]
         public ActionResult NewProfile([Bind(Include=
                                         "Id,"+
