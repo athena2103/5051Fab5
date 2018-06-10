@@ -20,6 +20,29 @@ namespace _5051.Models
         /// </summary>
         public StudentDisplayViewModel Student { get; set; }
 
+        public int DisplayMsgType { get; set;}
+
+        public string ReturnMsg { get; set; }
+    
+        public string DisplayMsg()
+        {
+            if (DisplayMsgType == 1)
+            {
+                return "Account created successfully at " + DateTime.Now + "!";
+            }
+            else if (DisplayMsgType == 2)
+            {
+                return "Clocked in successfully at " + DateTime.Now + "!\n Your point balance has been increased by 100.";
+            }
+            else if (DisplayMsgType == 3)
+            {
+                return "Clocked out successfully at " + DateTime.Now + "!\n Your point balance has been increased by 100.";
+            }
+            else
+            {
+                return "";
+            }
+        }
 
         /// <summary>
         /// Default constructor, needed becase of the constructor that takes a List of Student Models
@@ -36,6 +59,8 @@ namespace _5051.Models
             {
                 StudentList.Add(new StudentDisplayViewModel(item));
             }
+            ReturnMsg = DisplayMsg();
+            DisplayMsgType = 0;
         }
 
         /// <summary>
