@@ -46,7 +46,7 @@ namespace _5051.Controllers
                 //Respond to update student's info request
                 if(cmd == "Update")
                 {
-                    StudentViewModel.Student.isUpdate = true;
+                    StudentViewModel.Student.IsUpdate = true;
                 }
                 return View(StudentViewModel);
             }
@@ -90,7 +90,7 @@ namespace _5051.Controllers
                 
             }
 
-            StudentView.Student.isUpdate = false;
+            StudentView.Student.IsUpdate = false;
             StudentBackend.Update(StudentView.Student);
 
             return RedirectToAction("Manage", new { id = StudentView.Student.Id });
