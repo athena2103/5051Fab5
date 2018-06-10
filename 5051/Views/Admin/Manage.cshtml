@@ -125,7 +125,7 @@ ViewBag.Title = "Reports";
                         <br />
                         <br />
 
-                                if (Model.Student.isUpdate == true)
+                                if (Model.Student.IsUpdate == true)
                                 {
                                     //Update student info
                                     using (Html.BeginForm("Update", "Admin", FormMethod.Post))
@@ -135,7 +135,7 @@ ViewBag.Title = "Reports";
                         @Html.HiddenFor(i => Model.Student.AvatarId)
                         @Html.HiddenFor(i => Model.Student.AvatarLevel)
                         @Html.HiddenFor(i => Model.Student.Tokens)
-                        @Html.HiddenFor(i => Model.Student.isUpdate)
+                        @Html.HiddenFor(i => Model.Student.IsUpdate)
                         @Html.HiddenFor(i => Model.Student.AvatarUri)
                         <div class="center">
                             <div class="row">
@@ -159,10 +159,10 @@ ViewBag.Title = "Reports";
 
 
                             <div class="row">
-                                <div id="fitTitleText" class="col-md-6 text-left">
+                                <div class="col-md-5 text-left">
                                     @Html.DisplayNameFor(i => Model.Student.AvatarDescription)
                                 </div>
-                                <div id="fitInfoText" class="col-md-6 text-left">
+                                <div class="col-md-7 text-left">
                                     @Html.DisplayFor(i => Model.Student.AvatarDescription)
                                 </div>
                             </div>
@@ -224,10 +224,10 @@ ViewBag.Title = "Reports";
                             </div>
 
                             <div class="row">
-                                <div id="fitTitleText" class="col-md-6 text-left">
+                                <div class="col-md-5 text-left">
                                     @Html.DisplayNameFor(i => item.AvatarDescription)
                                 </div>
-                                <div id="fitInfoText" class="col-md-6">
+                                <div class="col-md-7">
                                     @Html.DisplayFor(i => item.AvatarDescription)
                                 </div>
                             </div>

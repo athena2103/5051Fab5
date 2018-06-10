@@ -1,10 +1,7 @@
 ﻿@model _5051.Models.StudentViewModel
 
 @{
-    ViewBag.Title = "Index";
-    var t = TempData["ReturnMsg"];
-    var t2 = TempData["ReturnMsg2"];
-    var t3 = TempData["ReturnMsg3"];
+    ViewBag.Title = "Student Kiosk Page";
 }
 
 <script>
@@ -23,7 +20,7 @@
 </script>
 
     <div class="container-fluid" id="kioskbackground">
-        <div class="row text-center"><h1>Student Kiosk</h1></div>
+        <div class="row text-center"><h1>@ViewBag.Title</h1></div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-offset-0 col-sm-12">
                 <div class="row">
@@ -102,15 +99,13 @@
                         </div>
                         <div class="kioskModule" id="box">
                             <center>
-                                @if (t == null)
+                                @if (Model.DisplayMsgType == 0)
                                 {
                                     <h1>Good Morning!</h1>
                                 }
                                 else
                                 {
-                                    <h4>@t</h4>
-                                    <h4>@t2</h4>
-                                    <h4>@t3</h4>
+                                    <h4>@Model.DisplayMsg()</h4>
                                 }
                             </center>
                         </div>
