@@ -61,7 +61,7 @@ namespace _5051.Models
         /// <summary>
         /// Used by view to check if the student is subject to update request
         /// </summary>
-        public bool isUpdate { get; set; }
+        public bool IsUpdate { get; set; }
 
         /// <summary>
         ///The ID list of the reports the student is associated with, this will convert to report pictures
@@ -77,7 +77,7 @@ namespace _5051.Models
             Tokens = 0;
             AvatarLevel = 1;
             Status = StudentStatusEnum.Out;
-            isUpdate = false;
+            IsUpdate = false;
         }
 
         /// <summary>
@@ -121,7 +121,7 @@ namespace _5051.Models
             AvatarLevel = data.AvatarLevel;
             Tokens = data.Tokens;
             Status = data.Status;
-            isUpdate = data.isUpdate;
+            IsUpdate = data.IsUpdate;
             ReportsId = data.ReportsId;
         }
 
@@ -198,7 +198,7 @@ namespace _5051.Models
             AvatarName = myDataAvatar.Name;
             AvatarDescription = myDataAvatar.Description;
             AvatarUri = myDataAvatar.Uri;
-            isUpdate = data.isUpdate;
+            IsUpdate = data.IsUpdate;
             ReportsId = data.ReportsId;
         }
     }
