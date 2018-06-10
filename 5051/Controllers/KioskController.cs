@@ -24,12 +24,15 @@ namespace _5051.Controllers
         /// </summary>
         /// <returns></returns>
         // GET: Kiosk
-        public ActionResult Index()
+        public ActionResult Index(int DisplayMsgType = 0)
         {
             var myDataList = StudentBackend.Index();
             var StudentViewModel = new StudentViewModel(myDataList);
+            StudentViewModel.DisplayMsgType = DisplayMsgType;
             return View(StudentViewModel);
         }
+
+        
 
         /// <summary>
         /// Landing page for admin to unlock the Kiosk
@@ -111,12 +114,12 @@ namespace _5051.Controllers
             var Reports = StudentReportBackend.Instance.Index();
             var Report = Reports[Reports.Count - 1].Uri;
             data.ReportsId = Report;
-
+            data.Status = StudentStatusEnum.In;
 
             StudentBackend.Create(data);
-
-            TempData["ReturnMsg"] = "Account created successfully.";
-            return RedirectToAction("Index");
+           
+            return RedirectToAction("Index", new { DisplayMsgType = 1 });
+            
         }
 
         // GET: Kiosk/SetLogin/5
@@ -128,12 +131,8 @@ namespace _5051.Controllers
             }
 
             StudentBackend.ToggleStatusById(id);
-            string name = StudentBackend.Read(id).Name;
-            TempData["ReturnMsg"] = StudentBackend.Read(id).Name + " clocked in successfully at " + DateTime.Now + "!";
-            TempData["ReturnMsg2"] = "The reward is 100 points.";
             StudentBackend.UpTokens(id, 100);
-            TempData["ReturnMsg3"] = "Your token balance is now " + StudentBackend.Read(id).Tokens;
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { DisplayMsgType = 2});
         }
 
         // GET: Kiosk/SetLogout/5
@@ -145,12 +144,8 @@ namespace _5051.Controllers
             }
 
             StudentBackend.ToggleStatusById(id);
-            TempData["ReturnMsg"] = StudentBackend.Read(id).Name + " clocked out successfully at " + DateTime.Now + "!";
-            TempData["ReturnMsg2"] = "The reward is 100 points.";
             StudentBackend.UpTokens(id, 100);
-            TempData["ReturnMsg3"] = "Your token balance is now " + StudentBackend.Read(id).Tokens;
-
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", new { DisplayMsgType = 3});
         }
     }
 }
